@@ -1,6 +1,3 @@
-# Denne modellen er en oppgradering fra V1.
-# Modellen sender mer tydlige svar til LLM.
-
 from pathlib import Path
 import requests
 from llama_index.core import StorageContext, load_index_from_storage, Settings
@@ -8,11 +5,9 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 
 # CONFIG
-# alt dette kan endres ved behov:
-INDEX_DIR = Path("data/index")
-MODEL = "mistral"
+INDEX_DIR = Path("data/rag_index")
+MODEL = "mistral:latest"   # evt "mistral" hvis det funker hos deg
 OLLAMA_URL = "http://localhost:11434/api/chat"
-
 
 SYSTEM_PROMPT = (
    "Du er en hjelpsom labassistent. Svar på norsk. "
@@ -21,7 +16,6 @@ SYSTEM_PROMPT = (
     "Hvis svaret ikke finnes i konteksten, si: 'Jeg finner ikke dette i dokumentasjonen.' "
     "Avslutt med et realistisk eksempel."
 )
-
 
 def call_ollama(question: str, context: str) -> str:
     messages = [
@@ -36,30 +30,33 @@ def call_ollama(question: str, context: str) -> str:
     r.raise_for_status()
     return r.json()["message"]["content"]
 
-
-
-# modell:
 def main():
-    #må være samme embeddingmodell som når vi bygde index!
     Settings.embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
     index = load_index_from_storage(StorageContext.from_defaults(persist_dir=str(INDEX_DIR)))
-
     print("loading: vellykket!")
 
-    retriever = index.as_retriever()
+    retriever = index.as_retriever(similarity_top_k=3)
 
     while True:
         q = input("\nSpørsmål: ").strip()
         if q.lower() in {"exit", "quit"}:
             break
 
-        results = call_ollama(q)
+        results = retriever.retrieve(q)
         if not results:
             print("\nSvar: Jeg fant ingenting relevant i dokumentene.")
             continue
 
-        print("\n--- Treff ---")
+        # Bygg kontekst av treffene
+        context = "\n\n---\n\n".join([r.node.get_content() for r in results])
+
+        # Spør Mistral
+        answer = call_ollama(q, context)
+        print("\nSvar:\n", answer)
+
+        # (valgfritt) print treff slik du hadde
+        print("\n fant!")
         for i, r in enumerate(results, start=1):
             meta = r.node.metadata or {}
             source = meta.get("file_name") or meta.get("filename") or "ukjent fil"

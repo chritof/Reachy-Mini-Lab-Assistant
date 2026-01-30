@@ -1,5 +1,6 @@
 Guide for bruk av 3D-printer
 
+Printeren kan lånes bort hvis den er ledig.
 Før bruk må printeren være riktig kalibrert.
 Kun godkjente filamenttyper skal brukes.
 Ved feil under print skal jobben stoppes umiddelbart.
