@@ -1,0 +1,9 @@
+Utlån av utstyr
+
+VR-briller kan lånes i maks 48 timer.
+3D-printere kan kun brukes etter gjennomført opplæring.
+Alt lånt utstyr må registreres i utlånssystemet.
+Forsinket levering kan medføre gebyr.
+
+Eksempel:
+Hvis du låner VR-briller mandag kl. 12, må de leveres tilbake innen onsdag kl. 12.

@@ -1,0 +1,9 @@
+Guide for bruk av 3D-printer
+
+Før bruk må printeren være riktig kalibrert.
+Kun godkjente filamenttyper skal brukes.
+Ved feil under print skal jobben stoppes umiddelbart.
+Etter bruk skal printeren rengjøres.
+
+Eksempel:
+Hvis filamentet ikke fester seg til platen, stopp printen og juster høyden på dysen.

@@ -1,3 +1,6 @@
+# Denne modellen er en oppgradering fra V1.
+# Modellen sender mer tydlige svar til LLM.
+
 from pathlib import Path
 import requests
 from llama_index.core import StorageContext, load_index_from_storage, Settings
@@ -6,8 +9,10 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 # CONFIG
 # alt dette kan endres ved behov:
-INDEX_DIR = Path("data/rag_index")
+INDEX_DIR = Path("data/index")
 MODEL = "mistral"
+OLLAMA_URL = "http://localhost:11434/api/chat"
+
 
 SYSTEM_PROMPT = (
    "Du er en hjelpsom labassistent. Svar på norsk. "
@@ -16,6 +21,22 @@ SYSTEM_PROMPT = (
     "Hvis svaret ikke finnes i konteksten, si: 'Jeg finner ikke dette i dokumentasjonen.' "
     "Avslutt med et realistisk eksempel."
 )
+
+
+def call_ollama(question: str, context: str) -> str:
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": f"KONTEKST:\n{context}\n\nSPØRSMÅL: {question}\nSVAR:"},
+    ]
+    r = requests.post(
+        OLLAMA_URL,
+        json={"model": MODEL, "messages": messages, "stream": False},
+        timeout=120,
+    )
+    r.raise_for_status()
+    return r.json()["message"]["content"]
+
+
 
 # modell:
 def main():
@@ -33,7 +54,7 @@ def main():
         if q.lower() in {"exit", "quit"}:
             break
 
-        results = retriever.retrieve(q)
+        results = call_ollama(q)
         if not results:
             print("\nSvar: Jeg fant ingenting relevant i dokumentene.")
             continue

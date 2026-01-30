@@ -1,0 +1,9 @@
+Feilsøking av utstyr
+
+Hvis utstyr ikke starter, kontroller strømtilkobling.
+Restart enheten før videre feilsøking.
+Hvis problemet vedvarer, kontakt labansvarlig.
+Studenter skal ikke forsøke å reparere utstyr selv.
+
+Eksempel:
+Hvis 3D-printeren ikke reagerer, sjekk strøm og restart før du sier ifra.
