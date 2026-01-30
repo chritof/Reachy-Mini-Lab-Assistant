@@ -5,8 +5,8 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from pathlib import Path
 
-DOCS_DIR = Path("data")
-INDEX_DIR = Path("data/index")
+DOCS_DIR = Path("data/rag_sources")
+INDEX_DIR = Path("data/rag_index")
 
 
 def main():
