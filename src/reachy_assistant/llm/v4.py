@@ -1,12 +1,14 @@
 from pathlib import Path
 import requests
 
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
+from llama_index.core import StorageContext, load_index_from_storage, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-DOCS_DIR = Path("data/rag_sources")  
+INDEX_DIR = Path("data/rag_index")
+
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL = "mistral:latest"
+
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
 SYSTEM_PROMPT = (
@@ -29,19 +31,18 @@ def call_ollama(question: str, context: str) -> str:
     return r.json()["message"]["content"]
 
 def main():
-    if not DOCS_DIR.exists():
-        raise FileNotFoundError(f"Fant ikke {DOCS_DIR}. Legg dokumentene dine der.")
+    if not INDEX_DIR.exists():
+        print("Fant ikke data/index. Kjør buildV2.py først.")
+        return
 
     Settings.embed_model = HuggingFaceEmbedding(model_name=EMBED_MODEL)
 
-    docs = SimpleDirectoryReader(str(DOCS_DIR), recursive=True).load_data()
-    if not docs:
-        raise ValueError(f"Ingen filer funnet i {DOCS_DIR}")
+    storage_context = StorageContext.from_defaults(persist_dir=str(INDEX_DIR))
+    index = load_index_from_storage(storage_context)
 
-    index = VectorStoreIndex.from_documents(docs)
     retriever = index.as_retriever(similarity_top_k=3)
 
-    print(" Klar! (RAG uten lagring) Skriv 'exit' for å avslutte.")
+    print("Klar! Skriv exit for å avslutte.")
     while True:
         q = input("\nSpørsmål: ").strip()
         if q.lower() in {"exit", "quit"}:
