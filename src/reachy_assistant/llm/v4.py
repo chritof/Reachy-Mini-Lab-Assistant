@@ -22,6 +22,13 @@ def call_ollama(question: str, context: str) -> str:
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": f"KONTEKST:\n{context}\n\nSPØRSMÅL: {question}\nSVAR:"},
     ]
+    #dette er det llm see!
+    print(f"----------------++-------------")
+    print(f"KONTEKST: {context} \n")
+    print(f"SPØRSMPL: {question} \n")
+    print(f"----------------++-------------")
+
+
     r = requests.post(
         OLLAMA_URL,
         json={"model": MODEL, "messages": messages, "stream": False},
