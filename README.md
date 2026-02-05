@@ -17,6 +17,7 @@ Målet er å utvikle en fungerende prototype som:
 Reachy-Mini-Lab-Assistant
 ├───data
 │   └───rag_sources
+│   └───audio
 ├───docs
 │   ├───decisions
 │   ├───diagrams
@@ -34,8 +35,8 @@ Prosjektet utvikles som en Python-applikasjon med disse teknologiene:
 
 - Python
 - Reachy Mini SDK
-- LLM via Ollama (mistral)
-- Speech-to-Text (STT)
-- Retrieval-Augmented Generation (RAG) 
+- LLM via Ollama (mistral) -> cloud LLM (ChatGPT Nano-5)
+- STT (openai-whisper)
+- Retrieval-Augmented Generation (RAG) (LlamaIndex)
 
 Kommer sannsynligvis mer/endringer
