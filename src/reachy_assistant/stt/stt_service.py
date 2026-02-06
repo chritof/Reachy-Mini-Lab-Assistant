@@ -13,4 +13,3 @@ def transcribe_audio(audio_path: Path, language: str = "no") -> dict:
         language = language,
         fp16 = False
     )
-<
