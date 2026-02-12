@@ -4,6 +4,9 @@ import time
 import numpy as np
 import sounddevice as sd
 
+
+# Denne er foreløpig ikke fungerende, se -> (porcupine.py)
+
 # one-time download
 openwakeword.utils.download_models()
 

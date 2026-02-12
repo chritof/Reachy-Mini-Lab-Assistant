@@ -11,14 +11,15 @@ load_dotenv()
 ACCESS_KEY = os.getenv("PICOVOICE_ACCESS_KEY")
 
 
-BASE_DIR = Path(__file__).resolve().parent
-KEYWORD_PATH = str(BASE_DIR / "hei-reachy.ppn")
+ROOT = Path(__file__).resolve().parents[1]
+KEYWORD_PATH = ROOT / "src" / "reachy_assistant" / "wakeword" / "models" / "hei-reachy.ppn"
 
-COOLDOWN = 1.0
+if not KEYWORD_PATH.exists():
+    raise FileNotFoundError(f"Keyword not found: {KEYWORD_PATH}")
 
 porcupine = pvporcupine.create(
     access_key=ACCESS_KEY,
-    keyword_paths=[KEYWORD_PATH],
+    keyword_paths=[str(KEYWORD_PATH)],
     sensitivities=[1.0],
 )
 
@@ -26,6 +27,7 @@ SAMPLE_RATE = porcupine.sample_rate
 FRAME_LENGTH = porcupine.frame_length
 
 last_trigger = 0.0
+COOLDOWN = 1.0
 
 print("Listening for 'hei reachy'...)")
 
