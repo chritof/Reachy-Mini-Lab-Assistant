@@ -1,3 +1,4 @@
+# Test for reachy mini opptak av lyd!
 from pathlib import Path
 import time
 import numpy as np

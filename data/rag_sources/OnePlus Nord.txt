@@ -1,0 +1,42 @@
+OnePlus Nord
+OnePlus Nord er en mellomklasse-smarttelefon lansert i august 2020, som kombinerer solid ytelse, 5G-støtte og et attraktivt design til en konkurransedyktig pris.
+
+Hovedspesifikasjoner
+Skjerm: 6,44" Fluid AMOLED, 2400 × 1080 piksler, 90 Hz oppdateringsfrekvens, HDR10+
+
+Prosessor: Qualcomm Snapdragon 765G med 5G-støtte
+
+Minne: 6, 8 eller 12 GB RAM
+
+Lagring: 64, 128 eller 256 GB UFS 2.1 (ikke utvidbar)
+
+Batteri: 4115 mAh med Warp Charge 30T (30W hurtiglading)
+
+Operativsystem: OxygenOS basert på Android 10, oppgraderbar til Android 12
+
+Kameraer:
+
+Bak: 48 MP (hoved), 8 MP (ultravidvinkel), 5 MP (dybde), 2 MP (makro)
+
+Front: 32 MP + 8 MP (ultravidvinkel)
+
+Fordeler
+God skjermkvalitet med høy oppdateringsfrekvens og levende farger
+
+Solid ytelse for daglig bruk og multitasking
+
+5G-støtte for raskere mobilnett
+
+Rask lading med Warp Charge 30T
+
+Konkurransedyktig pris i forhold til spesifikasjoner
+
+
+Ulemper
+Ingen hodetelefonutgang
+
+Ikke støtte for trådløs lading
+
+Ingen offisiell IP-klassifisering for vann- og støvbestandighet
+
+Kameraet presterer mindre godt i dårlig lys

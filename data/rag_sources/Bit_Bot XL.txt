@@ -1,0 +1,49 @@
+Bit:Bot XL
+Bit:Bot XL er et effektivt verktøy for å kombinere programmering, problemløsing og kreativ utforsking i undervisningen. Gjennom praktiske aktiviteter og eksperimentering får elever og studenter oppleve hvordan kode påvirker fysisk teknologi i sanntid.
+Læringsutbytte og anvendelse:
+Tverrfaglighet: Bit:Bot XL kan brukes i fag som matematikk, naturfag, teknologi, kunst og håndverk – og spesielt i programmering og teknologiundervisning.
+
+Koding i praksis: Elever lærer grunnleggende programmeringslogikk (sekvens, løkker, betingelser) ved å skrive kode som styrer robotens bevegelser, lys og sensorer.
+
+Problemløsing og algoritmisk tenkning: Gjennom konkrete utfordringer (som å følge en linje, unngå hindringer eller kjøre en bestemt rute) utvikler elever evnen til å analysere, teste og feilsøke.
+
+Samarbeid og kreativitet: Arbeid med Bit:Bot skjer ofte i grupper og fremmer samarbeid, idéutveksling og kreativ tilnærming til teknologi.
+
+Motivasjon og mestring: Det er lett å se resultater av egne valg og koding – dette gir en sterk følelse av mestring og øker motivasjonen for videre læring.
+
+Bit:Bot XL passer for både nybegynnere og mer erfarne kodere, og egner seg godt i både grunnskole, videregående og høyere utdanning, spesielt i prosjekter der teknologi møter anvendelse i praksis.
+
+Slik kommer du i gang:
+Sett inn micro:bit i fronten av Bit:Bot XL, med LED-skjermen vendt utover.
+
+Koble til strøm:
+
+Slå på batteriboksen på undersiden. Pass på at batteriene er fulladet.
+
+Programmer micro:bit:
+
+Bruk en PC og gå til makecode.microbit.org.
+
+Velg «New Project» og bruk Bit:Bot-blokker (krever Bit:Bot Extension).
+
+Last opp koden:
+
+Koble micro:bit til PC med USB og overfør programmet (fil med .hex).
+
+Når overføringen er ferdig, koble micro:bit fra og sett den inn i Bit:Bot.
+
+Start roboten:
+
+Når du slår på strømmen, kjører Bit:Bot programmet du har lastet opp.
+
+Etter bruk:
+Slå av strømmen.
+
+Ta ut micro:bit og rydd bort kabler og utstyr.
+
+Lever tilbake med batteriboks, micro:bit, USB-kabel og eventuell sensorutvidelse.
+
+Tips:
+Bit:Bot kan programmeres til å følge linjer, bruke lys, kjøre lyd eller reagere på sensorer.
+
+Pass på at hjulene står fritt og at underlaget er jevnt.

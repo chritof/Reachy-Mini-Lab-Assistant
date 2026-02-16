@@ -1,0 +1,72 @@
+Boss RC-300 Loop Station
+Kort om produktet
+Boss RC-300 Loop Station er en kraftig og avansert looper for musikkproduksjon og liveopptredener. Den lar deg spille inn, lagre, overdubbe og kontrollere opptil tre separate looper samtidig, med individuelle kontroller og effekter.
+
+Hovedfunksjoner
+3 uavhengige stereospor med egne faderkontroller og start/stopp
+
+Overdubbing i sanntid – lag lag på lag med lyd
+
+Innebygde effekter og rytmer
+
+XLR-inngang med fantommating for mikrofon
+
+USB-tilkobling for lagring og import/eksport av looper
+
+Kontroll med føttene – perfekt for liveopptak
+
+
+Hva kan du gjøre med RC-300?
+Spille inn en akkordprogresjon og legge til trommer, bass og vokal i sanntid
+
+Lage backing tracks og øve til egne loops
+
+Lage kreative lydlandskap, repetisjoner og beatboxing-spor
+
+Bruke looper i undervisning for musikk og lydforståelse
+
+
+Grunnleggende bruk
+Tilkobling
+
+Koble til et instrument (gitar, synth) i INST IN.
+
+Mikrofon kobles i MIC IN (aktiver fantommating hvis du bruker kondensatormikrofon).
+
+Hodetelefoner eller høyttaler kobles til OUTPUT.
+
+Opptak og looping
+
+Trykk på pedal 1, 2 eller 3 for å starte opptak på valgt spor.
+
+Trykk igjen for å stoppe opptak og starte avspilling.
+
+Trykk en tredje gang for å overdubbe (legge på ny lyd).
+
+Stoppe og nullstille
+
+Hold pedalen inne for å slette opptak på sporet.
+
+Bruk STOP ALL-knappen for å stanse alle looper samtidig.
+
+Lagre loop
+
+Trykk WRITE for å lagre loopene i en av de 99 tilgjengelige internminneplassene.
+
+Loops kan navngis og lagres med tilhørende effekter og innstillinger.
+
+
+Bruk av effekter
+RC-300 har innebygde effekter som reverb, distortion, filter og modulasjon.
+
+Trykk FX ON/OFF for å aktivere, og bruk kontrollene for å velge effekt og justere parametere.
+
+Effektene kan brukes på inngangssignalet eller sporet du looper.
+
+
+Bruk med PC
+Koble RC-300 til PC via USB.
+
+Du kan importere/eksportere WAV-filer og sikkerhetskopiere looper.
+
+Looper lagres som .wav-filer i mappestruktur som kan leses av standard lydprogramvare.

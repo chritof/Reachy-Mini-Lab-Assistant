@@ -1,0 +1,48 @@
+NewTek NDI Kamera-koffert – 3x NDIHX-PTZ1
+Beskrivelse:
+Denne kofferten inneholder tre profesjonelle PTZ-kameraer av typen NewTek NDIHX-PTZ1, tilpasset mobil videoproduksjon i undervisning, arrangementer og studio. Kameraene bruker NDI-teknologi (Network Device Interface) som overfører video, lyd og styringssignaler over vanlig nettverk – uten behov for tradisjonelle videokabler.
+Merk: Utlån skjer kun etter avtale og krever kort opplæring i bruk og oppsett.
+
+Innhold i kofferten:
+3 stk. NewTek NDIHX-PTZ1 kameraer (Full HD, 1080p60)
+
+Strømforsyninger og nettverkskabler
+
+Fjernkontroll(er)
+
+Hard transportkoffert med skuminnlegg
+
+
+Funksjoner:
+NDI|HX over IP: Én nettverkskabel håndterer video, lyd, kontroll og evt. strøm (via PoE)
+
+PTZ-styring: Fjernstyr panorering, tilt og zoom
+
+Lav båndbredde: Egnet for eksisterende nettverksinfrastruktur
+
+Kompatibel med OBS, vMix, TriCaster og annen NDI-programvare
+
+
+Bruksområder:
+Direktesending av undervisning, konserter, foredrag eller arrangement
+
+Flerkameraproduksjon i undervisning, med kontroll fra PC
+
+Integrasjon med strømmeplattformer som YouTube, Zoom, Teams og Panopto
+
+
+Programvare og kontroll:
+Brukes med NDI Tools, som f.eks. Studio Monitor og Virtual Input
+
+Kontrolleres fra datamaskin, nettbrett eller joystick (om tilgjengelig)
+
+Integreres enkelt i produksjonsverktøy via NDI
+
+
+Viktig:
+Dette utstyret krever:
+Opplæring før bruk
+
+Utlån kun etter nærmere avtale med Læringslaben
+
+Ta kontakt med Læringslaben for å avtale lån og gjennomgang av oppsett og bruk.

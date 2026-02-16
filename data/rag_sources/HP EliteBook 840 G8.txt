@@ -1,0 +1,51 @@
+HP EliteBook 840 G8
+Bærbar PC for fleksibel og kraftig 
+Kort om produktet
+HP EliteBook 840 G8 er en avansert og lett bærbar PC med god ytelse, sikkerhet og batteritid. Den er spesielt egnet for studenter og ansatte som trenger en pålitelige maskin til krevende oppgaver som programmering, databehandling, videoredigering eller presentasjoner.
+Hovedspesifikasjoner (kan variere noe)
+Skjerm: 14" Full HD (1920 x 1080), antirefleks
+
+Prosessor: Intel Core i5 / i7
+
+Minne (RAM): 16 GB
+
+Lagring: 512 GB SSD
+
+Tilkoblinger:
+
+2 x USB-C (med Thunderbolt)
+
+2 x USB-A
+
+HDMI
+
+Hodetelefonutgang
+
+Kamera og mikrofon: Integrert webkamera med personvern-lukker
+
+Operativsystem: Windows 11 Enterprise / HVL-tilpasset installasjon
+
+
+Slik bruker du PC-en
+Slå på ved å holde inne av/på-knappen (øverst til høyre på tastaturet).
+
+Logg inn med din HVL-bruker (hvis ferdig satt opp).
+
+Koble til Wi-Fi: eduroam eller HVL-gjest.
+
+Start nødvendige programmer fra Start-menyen eller skrivebordet.
+
+Bruk USB-C for lading eller ekstern skjerm via DisplayPort.
+
+
+Programvare
+PC-en kan være forhåndsinstallert med:
+Microsoft Office 365
+
+Zoom, Teams
+
+Adobe Creative Cloud (ved behov)
+
+Matematikkverktøy: GeoGebra, Python, MATLAB (avhenger av bruksområde)
+
+Sikkerhetsprogramvare fra HVL (bitlocker, antivirus m.m.)

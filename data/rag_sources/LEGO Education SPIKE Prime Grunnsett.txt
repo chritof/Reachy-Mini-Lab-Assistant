@@ -1,0 +1,51 @@
+LEGO Education SPIKE Prime Grunnsett
+Bygg, programmer og løs problemer med avansert LEGO-teknologi
+
+Hva er SPIKE Prime?
+LEGO SPIKE Prime er et undervisningssett utviklet for mellomtrinn og ungdomstrinn (5.–10. trinn), og gir elevene mulighet til å jobbe med programmering, teknologi og ingeniørfag på en praktisk måte. Settet kombinerer LEGO Technic-elementer med sensorer, motorer og en programmerbar hub, og brukes sammen med LEGO Education SPIKE-appen.
+SPIKE Prime er velegnet for undervisning i STEAM-fag (Science, Technology, Engineering, Arts og Mathematics) og er også brukt i konkurranser som First LEGO League.
+
+Hva inneholder grunnsettet?
+Over 500 Technic-kompatible LEGO-elementer
+
+Programmerbar hub med 6 porter, lys, høyttaler og 5x5 LED-matrise
+
+Store og mellomstore motorer
+
+Fargesensor, gyrosensor og avstandssensor
+
+USB-ladekabel og sortert oppbevaringsboks
+
+Tilgang til LEGO SPIKE Prime-appen (gratis)
+
+
+Kom i gang – steg for steg
+Installer appen
+ Last ned LEGO Education SPIKE-appen (samme app brukes for både Essential og Prime). Velg SPIKE Prime som produkt ved oppstart.
+
+Koble til hub-en
+ Slå på hub-en og koble den til appen via Bluetooth eller USB-kabel. Appen vil bekrefte tilkoblingen og vise tilgjengelige porter.
+
+Velg et prosjekt
+ SPIKE Prime-appen inneholder ferdige undervisningsforløp og oppdrag innen teknologi, programmering og problemløsing. Hvert prosjekt inneholder byggeveiledning og kodeoppgaver.
+
+Bygg og programmer
+ Følg byggeinstruksjonene og bruk blokkbasert programmering (Scratch-lignende). Du kan også velge å bruke Python hvis ønskelig. Elevene kan programmere robotens bevegelser, sensorer og logikk.
+
+
+Pedagogisk bruk i Læringslaben
+Passer for tverrfaglige læringsaktiviteter i matematikk, naturfag, teknologi og kunst og håndverk
+
+Utvikler ferdigheter i logisk tenkning, samarbeid, systemforståelse og problemløsing
+
+Kan brukes til utforskende arbeid, elevstyrte prosjekter eller konkurranser
+
+
+Vedlikehold og tips
+Lad hub-en etter hver økt
+
+Sørg for at elevene sorterer brikkene tilbake i boksen
+
+Slett gamle programmer i appen for å holde oversikten
+
+Bruk etiketter og sorteringssystemet i boksen for effektiv bruk
