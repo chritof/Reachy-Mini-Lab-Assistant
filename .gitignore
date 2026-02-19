@@ -16,3 +16,8 @@ Thumbs.db
 # Project-specific
 data/rag_index/
 
+
+# Python virtualenv
+backend/venv/
+venv/
+.venv/
