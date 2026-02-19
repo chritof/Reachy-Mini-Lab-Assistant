@@ -11,6 +11,7 @@ INDEX_DIR = Path("data/rag_index")
 #PS: må bruke lik embedding fra query gitt av bruker (llm...v1,v1..vn)
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 
+
 def main():
     if not DOCS_DIR.exists():
         raise FileNotFoundError(f"Fant ikke {DOCS_DIR}")
