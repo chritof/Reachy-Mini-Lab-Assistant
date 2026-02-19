@@ -1,29 +1,18 @@
-from fastapi import FastAPI, Header, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException
 import httpx
-
 from .settings import settings
 
-app = FastAPI(title="Reachy VM Backend", version="0.1.0")
-
-def require_key(x_api_key: str | None) -> None:
-    if settings.API_KEY and x_api_key != settings.API_KEY:
-        raise HTTPException(status_code=401, detail="Invalid API key")
-
+app = FastAPI()
 
 @app.get("/health")
 def health():
     return {"ok": True}
 
 @app.post("/llm/chat")
-async def llm_chat(payload: dict, x_api_key: str | None = Header(default=None)):
-    """
-    payload:
-    {
-      "messages": [{"role":"user","content":"..."}],
-      "temperature": 0.2,          # optional
-      "num_predict": 200           # optional (token-ish limit)
-    }
-    """
+async def llm_chat(payload: dict):
+    # Requires JSON body with "messages"
+    if "messages" not in payload:
+        raise HTTPException(status_code=422, detail="Missing required field: messages")
 
     req = {
         "model": payload.get("model") or settings.OLLAMA_MODEL,
@@ -45,4 +34,3 @@ async def llm_chat(payload: dict, x_api_key: str | None = Header(default=None)):
         data = r.json()
 
     return {"text": data["message"]["content"]}
-
