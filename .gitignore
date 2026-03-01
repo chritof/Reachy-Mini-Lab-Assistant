@@ -21,3 +21,5 @@ data/rag_index/
 backend/venv/
 venv/
 .venv/
+src/reachy_assistant.egg-info/requires.txt
+/src/reachy_assistant.egg-info
