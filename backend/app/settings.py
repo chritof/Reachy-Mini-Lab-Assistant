@@ -11,9 +11,9 @@ class Settings(BaseSettings):
     OLLAMA_BASE_URL: str = "http://127.0.0.1:11434"
     OLLAMA_MODEL: str = "qwen2.5:14b"
 
-    WHISPER_MODEL = os.getenv("WHISPER_MODEL", "medium")
-    WHISPER_COMPUTE_TYPE = os.getenv("WHISPER_COMPUTE_TYPE", "int8")
-    STT_LANGUAGE = os.getenv("STT_LANGUAGE", "no")
+    WHISPER_MODEL: str = "medium"
+    WHISPER_COMPUTE_TYPE: str = "int8"
+    STT_LANGUAGE: str = "no"
 
 
 settings = Settings()

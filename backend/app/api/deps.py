@@ -1,6 +1,6 @@
 from reachy_assistant.stt.faster_whisper_silero import FasterWhisperSileroSTT
 from reachy_assistant.services.stt_service import STTService
-from backend.app import settings
+from backend.app.settings import settings
 
 _stt_engine = None
 _stt_service = None
