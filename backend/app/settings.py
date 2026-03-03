@@ -25,5 +25,8 @@ class Settings(BaseSettings):
     RAG_EMBED_MODEL: str = "nomic-embed-text"
     RAG_TOP_K: int = 3
 
+    # TTS
+    PIPER_MODEL_PATH: str = "models/no_NO-talesyntese-medium.onnx"
+
 
 settings = Settings()

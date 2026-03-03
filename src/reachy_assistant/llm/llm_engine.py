@@ -1,3 +1,11 @@
+"""
+LLM-wrapper.
+
+Sender prompt til LLM-backend
+og returnerer svar.
+
+Inneholder kun kommunikasjon med LLM.
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -8,9 +16,6 @@ from llama_index.core.llms import ChatMessage, MessageRole
 
 @dataclass
 class LLMEngine:
-    """
-    Tynn wrapper rundt Ollama-chat (qwen2.5:14b eller annet).
-    """
 
     model: str = "qwen2.5:14b"
     base_url: str = "http://localhost:11434"

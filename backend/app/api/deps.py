@@ -1,3 +1,15 @@
+"""
+Oppretter og cacher backend-tjenester.
+
+Ansvar:
+- Lage STTService
+- Lage TTSService
+- Lage RagService
+- Lese konfig fra settings
+- Finne riktige model paths
+
+Routerne henter tjenestene herfra.
+"""
 from pathlib import Path
 
 from backend.app.settings import settings
@@ -7,11 +19,22 @@ from reachy_assistant.services.stt_service import STTService
 from reachy_assistant.services.rag_service import RagService
 from reachy_assistant.rag.rag_engine import RagEngine
 from reachy_assistant.llm.llm_engine import LLMEngine
+from reachy_assistant.tts.piper_tts import PiperTTSEngine
+from reachy_assistant.services.tts_service import TTSService
 
 _stt_engine = None
 _stt_service = None
 _rag_service = None
+_tts_service = None
 
+
+
+def get_repo_root() -> Path:
+    p = Path(__file__).resolve()
+    for parent in [p] + list(p.parents):
+        if (parent / "backend").exists() and (parent / "src").exists():
+            return parent
+    return Path.cwd()
 
 def get_stt_service() -> STTService:
     global _stt_engine, _stt_service
@@ -24,13 +47,26 @@ def get_stt_service() -> STTService:
         _stt_service = STTService(engine=_stt_engine)
     return _stt_service
 
+def get_tts_service() -> TTSService:
+    global _tts_service
+    if _tts_service is None:
+        root = get_repo_root()
 
-def get_repo_root() -> Path:
-    p = Path(__file__).resolve()
-    for parent in [p] + list(p.parents):
-        if (parent / "backend").exists() and (parent / "src").exists():
-            return parent
-    return Path.cwd()
+        model_path = Path(settings.PIPER_MODEL_PATH)
+
+        if not model_path.exists():
+            raise FileNotFoundError(
+                f"Piper model not found at: {model_path}\n"
+                f"Repo root resolved to: {root}\n"
+                f"Expected files in: {root / 'models'}"
+            )
+
+        engine = PiperTTSEngine(
+            model_path=str(model_path),  # tilpass
+        )
+        _tts_service = TTSService(engine=engine)
+    return _tts_service
+
 
 
 def get_rag_service() -> RagService:

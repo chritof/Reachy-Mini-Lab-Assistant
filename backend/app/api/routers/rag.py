@@ -1,3 +1,10 @@
+"""
+HTTP-endepunkter for RAG-chat.
+
+Tar imot spørsmål,
+kaller RagService,
+returnerer generert svar.
+"""
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 

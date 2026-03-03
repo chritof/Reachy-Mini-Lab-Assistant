@@ -3,6 +3,10 @@ __pycache__/
 *.pyc
 .venv/
 
+
+# Models
+models/
+
 # Environment
 .env
 
@@ -21,3 +25,7 @@ data/rag_index/
 backend/venv/
 venv/
 .venv/
+
+
+# python packaging
+*.egg-info/

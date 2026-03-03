@@ -1,3 +1,11 @@
+"""
+STT-implementasjon.
+
+Bruker Faster-Whisper for transkribering
+og Silero VAD for å finne tale i lyd.
+
+Inneholder lavnivå talegjenkjenning.
+"""
 from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path

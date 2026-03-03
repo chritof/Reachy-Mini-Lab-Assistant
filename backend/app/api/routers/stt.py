@@ -1,3 +1,10 @@
+"""
+HTTP-endepunkter for STT.
+
+Tar imot lyd fra klient,
+kaller STTService,
+returnerer transkripsjon.
+"""
 from pathlib import Path
 import tempfile
 

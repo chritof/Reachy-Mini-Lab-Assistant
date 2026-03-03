@@ -1,3 +1,13 @@
+"""
+Retrieval-del av RAG.
+
+Ansvar:
+- Laste vektorindeks
+- Lage embeddings
+- Hente relevante dokumenter (top-k)
+
+Genererer ikke tekst.
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass
