@@ -53,27 +53,32 @@ def get_tts_service() -> TTSService:
         root = get_repo_root()
 
         model_path = Path(settings.PIPER_MODEL_PATH)
+        if not model_path.is_absolute():
+            model_path = (root / model_path).resolve()
 
         if not model_path.exists():
             raise FileNotFoundError(
                 f"Piper model not found at: {model_path}\n"
                 f"Repo root resolved to: {root}\n"
+                f"settings.PIPER_MODEL_PATH was: {settings.PIPER_MODEL_PATH}\n"
                 f"Expected files in: {root / 'models'}"
             )
 
-        engine = PiperTTSEngine(
-            model_path=str(model_path),  # tilpass
-        )
+        engine = PiperTTSEngine(model_path=str(model_path))
         _tts_service = TTSService(engine=engine)
-    return _tts_service
 
+    return _tts_service
 
 
 def get_rag_service() -> RagService:
     global _rag_service
     if _rag_service is None:
         root = get_repo_root()
-        index_dir = root / "data" / "rag_index"
+
+        index_dir = Path(settings.RAG_INDEX_DIR)
+        if not index_dir.is_absolute():
+            index_dir = (root / index_dir).resolve()
+        index_dir.mkdir(parents=True, exist_ok=True)
 
         rag_engine = RagEngine(
             index_dir=index_dir,

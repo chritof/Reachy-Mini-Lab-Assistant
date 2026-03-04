@@ -33,7 +33,7 @@ class RagService:
 
     system_prompt: str = (
         "Du er en labassistent. Svar på norsk.\n"
-        "Svar kort (maks 3-4 setninger) med det viktigste først"
+        "Svar kort (maks 3-4 setninger) med det viktigste først. \n"
         "Bruk KONTEKST som primærkilde.\n"
         "Hvis du ikke finner svaret i KONTEKST, skriv nøyaktig: "
         "'Jeg finner ikke dette i dokumentasjonen.'"
