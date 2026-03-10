@@ -15,29 +15,47 @@ def float32_to_pcm16(audio: np.ndarray) -> np.ndarray:
 
 def main():
     seconds = 4.0
-    out_path = Path("/tmp/reachy_record.wav")
+    out_path = Path("reachy_record.wav")
 
     with ReachyMini(media_backend="default") as mini:
         sr_in = int(mini.media.get_input_audio_samplerate())
+        in_channels = int(mini.media.get_input_channels())
         print("Input samplerate:", sr_in)
+        print("Input channels:", in_channels)
 
         mini.media.start_recording()
 
-        chunks = []
+        chunks: list[np.ndarray] = []
         t_end = time.time() + seconds
+
         while time.time() < t_end:
-            samples = mini.media.get_audio_sample()  # numpy float array
+            samples = mini.media.get_audio_sample()
+
+            # Skip missing chunks
+            if samples is None:
+                continue
+
             samples = np.asarray(samples, dtype=np.float32)
+
+            # Skip scalar / invalid chunks
+            if samples.ndim == 0 or samples.size == 0:
+                continue
+
+            # Normalize shape to (N, C)
+            if samples.ndim == 1:
+                samples = samples.reshape(-1, 1)
+
             chunks.append(samples)
 
         mini.media.stop_recording()
 
+    if not chunks:
+        raise RuntimeError(
+            "No valid audio chunks were captured. "
+            "The mic may be returning empty data or silence."
+        )
+
     audio = np.concatenate(chunks, axis=0)
-
-    # Ensure shape (N, C)
-    if audio.ndim == 1:
-        audio = audio.reshape(-1, 1)
-
     pcm = float32_to_pcm16(audio)
 
     with wave.open(str(out_path), "wb") as wf:
@@ -47,6 +65,8 @@ def main():
         wf.writeframes(pcm.tobytes())
 
     print("Saved:", out_path)
+    print("Audio shape:", audio.shape)
+    print("Peak abs level:", float(np.max(np.abs(audio))))
 
 
 if __name__ == "__main__":

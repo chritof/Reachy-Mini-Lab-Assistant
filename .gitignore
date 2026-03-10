@@ -5,7 +5,8 @@ __pycache__/
 
 
 # Models
-models/
+models/*
+!models/.gitkeep
 
 # Environment
 .env
