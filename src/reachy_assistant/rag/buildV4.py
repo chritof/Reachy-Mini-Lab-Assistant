@@ -11,9 +11,9 @@ except Exception:
 
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-
-DOCS_DIR = Path("data/rag_sources")
-INDEX_DIR = Path("data/rag_index")
+ROOT = Path(__file__).resolve().parents[3]
+DOCS_DIR = ROOT / "data" / "rag_sources"
+INDEX_DIR = ROOT / "data" / "rag_index"
 
 OLLAMA_EMBED_MODEL = "nomic-embed-text"
 

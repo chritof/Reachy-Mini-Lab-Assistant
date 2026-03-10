@@ -1,3 +1,7 @@
+"""
+Implementasjon av porcupine vekkeord.
+Foreløpig ikke brukbar.
+"""
 import time
 import numpy as np
 import pvporcupine

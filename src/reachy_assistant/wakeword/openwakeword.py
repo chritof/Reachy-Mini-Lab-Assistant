@@ -1,3 +1,7 @@
+"""
+Implementasjon av openwakeword, en vekkeord-modell.
+Foreløpig ikke brukbar.
+"""
 import openwakeword
 from openwakeword.model import Model
 import time
@@ -5,7 +9,7 @@ import numpy as np
 import sounddevice as sd
 
 
-# Denne er foreløpig ikke fungerende, se -> (porcupine.py)
+
 
 # one-time download
 openwakeword.utils.download_models()
