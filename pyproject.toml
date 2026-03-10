@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reachy-assistant"
+version = "0.1.0"
+description = "Reachy Mini lab assistant pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Bachelor group 16" }]
+dependencies = [
+  # put runtime deps here, examples:
+  # "requests>=2.31",
+  # "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.4",
+  "mypy>=1.8",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
