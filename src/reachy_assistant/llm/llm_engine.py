@@ -25,7 +25,7 @@ class LLMEngine:
 
     def _client(self) -> Ollama:
         return Ollama(
-            model=os.getenv("ollama_model", "tinyllama"),
+            model=os.getenv("ollama_model", "qwen2.5:14b"),
             base_url=self.base_url,
             request_timeout=self.request_timeout,
         )

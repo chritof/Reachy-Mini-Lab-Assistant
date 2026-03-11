@@ -88,7 +88,6 @@ def get_rag_service() -> RagService:
         )
 
         llm_engine = LLMEngine(
-            model=settings.OLLAMA_MODEL,
             base_url=settings.OLLAMA_BASE_URL,
             request_timeout=int(getattr(settings, "OLLAMA_TIMEOUT", 120)),
         )
