@@ -1,0 +1,30 @@
+Bruksanvisning – Apple iMac (kun til bruk på stedet)
+Viktig informasjon
+Denne iMac-en er ikke til utlån. Den skal brukes på stedet i HVL Læringslab, og er klargjort med profesjonell programvare som gir deg verktøy til kreative, visuelle og digitale prosjekter.
+
+Hva gjør denne iMac-en spesiell?
+Høy ytelse og stor skjerm – egnet for krevende oppgaver som bildebehandling, videoredigering og animasjon.
+
+Forhåndsinstallert Adobe Creative Cloud-pakke – profesjonell programvare for design, film, foto og digital publisering.
+
+Optimal for prosjektarbeid, designoppgaver og medieproduksjon.
+
+
+Adobe Creative Cloud – hva er inkludert?
+Adobe-pakken på iMac-en består av flere bransjestandardprogrammer. Her er en oversikt over de viktigste verktøyene du har tilgang til:
+Tips: Du kan bruke flere av disse programmene sammen. F.eks. lage illustrasjoner i Illustrator, sette dem inn i en layout i InDesign, og eksportere som PDF.
+
+Bruk og tilgang
+Logg inn med din HVL-brukerkonto eller som gjest (etter avtale).
+
+Filer bør helst  lagres på ekstern lagring (f.eks. USB eller skylagring) – iMac-en nullstilles regelmessig.
+
+Program	
+Photoshop	Redigere bilder, retusjere, lage grafikk. Brukes til alt fra plakater til digitalt kunstverk.
+Illustrator	Lage vektorgrafikk – f.eks. logoer, ikoner, illustrasjoner som kan skaleres uten kvalitetstap.
+InDesign	Profesjonell layout for brosjyrer, plakater, rapporter og magasiner. Perfekt for trykksaker.
+Premiere Pro	Videoredigering på høyt nivå – klipp, lydjustering, effekter og eksport til sosiale medier, film, undervisning.
+After Effects	Lag animasjoner, bevegelig grafikk, tekstanimasjon og visuelle spesialeffekter. Brukes ofte sammen med Premiere.
+Lightroom	Organisere og redigere store mengder bilder raskt. Brukes mye av fotografer og visuelle prosjekter.
+Audition	Profesjonell lydredigering – f.eks. til podkast, filmlyd, voiceover og støyrensing.
+Acrobat Pro	Rediger, signer og administrer PDF-dokumenter på et profesjonelt nivå.

@@ -1,0 +1,99 @@
+Insta360 X4
+Profesjonelt 360-graders kamera med 5.7K-oppløsning og AI-basert redigering
+Kort om produktet
+Insta360 X4 er et toppspesifisert 360-graders kamera som tar videoer i høy oppløsning, og er ideelt for både profesjonelle opptak og kreative prosjekter. Kameraet gir deg muligheten til å fange alt rundt deg i 5.7K-oppløsning, med avansert stabilisering og automatisk redigering via AI. Perfekt for undervisning, prosjektarbeid, ekstreme aktiviteter og virtuelle turer.
+
+Hovedfunksjoner
+360-graders videoopptak i 5.7K (30 fps) og 4K (50 fps)
+
+FlowState stabilisering for en jevn videoopplevelse, selv under raske bevegelser
+
+AI-påvirket redigering som automatisk finner det beste utsnittet (re-framing) etter opptak
+
+Livestreaming i 360-graders visning
+
+HDR-støtte for høy bildekvalitet i lavt lys
+
+Vannbestandig ned til 10 meter uten ekstra hus
+
+Multivinkel opptak for fleksible perspektiver
+
+360-graders lydopptak (avhengig av tilbehør)
+
+
+Hva følger med?
+Insta360 X4 kamera
+
+USB-C ladekabel
+
+Stativfeste / Kamerafeste (kan variere)
+
+Objektivbeskytter
+
+Bruksanvisning og monteringsmanual
+
+
+Slik bruker du kameraet
+Slå på kameraet ved å holde inn strømknappen.
+
+Koble til mobilen: Bruk Insta360 appen for å se live-feed, redigere og dele videoer direkte.
+
+Velg opptaksmodus:
+
+360 Video – Fullstendig utsikt rundt deg
+
+Stillbilder – Ta 360-graders bilder
+
+Time-lapse – Opprett tidsforkortede videoer for prosesser
+
+HDR – For bedre bildekvalitet i dårlige lysforhold
+
+Når opptak er ferdig, kan du redigere og dele via mobilen eller desktop-applikasjonen.
+
+Livestreaming: Strøm video direkte til YouTube eller andre plattformer via appen.
+
+
+Vanlige opptaksmoduser
+
+Tips i bruk
+Bruk FlowState stabilisering for jevne opptak under aktiv bevegelse (f.eks. sykling eller sport).
+
+AI-redigering gjør det enkelt å lage profesjonelle videoer uten avansert redigeringskunnskap. Kameraet velger automatisk de beste vinklene.
+
+Livestreaming i 360-graders format kan brukes til å dele prosjektarbeid, eksperimenter eller utendørsaktiviteter i sanntid.
+
+Bruk HDR-modus for opptak i dårlig belysning – dette gir bedre detaljer i både høye og lave lysnivåer.
+
+
+Feilsøking
+
+Vedlikehold
+Tørk objektivene med en mikrofiberklut for å unngå riper.
+
+Ikke eksponer kameraet for ekstreme temperaturer, sollys eller støv over lengre tid.
+
+Vanntett: Kameraet kan brukes i regn eller vann (maks 10 meter dyp), men unngå saltvann.
+
+Lad kameraet etter bruk, spesielt før langtidslagring.
+
+
+Eksempler på bruk:
+Virtuelle turer: Lag 360-graders videoer av klasserom, laboratorier eller ekskursjoner.
+
+Dokumentasjon av eksperimenter: Fang prosesser og eksperimenter i 360 grader for bedre læring og analyse.
+
+Kreative prosjekter: Lag kunst, videoer og interaktive presentasjoner for prosjekter i kunst, teknologi eller vitenskap.
+
+Live-streaming av aktiviteter: Strøm feltarbeid eller klasseromsundervisning i 360 grader for interaktiv deltagelse.
+
+Modus	Bruksområde
+360 Video	Fullstendig utsikt rundt deg, ideelt for VR-innhold.
+Linear Video	Juster opptakene for tradisjonell filmvisning.
+Time-Lapse	For å fange tidens gang i et komprimert format.
+HDR	Bedre bildebehandling i utfordrende lysforhold.
+Stillbilder	360-graders bilder, perfekte for panoramabilder.
+Problem	Løsning
+Kameraet starter ikke	Kontroller at kameraet har tilstrekkelig batteri eller er koblet til laderen.
+Ingen bilde eller video	Rengjør objektivene for smuss eller fingermerker.
+Koble ikke til mobilen	Sjekk Bluetooth-tilkoblingen, eller tilbakestill kameraet og prøv igjen.
+Langsom opplasting eller lagging	Reduser videooppløsningen eller sjekk Wi-Fi-tilkoblingen for streaming.

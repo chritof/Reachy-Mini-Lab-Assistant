@@ -1,0 +1,81 @@
+Apple iPad 6. generasjon (2018-modell)
+Nettbrett for notater, tegning, video og læringsapper
+Kort om produktet
+iPad 6th gen er et allsidig nettbrett med touchskjerm, støtte for Apple Pencil (1. gen) og lang batteritid. Den passer utmerket til notatskriving, skisser, PDF-lesing, videomøter, medieproduksjon og pedagogiske apper. Nettbrettet er satt opp med iOS-programvare fra HVL Læringslab, med tilpassede apper og innstillinger.
+
+Hovedspesifikasjoner
+Skjerm: 9,7" Retina (2048 x 1536)
+
+Lagring: 32 GB eller 128 GB (avhengig av modell)
+
+Apple Pencil-støtte: Ja, 1. generasjon
+
+Kamera: 8 MP bak, 1,2 MP front (FaceTime HD)
+
+Tilkobling: Wi-Fi, Bluetooth
+
+Lading og synkronisering: Lightning-port
+
+Operativsystem: iOS (oppdatert fra HVL)
+
+
+Hva følger med?
+iPad 6th gen
+
+Lightning ladekabel og USB-lader
+
+Apple Pencil (1. gen) (valgfritt)
+
+Beskyttelsesetui (kan variere)
+
+iPad-en kan være satt opp i "låst" studentmodus – kontakt veileder i laben for admin-tilgang ved behov.
+
+Kom i gang
+Trykk på Hjem-knappen eller sideknappen for å vekke skjermen.
+
+Skriv inn kode eller bruk Face ID (hvis aktivert).
+
+Tilgang til Wi-Fi: Velg eduroam eller HVL-gjest → logg inn med FEIDE-bruker.
+
+Åpne apper via Hjem-skjermen (f.eks. Notater, iMovie, Pages, Teams).
+
+Apple Pencil: Koble til første gang ved å plugge den i Lightning-porten.
+
+
+Forhåndsinstallerte apper (kan variere)
+Notater, Pages, Keynote, iMovie
+
+Teams, Zoom
+
+GeoGebra, Sketches School
+
+Safari, Kamera, Filer
+
+Eventuelt pedagogiske apper som Book Creator, Explain Everything, AR-applikasjoner
+
+
+Bruk i undervisning og prosjekt
+Noter og tegn med Apple Pencil i apper som Notater, GoodNotes eller Sketches
+
+Lag video og rediger med iMovie
+
+Skann dokumenter eller tegn på PDF-er med Apple Pencil
+
+
+Presenter trådløst via AirPlay (hvis tilgjengelig Apple TV)
+
+
+Vedlikehold og sikkerhet
+Rengjør skjermen med en myk mikrofiberklut
+
+Ikke la den ligge på varme overflater eller i direkte sol
+
+Slå av eller sett iPad i flymodus når den ikke er i bruk
+
+Husk å logge ut og slette eventuelle personlige filer før levering
+
+
+Teknisk støtte
+Kontakt læringslabens personale for spørsmål om apper, tilganger eller lås
+
+Glemte passord, feilkoder eller Apple ID-problemer meldes til HVL IT

@@ -1,0 +1,62 @@
+Raspberry Pi 5 AI Kit
+Raspberry Pi 5 AI Kit er en komplett pakke med en kraftig minidatamaskin og støtte for kunstig intelligens (AI). Den er ideell for eksperimentering med programmering, datasyn, maskinlæring og automatisering. Kitet inkluderer Raspberry Pi 5, strømforsyning, kabler, kjøling og ofte en forhåndsinstallert SD-kort med operativsystem.
+
+Slik kommer du i gang:
+Koble opp utstyret:
+
+Tilkoble skjerm via HDMI, tastatur og mus via USB.
+
+Sett inn SD-kortet med ferdig installert Raspberry Pi OS.
+
+Koble til strøm (USB-C) – Pi-en starter automatisk.
+
+Logg inn og start:
+
+Standardbruker er ofte "pi" – sjekk med Læringslab for spesifikke innstillinger.
+
+Jobb med AI:
+
+Installer/bruk verktøy som:
+
+TensorFlow Lite, OpenCV, Edge Impulse, PyTorch
+
+Koble til kompatibel AI-kameraenhet (f.eks. OAK-D eller Pi Camera) ved behov.
+
+Lagre prosjekter:
+
+Bruk skybaserte løsninger eller ekstern lagring for å ta vare på kode og modeller.
+
+
+Etter bruk:
+Lukk alle programmer og slå av systemet trygt.
+
+Koble fra strøm og tilbehør.
+
+Lever hele settet komplett (Pi, kabler, SD-kort, evt. kamera, kjøler).
+
+
+Pedagogisk anvendelse
+Raspberry Pi 5 AI Kit gir elever og studenter innsikt i moderne teknologier som kunstig intelligens, maskinlæring, programmering og IoT (Internet of Things). Det er et praktisk og kraftig verktøy for utforskende læring og tverrfaglig arbeid.
+
+Typiske bruksområder i undervisning:
+Bygge og teste AI-modeller for bilde- og lydgjenkjenning
+
+Lære Python-programmering i realistiske prosjekter
+
+Utforske datasyn og automatisering
+
+Bruke Raspberry Pi som en mini-server eller sensor-hub
+
+Delta i tverrfaglige prosjekter med teknologi, etikk og design
+
+
+Pedagogiske fordeler:
+Trener praktiske ferdigheter i koding og digital forståelse
+
+Gir konkret erfaring med AI og maskinlæring
+
+Fremmer problemløsning, innovasjon og kreativitet
+
+Gir overførbar kunnskap mellom fag som realfag, samfunnsfag og IT
+
+Tilgjengelig i Læringslab Førde.

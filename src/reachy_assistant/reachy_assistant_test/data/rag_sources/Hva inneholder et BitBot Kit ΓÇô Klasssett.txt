@@ -1,0 +1,45 @@
+Hva inneholder et BitBot Kit – Klasssett
+Et BitBot Kit klassesett inkluderer flere komplette sett, slik at flere elever kan jobbe samtidig. Hvert kit i klassesettet inneholder:
+BitBot hovedkort: Inneholder motorer, LED-lys, linjesensorer og buzzer.
+
+Hjul og aksler: For montering av robotens bevegelige deler.
+
+Koblingsbrett (breadboard) og ledninger: For å koble til eksterne komponenter og lage kretser.
+
+Batteriholder og batterier: For trådløs drift av roboten.
+
+Skruer og verktøy: For montering av roboten.
+
+Instruksjonshefte eller tilgang til online ressurser: For veiledning i prosjektene og ideer til prosjekter.
+
+Ekstra komponenter: Slike som sensorer, LED-lys eller motorer (avhengig av pakken).
+
+
+Hvordan bruke BitBot Kit i klasserommet
+BitBot Kit klassesett er perfekt for:
+Gruppearbeid: Flere elever kan jobbe sammen i grupper for å bygge og programmere sine egne robotprosjekter. Dette fremmer samarbeid og deling av ideer.
+
+Programmering: Lærere kan bruke BitBot Kit for å undervise blokkbasert eller tekstbasert programmering ved hjelp av MakeCode eller Python.
+
+Robotikk og mekanikk: Elevene lærer hvordan motorer og sensorer fungerer i en robot, og hvordan disse kobles sammen for å skape en fungerende robot.
+
+Sensorbruk og prosjekter: Elevene kan bruke linjesensorene til å lage linjefølgere, eller skape andre interaktive prosjekter som reagerer på omgivelsene.
+
+
+Programmeringsplattformer
+BitBot kan programmeres med:
+Microsoft MakeCode: En blokkbasert programmeringsplattform som er lett å lære for nybegynnere.
+
+Python Editor: For mer erfarne elever som ønsker å lære tekstbasert programmering.
+
+BitBot støtter også trådløs programmering via Bluetooth, som gir fleksibilitet til å programmere roboten fra ulike enheter.
+
+Bruksområder i Læringslaben
+BitBot Kit er ideelt for å bruke i Læringslaben til:
+Grunnleggende programmering: Lære blokkbasert programmering og hvordan man lager enkle programmer.
+
+Robotikk og mekanikk: Utforske roboters bevegelighet og sensorfunksjoner.
+
+Sensorbruk og linjefølgere: Lage prosjekter som linjefølgere, og eksperimentere med hvordan sensorene fungerer.
+
+Spill og interaktive prosjekter: Lage prosjekter som reagerer på brukerinput som f.eks. spill og lyd-/lyseffekter.

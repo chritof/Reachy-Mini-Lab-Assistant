@@ -1,0 +1,39 @@
+Cubetto Adventure Pack: Ancient Egypt
+Kort om produktet
+Cubetto Ancient Egypt er en utvidelsespakke til det pedagogiske robotsettet Cubetto, laget for å kombinere lek, programmering og historielæring. Denne pakken tar barna med på en reise gjennom oldtidens Egypt, hvor de løser oppgaver og lærer logisk tenkning ved hjelp av programmering uten skjerm.
+Passer for barn i barnehage og småskole, og brukes ofte i tverrfaglige undervisningsopplegg (f.eks. teknologi + samfunnsfag).
+
+Hva inneholder pakken?
+Temakart – et robust, stoffbasert kart med Egypt-tema (hieroglyfer, pyramider, Nilen)
+
+Historiehefte (Storybook) – fortellinger og oppdrag satt til oldtidens Egypt
+
+Oppgavekort – enkle instruksjoner og utfordringer for å veilede aktiviteten
+
+Brukes sammen med:
+
+Cubetto-robot (må lånes separat)
+
+Programmeringsbrett og klosser
+
+
+Typisk bruk
+Lær grunnleggende programmering med fysiske klosser og rutebasert kart
+
+Utforsk historiske temaer som pyramider, mumier og oldtidens kultur
+
+Lær retninger, mønstre og sekvenser gjennom problemløsing
+
+
+Kom i gang
+Legg ut Egypt-kartet på gulvet.
+
+Plasser Cubetto på startpunktet som angitt i oppgaven.
+
+Les oppdraget fra historieheftet – f.eks. “Finn Tutankhamons grav”.
+
+Lag et program med retning-klossene på brettet:
+
+Fremover, sving venstre, sving høyre, funksjon/repetisjon
+
+Trykk GO – Cubetto utfører programmet steg for steg.

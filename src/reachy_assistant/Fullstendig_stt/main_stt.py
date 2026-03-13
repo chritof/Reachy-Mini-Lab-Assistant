@@ -7,7 +7,7 @@ from audio.preprocessing import load_wav_as_float32_mono_16k
 from audio.vad import get_vad_segments, extract_voiced_audio
 from stt.whisper_engine import WhisperEngine
 
-DURATION_SEC = 60.0
+DURATION_SEC = 10.0
 TARGET_SR = 16000
 
 

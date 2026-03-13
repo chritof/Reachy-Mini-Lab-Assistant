@@ -1,0 +1,38 @@
+Olympus RS31H – Fotpedal for transkripsjon
+Beskrivelse:
+Olympus RS31H er en fotkontroller (fotpedal) utviklet for transkripsjon av lydopptak, og gir deg mulighet til å styre avspilling, spoling og pause med føttene – slik at du kan ha hendene fri til å skrive. Den er spesielt nyttig sammen med diktafonopptak gjort med Olympus-enheter, og brukes ofte i kombinasjon med Olympus’ programvare ODMS (Olympus Dictation Management System) eller annen transkripsjonsprogramvare.
+
+Nøkkelfunksjoner:
+3 eller 4 programmerbare pedaler: Justerbar for å kontrollere avspilling, stopp, spol frem/bak, osv.
+
+USB-tilkobling: Plug-and-play med de fleste Windows- og Mac-systemer
+
+Solid konstruksjon: Designet for å tåle langvarig bruk
+
+Kompatibel med Olympus ODMS-programvare og annen tredjeparts transkripsjonsprogramvare (f.eks. Express Scribe)
+
+
+Typiske bruksområder:
+Transkripsjon av intervjuer, møter, forelesninger og lydopptak
+
+Sammen med Olympus DM-650 eller andre diktafoner som brukes i Læringslaben
+
+Effektiv arbeidsflyt for forskningsprosjekter, podkast-redigering og dokumentasjon
+
+
+Bruk i praksis:
+Koble fotpedalen til datamaskinen via USB
+
+Åpne transkripsjonsprogrammet du skal bruke (f.eks. ODMS eller Express Scribe)
+
+Start et lydopptak og bruk fotpedalen til å styre avspilling, pause og spoling
+
+Tilpass funksjonene til pedalene i programinnstillingene ved behov
+
+
+Kompatibilitet:
+Windows og Mac (driverfri installasjon)
+
+Kompatibel med Olympus' egne løsninger og mange tredjepartsprogrammer
+
+Krever transkripsjonsprogramvare for full funksjonalitet

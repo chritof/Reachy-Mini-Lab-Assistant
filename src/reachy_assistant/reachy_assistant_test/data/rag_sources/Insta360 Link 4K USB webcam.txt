@@ -1,0 +1,90 @@
+Insta360 Link 4K USB-webkamera
+AI-styrt webkamera med 3-aksers gimbal og 4K-oppløsning
+Kort om produktet
+Insta360 Link er et avansert USB-webkamera med AI-sporing, 4K-oppløsning og motorisert gimbal. Kameraet følger brukeren automatisk, tilpasser utsnittet og leverer høy bildekvalitet selv i utfordrende lys. Det er ideelt til undervisning, fjernundervisning, møter, opptak og digitale presentasjoner.
+
+Hovedfunksjoner
+4K-video ved 30 fps, 1080p og 720p ved opptil 60 fps
+
+AI Auto-Tracking: Kameraet følger automatisk ansikt/bevegelse
+
+3-aksers gimbal gir stabile og dynamiske utsnitt
+
+HDR og automatisk eksponering for profesjonell bildekvalitet
+
+Whiteboard Mode: Automatisk utsnitt av tavle/flipover
+
+Overhead Mode: Viser bordflaten ovenfra
+
+Gesture Control: Start/zoom/track med håndbevegelser
+
+
+Hva følger med?
+Insta360 Link kamera (USB-C)
+
+USB-C til USB-A kabel
+
+Monteringsklips
+
+Bordstativ (hvis inkludert)
+
+Bruksanvisning og installasjonsveiledning
+
+
+Slik kobler du til
+Plugg kameraet i en PC/Mac via USB-C (eller USB-A med adapter).
+
+Kameraet blir automatisk gjenkjent som webkamera i f.eks.:
+
+Zoom, Teams, Google Meet, OBS, VLC
+
+Last ned og installer Insta360 Link Controller (valgfritt) for avanserte innstillinger:
+
+Juster eksponering, HDR, gimbalvinkel, sporing, osv.
+
+Plasser kameraet på toppen av skjerm, stativ eller bord.
+
+Bruk gestkontroll eller app til å aktivere ulike moduser.
+
+Vanlige bruksmoduser
+
+Tips i bruk
+Hold hånden opp med åpen flate for å aktivere sporing.
+
+"V"-tegn foran kameraet zoomer inn/ut.
+
+Sørg for god belysning – HDR kan forbedre motlys.
+
+Kameraet går automatisk i "Privacy Mode" (peker ned) når det ikke er i bruk.
+
+
+Feilsøking
+
+Vedlikehold
+Rengjør linsen med en tørr mikrofiberklut
+
+Ikke vri manuelt på gimbalen – bruk programvare eller bevegelser
+
+Unngå støt og vann – kameraet er ikke vannbestandig
+
+
+Egnet for bruk i:
+Digital undervisning og hybridundervisning
+
+Film og dokumentasjon av eksperimenter
+
+Presentasjoner med bevegelse eller tavlebruk
+
+Teknisk videoopptak på lab, verksted eller bordflate
+
+
+
+Modus	Bruksområde
+Tracking Mode	Kameraet følger brukerens ansikt
+Whiteboard Mode	Zoomer inn og retter opp tavle
+DeskView	Viser bordflate (for håndtegning m.m.)
+Overhead Mode	Top-down-visning (krever montering)
+Problem	Løsning
+Kamera ikke gjenkjent	Bytt USB-port. Sjekk om det vises i Enhetsbehandling (PC).
+Ingen bilde i Teams/Zoom	Velg "Insta360 Link" som kamera i innstillinger.
+Bevegelse/sporing virker ikke	Sjekk om AI Tracking er aktivert i programvaren.

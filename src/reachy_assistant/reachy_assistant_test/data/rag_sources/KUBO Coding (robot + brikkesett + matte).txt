@@ -1,0 +1,86 @@
+KUBO Coding (robot + brikkesett + matte)
+Skjermfri koding for barn gjennom lek og utforskning
+
+Hva er KUBO Coding?
+KUBO Coding er et pedagogisk verktøy som gjør det mulig å lære grunnleggende programmering uten behov for skjerm eller tastatur. Elever programmerer en KUBO-robot ved å sette sammen fysiske brikker (TagTiles) som representerer instruksjoner. Ved hjelp av en matte kan elevene navigere roboten i ulike oppgaver og utfordringer.
+
+Hva inneholder settet?
+1 stk. KUBO-robot med oppladbart batteri
+
+Brikkesett (TagTiles) med:
+
+Start / Stopp
+
+Fremover / Bakover
+
+Sving høyre / venstre
+
+Vent / hopp
+
+Programmeringsmatte (rutet kart)
+
+USB-ladekabel
+
+Oppbevaringseske og bruksanvisning
+
+
+Kom i gang – trinn for trinn
+1. Lad KUBO-roboten
+Koble til medfølgende USB-kabel.
+
+Fulladet når LED-lyset slutter å blinke.
+
+2. Start roboten
+Trykk på på-knappen under roboten.
+
+Plasser roboten på en "Start"-brikke for å aktivere programmeringssekvensen.
+
+3. Bygg programmer med brikkene
+Legg ut en sekvens på bordet eller matta.
+
+Eksempel:
+ [Start] → [Frem] → [Frem] → [Sving venstre] → [Frem] → [Stopp]
+
+4. La roboten lese koden
+Sett roboten på startbrikken. Den vil følge sekvensen automatisk.
+
+5. Bruk matta for oppgaver og læring
+Matta gir et rutet miljø for å utforske bevegelser, retninger og problemløsing.
+
+Eksempeloppgaver:
+
+"Finn veien til butikken"
+
+"Hjelp roboten å levere pakken"
+
+"Unngå hindringer og nå målet"
+
+
+Læringsmål
+Forstå sekvenser og rekkefølge
+
+Introdusere grunnleggende algoritmisk tenkning
+
+Øke romforståelse og logisk tenkning
+
+Samarbeid og kommunikasjon i gruppeaktiviteter
+
+
+Vedlikehold og brukstips
+Oppbevar brikker i egne rom i esken
+
+Bruk roboten på flatt underlag (matten anbefales)
+
+Ikke utsett brikkene for fukt
+
+Tørk av roboten med en tørr klut etter bruk
+
+Husk å slå av roboten etter økten for å spare batteri
+
+
+Forskjellen på KUBO Coding og KUBO Coding+
+KUBO Coding: Grunnleggende bevegelser og rekkefølge
+
+KUBO Coding+: Avanserte konsepter som løkker og funksjoner
+
+Settene kan brukes sammen for å utvide læringsmulighetene

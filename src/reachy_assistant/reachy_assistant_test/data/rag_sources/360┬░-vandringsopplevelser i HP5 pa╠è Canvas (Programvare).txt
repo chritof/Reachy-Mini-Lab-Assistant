@@ -1,0 +1,75 @@
+360°-vandringsopplevelser i HP5 på Canvas (Programvare)
+Introduksjon
+HP5 på Canvas er en kraftig plattform for å lage interaktive og immersive opplevelser, inkludert 360°-vandringsopplevelser. Ved å bruke 360°-bilder eller videoer, kan du lage virtuelle turer som gir en realistisk opplevelse av å utforske et rom eller en utstilling på nettet. Dette kan være nyttig i undervisning, presentasjoner eller for virtuelle turer i ulike læringslabber eller klasserom.
+
+Hva trenger du?
+360°-bilder eller videoer:
+ Du trenger 360°-bilder eller videoer som er tatt med et kompatibelt 360°-kamera, som f.eks. Kandao QooCam, Insta360, eller et annet tilsvarende produkt.
+
+HP5 på Canvas:
+En konto og tilgang til HP5 verktøyet på Canvas, som kan brukes til å lage og tilpasse virtuelle opplevelser.
+
+En datamaskin med internettilgang:
+For å laste opp og administrere 360°-innholdet på Canvas, trenger du en datamaskin med internettilgang og en nettleser.
+
+
+Steg-for-steg guide
+1. Forbered 360°-innholdet ditt
+Ta 360°-bilder eller videoer: Bruk et 360°-kamera til å ta bilder eller videoer av området du ønsker å lage en virtuell tur av. Du kan bruke kameraer som Insta360 ONE X2, Kandao QooCam, eller en annen enhet som støtter 360°-opptak.
+
+Rediger innholdet (valgfritt): Før du laster opp bildene eller videoene til Canvas, kan du bruke redigeringsverktøy for å justere bildene (f.eks. beskjæring, justering av farger, kontrast osv.).
+
+2. Logg inn på HP5 på Canvas
+Gå til Canvas-plattformen og logg inn med din brukerprofil.
+
+Velg HP5 som verktøyet for å lage din virtuelle tur.
+
+3. Lag et nytt prosjekt i HP5
+Etter innlogging, velg "New Project" for å starte et nytt prosjekt.
+
+Gi prosjektet ditt et passende navn, f.eks. "Virtuell tur i Læringslabben" eller "360° klasseromsreise".
+
+4. Legg til 360°-bilder eller videoer
+Klikk på "Add Media" eller "Legg til innhold" for å laste opp dine 360°-bilder eller videoer til prosjektet.
+
+Velg bildene eller videoene du har forberedt, og last dem opp til Canvas.
+
+Organiser innholdet ditt i ønsket rekkefølge hvis du planlegger å lage en serie av 360°-vandringsopplevelser.
+
+5. Sett opp navigasjon mellom bilder/videoer
+Legg til navigasjonspunkter: For å skape en flytende og sammenhengende opplevelse, kan du legge til navigasjonspunkter mellom bildene/videoene. Dette gjør at brukeren kan bevege seg fra et punkt i rommet til et annet, slik at de kan gå gjennom hele 360°-vandringsopplevelsen.
+
+Legg til hotspots: Bruk hotspots for å lage interaktive elementer i vandringen. Hotspots kan være knapper eller områder som brukeren kan klikke på for å få mer informasjon, for eksempel bilder, tekst, eller lenker.
+
+6. Tilpass visningen
+Stil og tema: Velg et passende tema for 360°-vandringen din. HP5 lar deg tilpasse bakgrunner, farger og layout slik at det passer med læringsinnholdet.
+
+Interaktivitet: Gjør opplevelsen mer interaktiv ved å legge til quiz-spørsmål, forklarende tekst eller tilleggsinformasjon ved hotspots.
+
+7. Test vandringen
+Før du publiserer, test 360°-vandringsopplevelsen din for å sikre at alt fungerer som forventet.
+
+Sjekk navigasjonen mellom punktene, se om videoene/bildene er korrekt plassert, og at eventuelle interaktive elementer fungerer.
+
+8. Publiser opplevelsen
+Når du er fornøyd med 360°-vandringsopplevelsen, kan du publisere den på Canvas.
+
+Velg om du vil at opplevelsen skal være tilgjengelig for en spesifikk gruppe eller offentlig tilgjengelig.
+
+Del en lenke til opplevelsen slik at andre kan utforske den.
+
+
+Tips for best mulig opplevelse
+Bruk høyoppløselige bilder/videoer: Sørg for at bildene eller videoene du bruker har høy oppløsning for en best mulig visuell opplevelse.
+
+Hold navigasjonen enkel: Unngå for mange navigasjonspunkter som kan gjøre opplevelsen rotete. Hold det oversiktlig for brukerne.
+
+Test på ulike enheter: Sjekk at 360°-vandringsopplevelsen fungerer på forskjellige enheter, som PC, mobiltelefoner og VR-briller, for å sikre at den er tilgjengelig for alle brukere.
+
+
+Bruksområder i Læringslaben
+Virtuelle klasserom: Lag en virtuell tur av et klasserom eller en læringslab som kan brukes til fjernundervisning.
+
+Ekskursjoner og feltarbeid: Lag virtuelle ekskursjoner til steder som kan være vanskelig å besøke fysisk, som laboratorier, museer eller historiske steder.
+
+Presentasjoner og prosjekter: Bruk 360°-vandringsopplevelsen som en interaktiv måte å presentere et prosjekt eller emne på for klassen.
