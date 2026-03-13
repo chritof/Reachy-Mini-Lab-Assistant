@@ -10,7 +10,7 @@ Logikken ligger i en STT-engine.
 class ApiSTTService:
 
     def __init__(self):
-        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8001")
 
     def transcribe_wav(self, wav_path: Path) -> str:
         with wav_path.open("rb") as f:

@@ -7,7 +7,7 @@ Service-lag for TTS som kjører på backend-API (VM).
 class ApiTTSService:
 
     def __init__(self):
-        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8001")
 
     def synthesize(self, text: str) -> bytes:
         resp = httpx.post(

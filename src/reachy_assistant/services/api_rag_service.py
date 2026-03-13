@@ -9,7 +9,7 @@ from reachy_assistant.rag.rag_engine import RagResult, RagHit
 class ApiRagService:
 
     def __init__(self):
-        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+        self.base_url = os.getenv("BACKEND_URL", "http://localhost:8001")
 
     def ask(self, question: str) -> RagAnswer:
         resp = httpx.post(

@@ -23,23 +23,28 @@ class ReachyRecorder:
         chunks: list[np.ndarray] = []
         t_end = time.time() + self.duration_sec
 
-        while time.time() < t_end:
-            samples = self.mini.media.get_audio_sample()
+        try:
+            while time.time() < t_end:
+                samples = self.mini.media.get_audio_sample()
 
-            if samples is None:
-                continue
+                if samples is None:
+                    continue
 
-            samples = np.asarray(samples, dtype=np.float32)
+                samples = np.asarray(samples, dtype=np.float32)
 
-            if samples.ndim == 0 or samples.size == 0:
-                continue
+                if samples.ndim == 0 or samples.size == 0:
+                    continue
 
-            if samples.ndim == 1:
-                samples = samples.reshape(-1, 1)
+                # If multichannel, force mono by taking first channel
+                if samples.ndim > 1:
+                    samples = samples[:, 0]
+                else:
+                    samples = samples.flatten()
 
-            chunks.append(samples)
+                chunks.append(samples)
 
-        self.mini.media.stop_recording()
+        finally:
+            self.mini.media.stop_recording()
 
         if not chunks:
             raise RuntimeError("No valid audio chunks captured from Reachy.")
@@ -50,7 +55,7 @@ class ReachyRecorder:
         self.out_path.parent.mkdir(parents=True, exist_ok=True)
 
         with wave.open(str(self.out_path), "wb") as wf:
-            wf.setnchannels(pcm.shape[1])
+            wf.setnchannels(1)
             wf.setsampwidth(2)
             wf.setframerate(sr_in)
             wf.writeframes(pcm.tobytes())

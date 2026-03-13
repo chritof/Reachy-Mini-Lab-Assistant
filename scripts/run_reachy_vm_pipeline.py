@@ -26,7 +26,7 @@ RAG_INDEX_DIR = PROJECT_ROOT / "data" / "rag_index"
 
 def main():
 
-    with ReachyMini(connection_mode="auto") as mini:
+    with ReachyMini(connection_mode="localhost_only", port=8000) as mini:
         recorder = ReachyRecorder(mini=mini,out_path=DATA_DIR / "input.wav")
         player = ReachyPlayer(mini=mini)
 
