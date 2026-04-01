@@ -1,32 +1,45 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
 .venv/
+venv/
+ENV/
+env/
+backend/venv/
 
-
-# Models
-models/*
-!models/.gitkeep
+# Packaging
+*.egg-info/
+build/
+dist/
 
 # Environment
 .env
 
-# IDE
+# IDE / editor
 .idea/
+.vscode/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Project-specific
+# Local model artifacts
+models/*
+!models/.gitkeep
+
+# Generated retrieval indexes / vector stores
 data/rag_index/
+data/rag_openai_store/
 
+# Runtime audio output
+data/audio/input.wav
+data/audio/recordings/
+data/audio/tts/
 
-# Python virtualenv
-backend/venv/
-venv/
-.venv/
-
-
-# python packaging
-*.egg-info/

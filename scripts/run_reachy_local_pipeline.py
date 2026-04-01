@@ -1,20 +1,19 @@
-import time
 from pathlib import Path
 
 from reachy_mini import ReachyMini
 
-from reachy_assistant.robot.pipeline.conversation_pipeline import ConversationPipeline
-from reachy_assistant.services.stt_service import STTService
-from reachy_assistant.services.rag_service import RagService
-from reachy_assistant.services.tts_service import TTSService
-
-from reachy_assistant.stt.faster_whisper_silero import FasterWhisperSileroSTT
-from reachy_assistant.rag.rag_engine import RagEngine
 from reachy_assistant.llm.llm_engine import LLMEngine
+from reachy_assistant.rag.rag_engine import RagEngine
+from reachy_assistant.robot.audio.reachy_player import ReachyPlayer
+from reachy_assistant.robot.audio.reachy_recorder import ReachyRecorder
+from reachy_assistant.robot.motion.motion_controller import ReachyMotionController
+from reachy_assistant.robot.pipeline.conversation_pipeline import ConversationPipeline
+from reachy_assistant.services.rag_service import RagService
+from reachy_assistant.services.stt_service import STTService
+from reachy_assistant.services.tts_service import TTSService
+from reachy_assistant.stt.faster_whisper_silero import FasterWhisperSileroSTT
 from reachy_assistant.tts.piper_tts import PiperTTSEngine
 
-from reachy_assistant.robot.audio.reachy_recorder import ReachyRecorder
-from reachy_assistant.robot.audio.reachy_player import ReachyPlayer
 """
 Pipeline-logikk som bruker lokale ressurser + Reachy Mini mikrofon og høyttaler.
 Kjøres koblet opp til Reachy Mini Lite med reachy-mini-daemon kjørende.
@@ -26,20 +25,17 @@ MODELS_DIR = PROJECT_ROOT / "models"
 RAG_INDEX_DIR = PROJECT_ROOT / "data" / "rag_index"
 
 
-def main():
-
+def main() -> None:
     with ReachyMini(connection_mode="auto") as mini:
         recorder = ReachyRecorder(mini=mini, out_path=DATA_DIR / "input.wav")
         player = ReachyPlayer(mini=mini)
+        motion = ReachyMotionController(mini=mini)
 
         stt = STTService(FasterWhisperSileroSTT())
-
-       # rag_engine = RagEngine(index_dir=RAG_INDEX_DIR)
-       # llm_engine = LLMEngine()
         rag = RagService(RagEngine(index_dir=RAG_INDEX_DIR), LLMEngine())
-
-        #tts_engine = PiperTTSEngine(model_path=str(MODELS_DIR))
-        tts = TTSService(PiperTTSEngine(model_path=str(MODELS_DIR / "no_NO-talesyntese-medium.onnx")))
+        tts = TTSService(
+            PiperTTSEngine(model_path=str(MODELS_DIR / "no_NO-talesyntese-medium.onnx"))
+        )
 
         pipeline = ConversationPipeline(
             stt=stt,
@@ -47,12 +43,10 @@ def main():
             tts=tts,
             recorder=recorder,
             player=player,
-            motion=None         # foreløpig None
+            motion=motion,
         )
+        pipeline.run_forever()
 
-        while True:
-            pipeline.run_once()
-            time.sleep(0.1)
 
 if __name__ == "__main__":
     main()

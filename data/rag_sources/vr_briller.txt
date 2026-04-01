@@ -1,0 +1,14 @@
+Tittel: VR briller
+
+Kort beskrivelse:
+VR-briller (Virtual Reality-briller) gir en helt oppslukende opplevelse ved å vise et digitalt 3D-miljø som du kan navigere i, enten ved å bevege hodet eller bruke kontroller. Dette gir en følelse av å være tilstede i et annet univers, noe som gjør det perfekt for spill, trening, utdanning og mer. VR-briller kobles til enten en PC, Mac eller brukes trådløst med mobiltelefoner eller spesifikke VR-plattformer.
+
+Nøkkelpunkter:
+- Pico 4: Et annet trådløst VR-headset med høy oppløsning og god ytelse. Pico 4 fungerer både selvstendig og kan kobles til PC for å spille krevende VR-spill.
+- Spilling: For spill med høy grafikk og detaljerte universer anbefales Meta Quest 2 og Meta Quest 3. De har et stort bibliotek med spill på Meta Store, og kan også kobles til PC for å spille spill fra SteamVR eller Oculus Store.
+- Utdanning og opplæring: Hvis du er ute etter VR for læring, trening eller simuleringer, er Meta Quest 3 et av de beste alternativene, da det tilbyr høy oppløsning og tilgang til en rekke pedagogiske apper og simuleringer. Pico 4 fungerer også godt for utdanningsplattformer og virtuelle turer.
+- PC-tilkobling: Alle våre VR-headset kan kobles til PC eller Mac for å spille avanserte VR-spill. Med Meta Quest 2 og Meta Quest 3 kan du bruke Oculus Link eller Air Link (trådløst) for å koble til PC, mens Pico 4 kan kobles til PC via USB-C for høyere grafikkytelse.
+- SteamVR: En av de største VR-spillplattformene som fungerer med PC-koblede VR-briller som Meta Quest (via Link) og Pico 4.
+
+Søkbare nøkkelord:
+briller, vr-briller, virtual, reality-briller, gir, helt, oppslukende, opplevelse, vise, digitalt, 3d-miljø, navigere

@@ -8,9 +8,9 @@ from dataclasses import dataclass
 class RealtimeConfig:
     api_key: str
     model: str = "gpt-realtime"
-    voice: str = "alloy"
+    voice: str = "ash"
     instructions: str = (
-        "You are Reachy, a concise Norwegian-speaking lab assistant for the Learning Lab."
+        "Du er Reachy, en norsk labassistent på Læringslabben ved HVL. Du hjelper brukere av labben med utstyr og spørsmål knyttet til læringslabben."
     )
     language: str = "no"
     transcription_model: str = "gpt-4o-mini-transcribe"

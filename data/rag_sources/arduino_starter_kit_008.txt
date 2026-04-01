@@ -1,0 +1,10 @@
+Tittel: Arduino Starter Kit 008
+
+Kort beskrivelse:
+Arduino Starter Kit 008 er en introduksjonspakke for å lære elektronikk og programmering med mikrokontrolleren Arduino UNO. Kitet er egnet for nybegynnere, studenter og lærere som ønsker å lære gjennom praktiske eksperimenter og prosjekter. Hva inneholder Arduino Starter Kit 008?
+
+Nøkkelpunkter:
+- Kitet inneholder blant annet:
+
+Søkbare nøkkelord:
+arduino, starter, kit, introduksjonspakke, lære, elektronikk, programmering, mikrokontrolleren, uno, kitet, egnet, nybegynnere

@@ -1,0 +1,14 @@
+Tittel: DisplayPort til HDMI-adapter
+
+Kort beskrivelse:
+Adapter for tilkobling av PC til skjerm, TV eller projektor DisplayPort til HDMI-adapteren gjør det mulig å koble en PC eller bærbar med DisplayPort-utgang til en HDMI-inngang på f.eks. en skjerm, projektor eller TV. Dette er nyttig i undervisning, presentasjoner og alt arbeid som krever ekstern visning.
+
+Nøkkelpunkter:
+- 1 stk DisplayPort (hann) til HDMI (hunn) overgang
+- Krever separat HDMI-kabel til den eksterne skjermen
+- Slik bruker du adapteren
+- Koble DisplayPort-delen inn i PC-en eller laptopens DisplayPort-utgang.
+- Denne porten har ofte et lite hakk – skyv den inn til det "klikker".
+
+Søkbare nøkkelord:
+displayport, hdmi-adapter, adapter, tilkobling, skjerm, projektor, hdmi-adapteren, gjør, mulig, koble, bærbar, displayport-utgang

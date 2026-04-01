@@ -1,0 +1,21 @@
+Tittel: Apple iPad 6. generasjon (2018-modell)
+
+Kort beskrivelse:
+Nettbrett for notater, tegning, video og læringsapper iPad 6th gen er et allsidig nettbrett med touchskjerm, støtte for Apple Pencil (1. gen) og lang batteritid. Den passer utmerket til notatskriving, skisser, PDF-lesing, videomøter, medieproduksjon og pedagogiske apper. Nettbrettet er satt opp med iOS-programvare fra HVL Læringslab, med tilpassede apper og innstillinger.
+
+Nøkkelpunkter:
+- Skjerm: 9,7" Retina (2048 x 1536)
+- Lagring: 32 GB eller 128 GB (avhengig av modell)
+- Apple Pencil-støtte: Ja, 1. generasjon
+- Kamera: 8 MP bak, 1,2 MP front (FaceTime HD)
+- Lading og synkronisering: Lightning-port
+
+Bruk:
+1. Trykk på Hjem-knappen eller sideknappen for å vekke skjermen.
+2. Skriv inn kode eller bruk Face ID (hvis aktivert).
+3. Tilgang til Wi-Fi: Velg eduroam eller HVL-gjest → logg inn med FEIDE-bruker.
+4. Åpne apper via Hjem-skjermen (f.eks. Notater, iMovie, Pages, Teams).
+5. Apple Pencil: Koble til første gang ved å plugge den i Lightning-porten.
+
+Søkbare nøkkelord:
+apple, ipad, generasjon, 2018-modell, nettbrett, notater, tegning, video, læringsapper, 6th, gen, allsidig

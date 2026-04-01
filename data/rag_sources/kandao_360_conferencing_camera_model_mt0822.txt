@@ -1,0 +1,21 @@
+Tittel: Kandao 360 Conferencing Camera Model MT0822
+
+Kort beskrivelse:
+Profesjonelt 360-graders konferansekamera for møter og videokonferanser Kandao 360 Conferencing Camera Model MT0822 er et 360-graders konferansekamera designet for å fange alle deltakerne i et møte. Med HD-video, støtte for virtuelle møter, og muligheten for å tilpasse visningen etter behov, er dette kameraet ideelt for interaktive møter, klasseromsundervisning, og fjernundervisning i Læringslabben.
+
+Nøkkelpunkter:
+- 360-graders videoopptak i 1080p HD for å fange hele rommet
+- Automatisk panorering og tilpasning av visning basert på deltakernes plassering
+- Enkel USB-tilkobling for plug-and-play på PC eller Mac
+- Støtte for alle ledende videokonferanseplattformer som Zoom, Teams, Skype og Google Meet
+- Innebygd mikrofon og høyttaler for interaktive møter uten ekstra utstyr
+
+Bruk:
+1. Koble til kameraet:Koble USB-kabelen fra kameraet til en ledig USB-port på PC-en eller Mac-en. Kameraet vil automatisk bli gjenkjent av systemet.
+2. Installere programvare (valgfritt): Hvis ønskelig, kan du installere den Kandao-appen for ekstra funksjoner som tilpasning av kameravinkler og bildekvalitet.
+3. Start videokonferansen: Åpne videokonferanseplattformen du bruker (Zoom, Microsoft Teams, Google Meet, etc.) og velg Kandao 360 Camera som kameraenhet.
+4. Justere visning: Kameraet justerer automatisk visningen basert på hvor deltakerne er i rommet, men du kan manuelt justere visningen ved å bruke appen eller videokonferanseplattformens innstillinger.
+5. Bruk mikrofonen og høyttaleren: Kameraet har innebygd mikrofon og høyttaler for å gi fullstendig lyd- og bildegjennomgang uten behov for eksterne enheter.
+
+Søkbare nøkkelord:
+kandao, conferencing, camera, model, mt0822, profesjonelt, 360-graders, konferansekamera, møter, videokonferanser, designet, fange

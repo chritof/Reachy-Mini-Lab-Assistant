@@ -1,0 +1,491 @@
+Reachy Mini Lab Assistant: Architecture and Module Notes
+========================================================
+
+This document explains:
+- the original repo structure and preexisting modules
+- the older turn-based assistant pipeline
+- the newer OpenAI Realtime pipeline
+- the parallel OpenAI/Qdrant-style RAG path
+- how the modules relate to each other
+
+
+1. High-level architecture
+--------------------------
+
+This repo now contains more than one architectural direction:
+
+1. The original turn-based pipeline
+   This is the system built around separate modules for recording, STT, RAG, LLM,
+   TTS, and playback.
+
+2. The newer Realtime pipeline
+   This is a streaming conversation path built for OpenAI Realtime, where audio
+   goes in continuously and audio comes back continuously.
+
+3. The parallel newer RAG path
+   This is a separate retrieval implementation inspired by the similar parent repo.
+   It exists alongside the original RAG and does not replace it.
+
+The important design decision is that these systems coexist. The newer code was
+added in parallel rather than replacing your older work.
+
+
+2. Preexisting repo structure
+-----------------------------
+
+Main code lives in:
+- src/reachy_assistant/
+
+Important existing areas before the Realtime work:
+- src/reachy_assistant/robot/
+- src/reachy_assistant/services/
+- src/reachy_assistant/stt/
+- src/reachy_assistant/tts/
+- src/reachy_assistant/rag/
+- src/reachy_assistant/llm/
+- src/reachy_assistant/pc/
+
+
+3. Original turn-based pipeline
+-------------------------------
+
+Main class:
+- src/reachy_assistant/robot/pipeline/conversation_pipeline.py
+
+What it does:
+- enters IDLE
+- records one audio turn
+- transcribes the WAV
+- runs RAG / answer generation
+- synthesizes a WAV response
+- plays the WAV
+- resets state and waits for the next turn
+
+Conversation states are defined in:
+- src/reachy_assistant/robot/pipeline/states.py
+
+This architecture is modular, but every stage is separate, which increases total
+latency and makes the interaction feel more step-by-step.
+
+
+4. Preexisting audio modules
+----------------------------
+
+PC audio:
+- src/reachy_assistant/pc/audio/recorder.py
+- src/reachy_assistant/pc/audio/player.py
+
+What they do:
+- PcRecorder records microphone audio into a WAV file
+- PcPlayer plays WAV bytes on the PC
+
+Reachy audio:
+- src/reachy_assistant/robot/audio/reachy_recorder.py
+- src/reachy_assistant/robot/audio/reachy_player.py
+
+What they do:
+- ReachyRecorder records audio from Reachy and writes a WAV file
+- ReachyPlayer plays WAV bytes through Reachy’s audio output
+
+Why these were not reused directly for Realtime:
+- these are file/turn oriented
+- Realtime is stream oriented
+- Realtime needs chunk-by-chunk audio in both directions, not whole WAV turns
+
+
+5. Preexisting service modules
+------------------------------
+
+Files:
+- src/reachy_assistant/services/stt_service.py
+- src/reachy_assistant/services/tts_service.py
+- src/reachy_assistant/services/rag_service.py
+
+What they do:
+- STTService wraps an STT engine and exposes transcribe_wav()
+- TTSService wraps a TTS engine and exposes synthesize()
+- RagService wraps retrieval + answer generation behavior
+
+Purpose:
+- provide stable interfaces above specific model implementations
+- keep the pipeline less tightly coupled to any one backend
+
+
+6. Preexisting STT modules
+--------------------------
+
+Main existing STT engine:
+- src/reachy_assistant/stt/faster_whisper_silero.py
+
+Other older/experimental STT-related code also exists under:
+- src/reachy_assistant/Fullstendig_stt/
+- src/reachy_assistant/stt/
+
+Purpose:
+- local speech-to-text processing using non-Realtime models
+
+
+7. Preexisting TTS modules
+--------------------------
+
+Main existing TTS engine:
+- src/reachy_assistant/tts/piper_tts.py
+
+Purpose:
+- local text-to-speech using Piper
+
+
+8. Preexisting LLM and RAG modules
+----------------------------------
+
+LLM:
+- src/reachy_assistant/llm/llm_engine.py
+
+Original RAG:
+- src/reachy_assistant/rag/rag_engine.py
+- build helpers in src/reachy_assistant/rag/build*.py
+
+What this original RAG path does:
+- uses the repo’s earlier LlamaIndex/Ollama-based approach
+- retrieves documentation chunks
+- passes context to the LLM
+- returns an answer object
+
+This is still present and untouched.
+
+
+9. Preexisting motion modules
+-----------------------------
+
+Files:
+- src/reachy_assistant/robot/motion/gestures.py
+- src/reachy_assistant/robot/motion/motion_controller.py
+
+Originally:
+- gestures.py only had a small number of direct movement functions
+
+Now:
+- gestures.py also contains state-like poses for Realtime
+- motion_controller.py provides a small controller that maps assistant state to gestures
+
+
+10. Realtime architecture
+-------------------------
+
+Main folder:
+- src/reachy_assistant/realtime/
+
+Purpose:
+- provide a streaming, lower-latency assistant path built around OpenAI Realtime
+
+Core idea:
+- open one websocket session
+- stream user audio continuously
+- let server-side VAD detect turns
+- receive response audio continuously
+- play assistant audio while it is being generated
+
+This matches Realtime much more closely than the original turn-based pipeline.
+
+
+11. Realtime modules
+--------------------
+
+11.1 RealtimeConfig
+File:
+- src/reachy_assistant/realtime/config.py
+
+What it does:
+- reads model, voice, language, VAD, chunking, and sample-rate settings from env
+- stores runtime configuration for the Realtime engine
+
+
+11.2 OpenAIRealtimeClient
+File:
+- src/reachy_assistant/realtime/client.py
+
+What it does:
+- wraps the OpenAI async client
+- creates the Realtime websocket connection
+
+
+11.3 audio.py
+File:
+- src/reachy_assistant/realtime/audio.py
+
+What it does:
+- converts audio to mono
+- resamples audio
+- encodes float32 audio into PCM16/base64 for outgoing Realtime input
+- decodes incoming PCM16/base64 back into float32 audio arrays
+
+
+11.4 io_base.py
+File:
+- src/reachy_assistant/realtime/io_base.py
+
+What it does:
+- defines the abstract streaming interfaces:
+  RealtimeAudioSource
+  RealtimeAudioSink
+
+Why it matters:
+- lets the same Realtime engine run on either PC hardware or Reachy hardware
+
+
+11.5 PC Realtime audio
+Files:
+- src/reachy_assistant/realtime/pc_audio.py
+
+Classes:
+- PcRealtimeAudioSource
+- PcRealtimeAudioSink
+
+What they do:
+- source reads live microphone chunks from the PC
+- sink plays streamed assistant audio on the PC
+
+
+11.6 Reachy Realtime audio
+Files:
+- src/reachy_assistant/realtime/reachy_audio.py
+
+Classes:
+- ReachyRealtimeAudioSource
+- ReachyRealtimeAudioSink
+
+What they do:
+- source streams microphone audio from Reachy
+- sink streams assistant audio to Reachy speakers
+
+Why they are separate from the older robot audio classes:
+- the older classes are WAV/turn based
+- these are live stream based
+
+
+11.7 RealtimeConversationEngine
+File:
+- src/reachy_assistant/realtime/engine.py
+
+This is the core Realtime class.
+
+What it does:
+- opens the source and sink
+- opens the OpenAI Realtime session
+- configures instructions, modalities, voice, transcription, and VAD
+- continuously sends input audio chunks
+- continuously receives Realtime events
+- plays response audio chunks immediately
+- logs transcript events
+- triggers motion hooks
+
+This class is the actual live conversation loop.
+
+
+11.8 RealtimeConversationPipeline
+File:
+- src/reachy_assistant/realtime/pipeline.py
+
+What it does:
+- simple synchronous wrapper around the async engine
+- gives a plain run() method
+
+
+11.9 PC Realtime entrypoint
+File:
+- src/reachy_assistant/realtime/main.py
+
+What it does:
+- builds a PC source and sink
+- builds the engine
+- runs the Realtime pipeline on a normal computer
+
+Current default main entrypoint:
+- src/reachy_assistant/main.py
+
+This currently forwards to the PC Realtime main.
+
+
+12. Realtime motion integration
+-------------------------------
+
+Motion controller:
+- src/reachy_assistant/robot/motion/motion_controller.py
+
+Gesture file:
+- src/reachy_assistant/robot/motion/gestures.py
+
+Reachy Realtime wrapper:
+- src/reachy_assistant/robot/pipeline/realtime_pipeline.py
+
+What happens:
+- ReachyRealtimePipeline builds Reachy audio source/sink
+- it also creates a ReachyMotionController
+- the motion controller is passed into RealtimeConversationEngine
+
+Current event-to-motion mapping in the Realtime engine:
+- startup -> idle
+- input_audio_buffer.speech_started -> listening
+- input_audio_buffer.speech_stopped -> thinking
+- response.audio.delta -> speaking
+- conversation.item.input_audio_transcription.completed -> acknowledge
+- response.done or response.audio_transcript.done -> idle
+
+Practical meaning:
+- Reachy can now move according to what phase of conversation is happening
+
+
+13. Reachy hardware Realtime runner
+-----------------------------------
+
+Script:
+- scripts/run_reachy_realtime.py
+
+What it does:
+- loads environment values
+- creates ReachyMini
+- builds ReachyRealtimePipeline
+- runs the live Realtime session on robot hardware
+
+This is the current direct hardware entrypoint for Realtime.
+
+
+14. Parallel newer RAG path
+---------------------------
+
+Folder:
+- src/reachy_assistant/rag_openai/
+
+Purpose:
+- add a second RAG implementation inspired by the similarly named parent repo
+- keep it alongside the original rag/ implementation
+- do not remove the original RAG path
+
+This is separate from:
+- src/reachy_assistant/rag/
+
+
+15. rag_openai modules
+----------------------
+
+15.1 chunking.py
+File:
+- src/reachy_assistant/rag_openai/chunking.py
+
+Contains:
+- ChunkRecord
+- chunk_text()
+- iter_content_files()
+- build_chunks()
+- infer_category()
+
+What it does:
+- reads .txt and .md documents
+- chunks them into overlapping segments
+- tags them with a simple category derived from folder structure
+
+
+15.2 embeddings.py
+File:
+- src/reachy_assistant/rag_openai/embeddings.py
+
+Class:
+- OpenAIEmbeddings
+
+What it does:
+- uses OpenAI embeddings, default text-embedding-3-small
+- provides embed() and embed_one()
+
+
+15.3 store.py
+File:
+- src/reachy_assistant/rag_openai/store.py
+
+Class:
+- QdrantVectorStore
+
+What it does:
+- manages a local Qdrant collection
+- supports upsert, search, delete-by-file, and empty checks
+
+
+15.4 build.py
+File:
+- src/reachy_assistant/rag_openai/build.py
+
+What it does:
+- reads documents from data/rag_sources by default
+- builds chunk records
+- embeds the chunks with OpenAI embeddings
+- writes them into a local Qdrant store in data/rag_openai_store
+
+
+15.5 search.py
+File:
+- src/reachy_assistant/rag_openai/search.py
+
+Class:
+- OpenAIRagSearch
+
+What it does:
+- embeds a query
+- searches the Qdrant vector store
+- returns matches and a combined context string
+- returns a fallback answer if nothing relevant is found
+
+
+16. Relationship between the old and new systems
+------------------------------------------------
+
+Original turn-based system:
+- modular
+- explicit STT, RAG, LLM, TTS stages
+- more controllable in some ways
+- higher latency
+
+Realtime system:
+- much closer to how OpenAI Realtime is designed to be used
+- lower latency
+- natural event-based audio interaction
+- easier live conversation architecture
+
+Parallel rag_openai system:
+- closer in style to the parent repo’s newer retrieval approach
+- not yet fully wired into the Realtime engine as a tool
+- intended as an additional retrieval option, not a replacement
+
+
+17. Likely future architecture
+------------------------------
+
+The most sensible future setup is probably:
+- Realtime handles the live conversation loop
+- local tools provide knowledge retrieval and robot actions
+- motion stays event-driven
+
+In practice that means:
+- keep Realtime for speech in/out
+- expose RAG lookup as a callable local tool
+- expose robot actions as callable local tools when needed
+
+That would combine:
+- the low-latency conversation benefits of Realtime
+- the local knowledge and robot control logic from your existing project
+
+
+18. Current status summary
+--------------------------
+
+Already present and working at code level:
+- original turn-based pipeline
+- Realtime engine and pipeline structure
+- PC Realtime path
+- Reachy Realtime runner script
+- Realtime gesture integration
+- parallel rag_openai package
+
+Still not fully integrated:
+- tool-calling bridge between Realtime and local RAG
+- tool-calling bridge between Realtime and richer robot actions
+- production hardening such as reconnect and advanced error recovery
+

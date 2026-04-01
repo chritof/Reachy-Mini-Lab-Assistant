@@ -1,0 +1,14 @@
+Tittel: VUZE XR VR kamera
+
+Kort beskrivelse:
+Vuze XR er et hybridkamera som kombinerer 360°- og 180°-opptak i én enhet, og er spesielt designet for å skape VR180-innhold med stereoskopisk 3D-effekt. Dette gjør det til et attraktivt valg for både amatører og profesjonelle som ønsker å lage engasjerende VR-videoer uten å investere i flere separate kameraer.
+
+Nøkkelpunkter:
+- Dual-modus design: Veksler enkelt mellom 360° (2D) og 180° (3D) ved å justere linsene.
+- Linsesystem: To 12 MP Sony IMX-378 sensorer med f/2.4 210° fisheye-linser.
+- Bildebehandling: Innebygd videostabilisering i appen; desktop redigeringsprogrammet Vuze XR Studio anbefales for 5.7K-filer.
+- Live-streaming: Støtter 4K live-streaming via appen.
+- Byggekvalitet: Kompakt og robust design, lett å bruke.
+
+Søkbare nøkkelord:
+vuze, kamera, hybridkamera, kombinerer, opptak, enhet, spesielt, designet, skape, vr180-innhold, stereoskopisk, 3d-effekt

@@ -1,0 +1,21 @@
+Tittel: KUBO Coding+ med brikkesett
+
+Kort beskrivelse:
+Robotikk og programmering for de yngste – uten skjerm Hva er KUBO Coding+?
+
+Nøkkelpunkter:
+- 1 stk. KUBO-robot
+- Brikkesett (TagTiles) for:
+- Løkker (repeat)
+- Subrutiner (funksjoner)
+- Avanserte bevegelser
+
+Bruk:
+1. Lad roboten
+2. Bruk medfølgende USB-kabel til å lade KUBO-roboten før bruk.
+3. LED-lys viser når roboten er fulladet.
+4. Plasser roboten på en startbrikke
+5. Sett roboten på "Start"-brikken og den vil aktivere sin RFID-leser.
+
+Søkbare nøkkelord:
+kubo, coding, brikkesett, robotikk, programmering, yngste, skjerm, hva, stk, kubo-robot, tagtiles, løkker

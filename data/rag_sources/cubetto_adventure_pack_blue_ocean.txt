@@ -1,0 +1,18 @@
+Tittel: Cubetto Adventure Pack: Blue Ocean
+
+Kort beskrivelse:
+Cubetto Blue Ocean er en temabasert utvidelsespakke til Cubetto-programmeringsroboten, der barna får utforske havets verden. Gjennom lek og enkel fysisk programmering lærer barna logisk tenkning, kartlesing og problemløsning – uten behov for skjerm. Pakken brukes i barnehage og tidlig skolealder, og egner seg godt i tverrfaglige læringsopplegg innen naturfag, teknologi og geografi.
+
+Nøkkelpunkter:
+- Prøv å søke etter:
+- Gjør gjerne egenvurdering etterpå: Hva fungerte i programmet? Hva ville de gjort annerledes?
+
+Bruk:
+1. Legg ut Blue Ocean-kartet på et flatt underlag.
+2. Start med å lese en oppgave fra historieheftet, f.eks.: “Hjelp Cubetto å redde en skilpadde som har satt seg fast i fiskegarn.”
+3. Sett Cubetto på startpunktet og planlegg ruten på kartet.
+4. Bruk programmeringsklossene for å angi retninger på brettet.
+5. Trykk GO – og se om Cubetto klarer å løse oppgaven.
+
+Søkbare nøkkelord:
+cubetto, adventure, pack, blue, ocean, temabasert, utvidelsespakke, cubetto-programmeringsroboten, der, barna, får, utforske

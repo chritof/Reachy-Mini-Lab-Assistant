@@ -1,0 +1,21 @@
+Tittel: LaCie Mobile Drive 5TB (USB-C)
+
+Kort beskrivelse:
+Bærbar lagring med høy kapasitet og moderne tilkobling LaCie Mobile Drive 5TB er en ekstern harddisk med USB-C-tilkobling og hele 5 terabyte lagringsplass. Den egner seg perfekt for sikkerhetskopiering, videoprosjekter, store mediefiler og som lagring for studenter og ansatte ved Læringslaben.
+
+Nøkkelpunkter:
+- Lagringskapasitet: 5 TB (tilsvarer ca. 150 HD-filmer eller 1 million bilder)
+- Tilkobling: USB-C (inkluderer også USB-C til USB-A kabel)
+- Filformatering: Leveres ofte i exFAT (kompatibel med både Mac og Windows)
+- Skal harddisken kun brukes med Mac: formater til APFS eller Mac OS Extended (Journaled).
+- På Mac: Høyreklikk på disken og velg "Løs ut" før du kobler fra.
+
+Bruk:
+1. Koble til
+2. Bruk USB-C kabelen direkte til nyere Macer eller PC-er.
+3. Bruk adapter eller medfølgende USB-A-kabel hvis datamaskinen ikke har USB-C.
+4. Formater om ved behov
+5. Skal harddisken kun brukes med Mac: formater til APFS eller Mac OS Extended (Journaled).
+
+Søkbare nøkkelord:
+lacie, mobile, drive, 5tb, usb-c, bærbar, lagring, kapasitet, moderne, tilkobling, ekstern, harddisk

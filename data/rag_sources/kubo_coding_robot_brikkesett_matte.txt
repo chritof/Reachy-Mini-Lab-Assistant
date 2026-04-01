@@ -1,0 +1,14 @@
+Tittel: KUBO Coding (robot + brikkesett + matte)
+
+Kort beskrivelse:
+Skjermfri koding for barn gjennom lek og utforskning Hva er KUBO Coding?
+
+Nøkkelpunkter:
+- 1 stk. KUBO-robot med oppladbart batteri
+- Brikkesett (TagTiles) med:
+- Eksempel: [Start] → [Frem] → [Frem] → [Sving venstre] → [Frem] → [Stopp]
+- KUBO Coding: Grunnleggende bevegelser og rekkefølge
+- KUBO Coding+: Avanserte konsepter som løkker og funksjoner
+
+Søkbare nøkkelord:
+kubo, coding, robot, brikkesett, matte, skjermfri, koding, barn, lek, utforskning, hva, stk

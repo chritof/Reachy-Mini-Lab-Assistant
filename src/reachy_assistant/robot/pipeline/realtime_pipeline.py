@@ -6,6 +6,7 @@ from reachy_assistant.realtime.config import RealtimeConfig
 from reachy_assistant.realtime.engine import RealtimeConversationEngine
 from reachy_assistant.realtime.pipeline import RealtimeConversationPipeline
 from reachy_assistant.realtime.reachy_audio import ReachyRealtimeAudioSink, ReachyRealtimeAudioSource
+from reachy_assistant.robot.motion.motion_controller import ReachyMotionController
 
 
 @dataclass
@@ -16,5 +17,11 @@ class ReachyRealtimePipeline:
     def build(self) -> RealtimeConversationPipeline:
         source = ReachyRealtimeAudioSource(mini=self.mini)
         sink = ReachyRealtimeAudioSink(mini=self.mini)
-        engine = RealtimeConversationEngine(config=self.config, source=source, sink=sink)
+        motion = ReachyMotionController(mini=self.mini)
+        engine = RealtimeConversationEngine(
+            config=self.config,
+            source=source,
+            sink=sink,
+            motion=motion,
+        )
         return RealtimeConversationPipeline(engine=engine)

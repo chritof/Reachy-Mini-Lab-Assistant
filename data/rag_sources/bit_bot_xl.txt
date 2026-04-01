@@ -1,0 +1,21 @@
+Tittel: Bit:Bot XL
+
+Kort beskrivelse:
+Bit:Bot XL er et effektivt verktøy for å kombinere programmering, problemløsing og kreativ utforsking i undervisningen. Gjennom praktiske aktiviteter og eksperimentering får elever og studenter oppleve hvordan kode påvirker fysisk teknologi i sanntid. Tverrfaglighet: Bit:Bot XL kan brukes i fag som matematikk, naturfag, teknologi, kunst og håndverk – og spesielt i programmering og teknologiundervisning.
+
+Nøkkelpunkter:
+- Bit:Bot XL er et effektivt verktøy for å kombinere programmering, problemløsing og kreativ utforsking i undervisningen. Gjennom praktiske aktiviteter og eksperimentering får elever og studenter oppleve hvordan kode påvirker fysisk teknologi i sanntid.
+- Læringsutbytte og anvendelse:
+- Tverrfaglighet: Bit:Bot XL kan brukes i fag som matematikk, naturfag, teknologi, kunst og håndverk – og spesielt i programmering og teknologiundervisning.
+- Koding i praksis: Elever lærer grunnleggende programmeringslogikk (sekvens, løkker, betingelser) ved å skrive kode som styrer robotens bevegelser, lys og sensorer.
+- Problemløsing og algoritmisk tenkning: Gjennom konkrete utfordringer (som å følge en linje, unngå hindringer eller kjøre en bestemt rute) utvikler elever evnen til å analysere, teste og feilsøke.
+
+Bruk:
+1. Sett inn micro:bit i fronten av Bit:Bot XL, med LED-skjermen vendt utover.
+2. Koble til strøm:
+3. Slå på batteriboksen på undersiden. Pass på at batteriene er fulladet.
+4. Programmer micro:bit:
+5. Bruk en PC og gå til makecode.microbit.org.
+
+Søkbare nøkkelord:
+bit, bot, effektivt, verktøy, kombinere, programmering, problemløsing, kreativ, utforsking, undervisningen, praktiske, aktiviteter

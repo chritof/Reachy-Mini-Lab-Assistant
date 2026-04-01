@@ -1,0 +1,14 @@
+Tittel: BitBot Kit for micro:bit
+
+Kort beskrivelse:
+BitBot er en lettbygget, programmerbar robotbil utviklet for å lære barn og nybegynnere grunnleggende koding og elektronikk. Med støtte for Microsoft MakeCode og Python, tilbyr BitBot en praktisk og engasjerende måte å utforske robotikk og programmering på. BitBot er en kompakt robotbil designet for BBC micro:bit. Den er utstyrt med to motorer, LED-lys, linjesensorer og en buzzer, og kan programmeres til å utføre ulike oppgaver som linjefølgere, fjernstyrte biler eller interaktive lys- og lydprosjekter.
+
+Nøkkelpunkter:
+- BitBot Kit inkluderer følgende komponenter:
+- BitBot hovedkort: Inneholder motorer, LED-lys, linjesensorer og buzzer.
+- Hjul og aksler: For å montere robotens bevegelige deler.
+- Koblingsbrett (breadboard) og ledninger: For enkel tilkobling av eksterne komponenter.
+- Batteriholder og batterier: For trådløs drift av roboten.
+
+Søkbare nøkkelord:
+bitbot, kit, micro, bit, lettbygget, programmerbar, robotbil, utviklet, lære, barn, nybegynnere, grunnleggende

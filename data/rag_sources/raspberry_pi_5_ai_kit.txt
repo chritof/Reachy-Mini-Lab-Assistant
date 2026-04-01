@@ -1,0 +1,21 @@
+Tittel: Raspberry Pi 5 AI Kit
+
+Kort beskrivelse:
+Raspberry Pi 5 AI Kit er en komplett pakke med en kraftig minidatamaskin og støtte for kunstig intelligens (AI). Den er ideell for eksperimentering med programmering, datasyn, maskinlæring og automatisering. Kitet inkluderer Raspberry Pi 5, strømforsyning, kabler, kjøling og ofte en forhåndsinstallert SD-kort med operativsystem.
+
+Nøkkelpunkter:
+- Koble opp utstyret:
+- Logg inn og start:
+- Jobb med AI:
+- Installer/bruk verktøy som:
+- Lagre prosjekter:
+
+Bruk:
+1. Koble opp utstyret:
+2. Tilkoble skjerm via HDMI, tastatur og mus via USB.
+3. Sett inn SD-kortet med ferdig installert Raspberry Pi OS.
+4. Koble til strøm (USB-C) – Pi-en starter automatisk.
+5. Logg inn og start:
+
+Søkbare nøkkelord:
+raspberry, kit, komplett, pakke, kraftig, minidatamaskin, støtte, kunstig, intelligens, ideell, eksperimentering, programmering

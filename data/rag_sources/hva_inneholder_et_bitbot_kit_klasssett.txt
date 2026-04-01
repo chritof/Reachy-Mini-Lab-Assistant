@@ -1,0 +1,14 @@
+Tittel: Hva inneholder et BitBot Kit – Klasssett
+
+Kort beskrivelse:
+Et BitBot Kit klassesett inkluderer flere komplette sett, slik at flere elever kan jobbe samtidig. Hvert kit i klassesettet inneholder: BitBot hovedkort: Inneholder motorer, LED-lys, linjesensorer og buzzer.
+
+Nøkkelpunkter:
+- BitBot hovedkort: Inneholder motorer, LED-lys, linjesensorer og buzzer.
+- Hjul og aksler: For montering av robotens bevegelige deler.
+- Koblingsbrett (breadboard) og ledninger: For å koble til eksterne komponenter og lage kretser.
+- Batteriholder og batterier: For trådløs drift av roboten.
+- Skruer og verktøy: For montering av roboten.
+
+Søkbare nøkkelord:
+hva, inneholder, bitbot, kit, klasssett, klassesett, inkluderer, flere, komplette, sett, slik, elever
