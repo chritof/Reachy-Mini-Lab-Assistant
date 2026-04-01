@@ -28,5 +28,14 @@ class Settings(BaseSettings):
     # TTS
     PIPER_MODEL_PATH: str = "models/no_NO-talesyntese-medium.onnx"
 
+    # OpenAI Realtime
+    OPENAI_API_KEY: str | None = None
+    OPENAI_REALTIME_MODEL: str = "gpt-realtime"
+    OPENAI_REALTIME_VOICE: str = "alloy"
+    OPENAI_REALTIME_LANGUAGE: str = "no"
+    OPENAI_REALTIME_TRANSCRIPTION_MODEL: str = "gpt-4o-mini-transcribe"
+    OPENAI_REALTIME_INPUT_SAMPLE_RATE: int = 24000
+    OPENAI_REALTIME_OUTPUT_SAMPLE_RATE: int = 24000
+
 
 settings = Settings()

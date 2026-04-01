@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+from typing import AsyncIterator, Protocol
+
+import numpy as np
+
+
+class RealtimeAudioSource(Protocol):
+    sample_rate: int
+
+    async def open(self) -> None: ...
+
+    async def close(self) -> None: ...
+
+    async def chunks(self) -> AsyncIterator[np.ndarray]: ...
+
+
+class RealtimeAudioSink(Protocol):
+    async def open(self, sample_rate: int) -> None: ...
+
+    async def write(self, audio: np.ndarray, sample_rate: int) -> None: ...
+
+    async def close(self) -> None: ...
