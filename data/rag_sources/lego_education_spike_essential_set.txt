@@ -1,7 +1,13 @@
-Tittel: LEGO Education SPIKE Essential Set
+﻿Tittel: LEGO Education SPIKE Essential Set
 
 Kort beskrivelse:
 Praktisk læring i programmering, naturfag og problemløsing Hva er SPIKE Essential?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Over 400 LEGO-elementer i sortert oppbevaringsboks

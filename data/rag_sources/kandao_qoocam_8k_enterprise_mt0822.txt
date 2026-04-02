@@ -1,7 +1,13 @@
-Tittel: Kandao QooCam 8K Enterprise (MT0822)
+﻿Tittel: Kandao QooCam 8K Enterprise (MT0822)
 
 Kort beskrivelse:
 Profesjonelt 360°-kamera med 8K live-streaming for møter, undervisning og opptak Kandao QooCam 8K Enterprise er et avansert 360°-kamera med 8K-oppløsning, designet for profesjonell live-streaming og opptak. Med funksjoner som automatisk panorering, flere visningsmoduser og støtte for populære videokonferanseplattformer, er dette kameraet ideelt for interaktive møter, klasseromsundervisning, og fjernundervisning i Læringslabben.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 8K-oppløsning (7680×3840) for krystallklar video
@@ -9,6 +15,7 @@ Nøkkelpunkter:
 - Real-time bildebehandling med SuperSteady stabilisering og usynlig selfie-stang
 - Automatisk og manuell eksponering, hvitbalanse og fargejustering
 - Flere visningsmoduser: Diskusjon, Presentasjon og Global panorama
+
 
 Bruk:
 1. Koble til kameraet:

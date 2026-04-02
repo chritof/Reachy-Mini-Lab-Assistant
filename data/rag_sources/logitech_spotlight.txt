@@ -1,7 +1,13 @@
-Tittel: Logitech Spotlight
+﻿Tittel: Logitech Spotlight
 
 Kort beskrivelse:
 Trådløs presentasjonsfjernkontroll med avanserte funksjoner for undervisning og foredrag Hva er Logitech Spotlight?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Navigering frem og tilbake i presentasjoner
@@ -9,6 +15,7 @@ Nøkkelpunkter:
 - Kompatibel med PowerPoint, Keynote, Google Slides, Prezi m.m.
 - Rekkevidde: opptil 30 meter
 - Oppladbart batteri (via USB-C)
+
 
 Bruk:
 1. Koble til enheten

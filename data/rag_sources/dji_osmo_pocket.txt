@@ -1,7 +1,13 @@
-Tittel: DJI Osmo Pocket
+﻿Tittel: DJI Osmo Pocket
 
 Kort beskrivelse:
 Kompakt 3-aksers stabilisert kamera for video og foto DJI Osmo Pocket er et lite, håndholdt kamera med innebygd gimbal-stabilisator. Det gir profesjonell videokvalitet i en kompakt størrelse og er perfekt for studenter som jobber med film, dokumentasjon, reportasjer, sosiale medier eller undervisningsvideoer.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 3-aksers mekanisk gimbal – gir jevne og stødige opptak
@@ -9,6 +15,7 @@ Nøkkelpunkter:
 - Berøringsskjerm – for live-visning og innstillinger
 - ActiveTrack – følg motivet automatisk
 - Motionlapse og Timelapse – skap dynamiske visuelle fortellinger
+
 
 Bruk:
 1. Slå på kameraet ved å holde inne strømknappen (på siden).

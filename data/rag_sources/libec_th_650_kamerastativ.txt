@@ -1,7 +1,13 @@
-Tittel: Libec TH-650 kamerastativ
+﻿Tittel: Libec TH-650 kamerastativ
 
 Kort beskrivelse:
 Stødig og fleksibelt videostativ for kamera og opptak Hva er Libec TH-650?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Væskedempet pan/tilt-hode for myke kamerabevegelser

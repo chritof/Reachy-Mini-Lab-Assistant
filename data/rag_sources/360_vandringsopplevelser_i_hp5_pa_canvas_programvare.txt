@@ -1,7 +1,13 @@
-Tittel: 360°-vandringsopplevelser i HP5 på Canvas (Programvare)
+﻿Tittel: 360°-vandringsopplevelser i HP5 på Canvas (Programvare)
 
 Kort beskrivelse:
 HP5 på Canvas er en kraftig plattform for å lage interaktive og immersive opplevelser, inkludert 360°-vandringsopplevelser. Ved å bruke 360°-bilder eller videoer, kan du lage virtuelle turer som gir en realistisk opplevelse av å utforske et rom eller en utstilling på nettet. Dette kan være nyttig i undervisning, presentasjoner eller for virtuelle turer i ulike læringslabber eller klasserom.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 360°-bilder eller videoer: Du trenger 360°-bilder eller videoer som er tatt med et kompatibelt 360°-kamera, som f.eks. Kandao QooCam, Insta360, eller et annet tilsvarende produkt.

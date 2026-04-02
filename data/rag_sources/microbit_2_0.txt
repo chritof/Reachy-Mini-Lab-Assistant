@@ -1,7 +1,13 @@
-Tittel: Microbit 2.0
+﻿Tittel: Microbit 2.0
 
 Kort beskrivelse:
 Microbit 2.0 er en liten, programmerbar datamaskin utviklet for å lære barn og nybegynnere grunnleggende programmering og elektronikk. Den er ideell for å utforske ideer og eksperimentere med teknologi gjennom enkle prosjekter og koding. Med sin kompakte størrelse, flere innganger og utganger, samt nye funksjoner, gir Microbit 2.0 en fleksibel og engasjerende læringsopplevelse.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Skjerm: Microbit 2.0 har en 5x5 LED-matrise som kan vise tekst og enkle bilder.

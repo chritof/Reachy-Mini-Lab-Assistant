@@ -1,7 +1,13 @@
-Tittel: Utlån i Læringslaben
+﻿Tittel: Utlån i Læringslaben
 
 Kort beskrivelse:
 Retningslinjer for lån av utstyr i Læringslaben ved HVL.
+
+UtlÃ¥nsstatus:
+Generelle utlÃ¥nsregler for utstyr i LÃ¦ringslaben.
+
+UtlÃ¥nsveiledning:
+Bruk denne filen sammen med utstyrsfilene nÃ¥r noen spÃ¸r om hvem som kan lÃ¥ne, krav til opplÃ¦ring, reservasjon eller tilbakelevering.
 
 Nøkkelpunkter:
 - Utstyr kan lånes av studenter og ansatte

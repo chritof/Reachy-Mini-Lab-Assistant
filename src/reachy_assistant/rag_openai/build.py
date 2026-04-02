@@ -7,6 +7,7 @@ from pathlib import Path
 from reachy_assistant.rag_openai.chunking import build_chunks
 from reachy_assistant.rag_openai.embeddings import OpenAIEmbeddings
 from reachy_assistant.rag_openai.store import QdrantVectorStore
+from reachy_assistant.realtime.config import RealtimeConfig
 
 
 DEFAULT_DOCS_DIR = Path("data/rag_sources")
@@ -24,6 +25,7 @@ def build_index(
     chunk_size: int = 500,
     overlap: int = 100,
 ) -> int:
+    RealtimeConfig._load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
     if not api_key:
         raise ValueError("OPENAI_API_KEY is required to build rag_openai.")

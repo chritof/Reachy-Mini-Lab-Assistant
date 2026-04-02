@@ -1,7 +1,13 @@
-Tittel: Wacom Intuos Pro
+﻿Tittel: Wacom Intuos Pro
 
 Kort beskrivelse:
 Dette er en profesjonell tegne- og redigeringstablett designet for kreative fagfolk som illustratører, 3D-artister og foto- og videoredigerere. Pro Pen 3-stylus: Leveres med Wacom Pro Pen 3, som har 8192 nivåer av trykkfølsomhet, tilt-sensitivitet og justerbar tykkelse.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Pro Pen 3-stylus: Leveres med Wacom Pro Pen 3, som har 8192 nivåer av trykkfølsomhet, tilt-sensitivitet og justerbar tykkelse.

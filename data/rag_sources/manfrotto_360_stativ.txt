@@ -1,7 +1,13 @@
-Tittel: Manfrotto 360 Stativ
+﻿Tittel: Manfrotto 360 Stativ
 
 Kort beskrivelse:
 Stabilitet, allsidighet og presisjon for 360° foto og videoopptak Hva er Manfrotto 360 Stativ?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 360° rotasjon: Lag sømløse 360°-bilder og videoopptak.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 
 from reachy_assistant.realtime.config import RealtimeConfig
 from reachy_assistant.realtime.engine import RealtimeConversationEngine
@@ -17,19 +18,27 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main() -> None:
     args = build_parser().parse_args()
-    config = RealtimeConfig.from_env()
-    config.input_sample_rate = args.sample_rate
-    config.output_sample_rate = args.sample_rate
-    config.chunk_ms = args.chunk_ms
+    try:
+        config = RealtimeConfig.from_env()
+        config.input_sample_rate = args.sample_rate
+        config.output_sample_rate = args.sample_rate
+        config.chunk_ms = args.chunk_ms
+        print(
+            f"[realtime] Starting assistant with model={config.model}, "
+            f"sample_rate={config.input_sample_rate}, chunk_ms={config.chunk_ms}"
+        )
 
-    source = PcRealtimeAudioSource(
-        sample_rate=config.input_sample_rate,
-        chunk_frames=config.chunk_frames,
-    )
-    sink = PcRealtimeAudioSink()
-    engine = RealtimeConversationEngine(config=config, source=source, sink=sink)
-    pipeline = RealtimeConversationPipeline(engine=engine)
-    pipeline.run()
+        source = PcRealtimeAudioSource(
+            sample_rate=config.input_sample_rate,
+            chunk_frames=config.chunk_frames,
+        )
+        sink = PcRealtimeAudioSink()
+        engine = RealtimeConversationEngine(config=config, source=source, sink=sink)
+        pipeline = RealtimeConversationPipeline(engine=engine)
+        pipeline.run()
+    except Exception as exc:
+        print(f"[realtime] Fatal error: {exc}", file=sys.stderr)
+        raise
 
 
 if __name__ == "__main__":

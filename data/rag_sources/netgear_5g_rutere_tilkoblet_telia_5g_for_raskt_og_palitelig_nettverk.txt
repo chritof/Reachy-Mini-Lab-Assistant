@@ -1,7 +1,13 @@
-Tittel: Netgear 5G-rutere – Tilkoblet Telia 5G for raskt og pålitelig nettverk
+﻿Tittel: Netgear 5G-rutere – Tilkoblet Telia 5G for raskt og pålitelig nettverk
 
 Kort beskrivelse:
 Netgear 5G-rutere, som Nighthawk M5, Nighthawk M6, og Nighthawk M6 Pro, kan kobles til Telia sitt 5G-nettverk for å tilby ekstremt rask og pålitelig internettforbindelse, enten du er på farten eller hjemme. Telia har et av de største 5G-nettverkene i Norge, og med Netgear-rutere får du tilgang til de høyeste hastighetene som 5G-teknologien kan tilby.Hør med en av våre ansatte for å låne en av våre 5G routere.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Høy hastighet: Tilkoblet Telia 5G får du hastigheter på opptil flere Gbps, noe som gir deg en stabil og rask internettilkobling.

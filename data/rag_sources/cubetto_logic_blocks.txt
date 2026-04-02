@@ -1,7 +1,13 @@
-Tittel: Cubetto: Logic Blocks
+﻿Tittel: Cubetto: Logic Blocks
 
 Kort beskrivelse:
 Cubetto Logic Blocks er en utvidelsespakke med avanserte kodeklosser for bruk sammen med Cubetto-roboten og programmeringsbrettet. Denne pakken gir barna mulighet til å utforske mer komplekse programmeringskonsepter som funksjoner og gjentakelser – på en konkret og leken måte, uten skjerm. Egner seg for elever som allerede er kjent med retningsklossene, og som er klare for å tenke mer abstrakt og strukturert rundt koding.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Funksjonsklosser (blå) – forteller Cubetto å kjøre et forhåndsdefinert mønster (funksjon)

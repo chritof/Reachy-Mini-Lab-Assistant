@@ -1,7 +1,13 @@
-Tittel: Logitech HD Pro Webcam C920
+﻿Tittel: Logitech HD Pro Webcam C920
 
 Kort beskrivelse:
 Webkamera for videomøter, opptak og strømming i høy kvalitet Hva er Logitech C920?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Oppløsning: 1080p Full HD ved 30 fps

@@ -1,7 +1,13 @@
-Tittel: Læringslab:
+﻿Tittel: Læringslab:
 
 Kort beskrivelse:
 Læringslab ved Høgskulen på Vestlandet er ein stad for å utforske, samhandle og skape, med fokus på teknologi. Vi har i dag læringslabar på alle campus, og Medielab er driftsansvarleg eining. Læringslab er Medielabs førstelinjeteneste for hjelp til sjølvhjelp innanfor ny teknologi.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Aktuelle tenester vi tilbyr:

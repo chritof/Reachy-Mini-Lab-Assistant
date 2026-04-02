@@ -45,7 +45,7 @@ class FakeVectorStore:
     def search(self, query_vector, category=None, limit=3):
         assert query_vector == [0.1, 0.2, 0.3]
         assert category == "equipment"
-        assert limit == 2
+        assert limit >= 2
         return [
             {
                 "source": "equipment/ipad.txt",

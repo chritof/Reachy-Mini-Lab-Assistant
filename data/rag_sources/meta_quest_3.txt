@@ -1,7 +1,13 @@
-Tittel: Meta Quest 3
+﻿Tittel: Meta Quest 3
 
 Kort beskrivelse:
 Den neste generasjonen av trådløs VR-opplevelse Hva er Meta Quest 3?
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Oppslukende visuell opplevelse: Høyere oppløsning (2064 x 2208 per øye) for krystallklare bilder og en mer realistisk VR-opplevelse.

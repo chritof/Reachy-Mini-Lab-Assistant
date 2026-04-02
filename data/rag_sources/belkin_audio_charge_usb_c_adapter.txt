@@ -1,7 +1,13 @@
-Tittel: Belkin Audio + Charge USB-C Adapter
+﻿Tittel: Belkin Audio + Charge USB-C Adapter
 
 Kort beskrivelse:
 Belkin Audio + Charge USB-C Adapter lar deg lade enheten din samtidig som du bruker kablet lyd (via USB-C). Adapteren er spesielt nyttig med enheter som ikke har hodetelefonutgang, som mange moderne iPad Pro- og Android-enheter. 1 × USB-C-inngang for lading
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Adapteren har:

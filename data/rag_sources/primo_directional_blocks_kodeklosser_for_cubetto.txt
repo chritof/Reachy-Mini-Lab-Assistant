@@ -1,7 +1,13 @@
-Tittel: Primo: Directional Blocks (Kodeklosser for Cubetto)
+﻿Tittel: Primo: Directional Blocks (Kodeklosser for Cubetto)
 
 Kort beskrivelse:
 Primo Directional Blocks er en utvidelsespakke med ekstra kodeklosser til bruk sammen med Cubetto-roboten og programmeringsbrettet. Disse klossene lar barn programmere bevegelser som får Cubetto til å navigere på rutebaserte kart. Dette er en støttepakke – ment som ekstra klosser for større elevgrupper, mer komplekse programmer eller for å erstatte tapte klosser.
+
+UtlÃ¥nsstatus:
+Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+
+UtlÃ¥nsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Fremover-klosser – får Cubetto til å gå én rute frem
