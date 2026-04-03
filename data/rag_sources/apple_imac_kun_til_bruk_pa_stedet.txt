@@ -1,13 +1,13 @@
-﻿Tittel: Apple iMac (kun til bruk på stedet)
+Tittel: Apple iMac (kun til bruk på stedet)
 
 Kort beskrivelse:
 Denne iMac-en er ikke til utlån. Den skal brukes på stedet i HVL Læringslab, og er klargjort med profesjonell programvare som gir deg verktøy til kreative, visuelle og digitale prosjekter. Hva gjør denne iMac-en spesiell?
 
-UtlÃ¥nsstatus:
-Ikke til utlÃ¥n. Skal brukes pÃ¥ stedet eller etter sÃ¦rskilt avtale.
+Utlånsstatus:
+Ikke til utlån. Skal brukes på stedet eller etter særskilt avtale.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Tips: Du kan bruke flere av disse programmene sammen. F.eks. lage illustrasjoner i Illustrator, sette dem inn i en layout i InDesign, og eksportere som PDF.

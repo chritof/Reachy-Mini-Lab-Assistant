@@ -1,13 +1,13 @@
-﻿Tittel: Meta Quest 2
+Tittel: Meta Quest 2
 
 Kort beskrivelse:
 Den trådløse VR-opplevelsen for læring, spill og utforskning Hva er Meta Quest 2?
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Trådløs VR-opplevelse: Ingen kabler er nødvendige for å bruke headsetet, slik at du kan bevege deg fritt.

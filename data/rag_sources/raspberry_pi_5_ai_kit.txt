@@ -1,13 +1,13 @@
-﻿Tittel: Raspberry Pi 5 AI Kit
+Tittel: Raspberry Pi 5 AI Kit
 
 Kort beskrivelse:
 Raspberry Pi 5 AI Kit er en komplett pakke med en kraftig minidatamaskin og støtte for kunstig intelligens (AI). Den er ideell for eksperimentering med programmering, datasyn, maskinlæring og automatisering. Kitet inkluderer Raspberry Pi 5, strømforsyning, kabler, kjøling og ofte en forhåndsinstallert SD-kort med operativsystem.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Koble opp utstyret:

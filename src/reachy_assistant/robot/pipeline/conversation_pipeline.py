@@ -6,6 +6,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from time import sleep
+import traceback
 
 from reachy_assistant.robot.pipeline.states import ConversationState
 
@@ -58,6 +59,7 @@ class ConversationPipeline:
             raise
         except Exception as exc:
             print(f"[ERROR] Turn failed: {exc}")
+            traceback.print_exc()
             self._motion_call("idle")
             self._safe_speak(self.error_text)
             self._reset_turn()

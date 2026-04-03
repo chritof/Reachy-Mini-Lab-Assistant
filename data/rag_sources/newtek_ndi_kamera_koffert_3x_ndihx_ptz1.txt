@@ -1,13 +1,13 @@
-﻿Tittel: NewTek NDI Kamera-koffert – 3x NDIHX-PTZ1
+Tittel: NewTek NDI Kamera-koffert – 3x NDIHX-PTZ1
 
 Kort beskrivelse:
 Denne kofferten inneholder tre profesjonelle PTZ-kameraer av typen NewTek NDIHX-PTZ1, tilpasset mobil videoproduksjon i undervisning, arrangementer og studio. Kameraene bruker NDI-teknologi (Network Device Interface) som overfører video, lyd og styringssignaler over vanlig nettverk – uten behov for tradisjonelle videokabler. Merk: Utlån skjer kun etter avtale og krever kort opplæring i bruk og oppsett.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Merk: Utlån skjer kun etter avtale og krever kort opplæring i bruk og oppsett.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass
 from typing import Any
 
@@ -21,7 +22,11 @@ class OpenAIRagSearch:
             return {"error": "query is required"}
 
         query_vector = self.embeddings.embed_one(query)
-        raw_results = self.vector_store.search(query_vector, category=category, limit=max(limit * 3, 6))
+        wants_loan = self._wants_loan(query)
+        search_limit = max(limit * 3, 6)
+        raw_results = self.vector_store.search(query_vector, category=category, limit=search_limit)
+        if not raw_results and category:
+            raw_results = self.vector_store.search(query_vector, category=None, limit=search_limit)
         results = self._rerank_results(query, raw_results, limit=limit)
 
         if not results:
@@ -40,7 +45,12 @@ class OpenAIRagSearch:
             f"[{item['source']}]\n{item['text']}" for item in results
         )
         return {
-            "answer": " ".join(snippets[:2]),
+            "answer": self._build_answer(
+                query=query,
+                results=results,
+                wants_loan=wants_loan,
+                fallback=" ".join(snippets[:2]),
+            ),
             "results": results,
             "context": context,
             "sources": sources,
@@ -53,7 +63,7 @@ class OpenAIRagSearch:
         limit: int,
     ) -> list[dict[str, Any]]:
         query_terms = self._terms(query)
-        wants_loan = any(term in {"lån", "låne", "utlån", "borrow", "loan"} for term in query_terms)
+        wants_loan = self._wants_loan(query)
 
         rescored: list[tuple[float, dict[str, Any]]] = []
         for item in results:
@@ -101,6 +111,89 @@ class OpenAIRagSearch:
 
         return selected[:limit]
 
+    def _build_answer(
+        self,
+        query: str,
+        results: list[dict[str, Any]],
+        *,
+        wants_loan: bool,
+        fallback: str,
+    ) -> str:
+        if not wants_loan:
+            return fallback
+
+        equipment = self._primary_equipment_result(query, results)
+        if equipment is None:
+            return fallback
+
+        source = str(equipment.get("source", ""))
+        title = self._extract_title(str(equipment.get("text", ""))) or self._humanize_source(source)
+        status = self._extract_utlaan_status(results)
+
+        if "ikke til utl" in self._normalized_text(status):
+            return (
+                f"{title} er ikke til utlån. "
+                "Den skal brukes på stedet eller etter særskilt avtale. "
+                "Se også utlaan.txt for de generelle reglene."
+            )
+
+        return (
+            f"{title} kan normalt lånes i Læringslaben hvis ikke annet er oppgitt. "
+            "De generelle reglene sier at utstyr kan lånes av studenter og ansatte, "
+            "at noe utstyr kan kreve opplæring, og at alt skal leveres tilbake i samme stand. "
+            "Spør ansatte om tilgjengelighet og eventuelle krav før utlån."
+        )
+
+    def _primary_equipment_result(self, query: str, results: list[dict[str, Any]]) -> dict[str, Any] | None:
+        query_terms = self._terms(query)
+        best: dict[str, Any] | None = None
+        best_overlap = -1
+        for item in results:
+            source = str(item.get("source", ""))
+            if "utlaan" in source:
+                continue
+            overlap = len(self._terms(source) & query_terms)
+            if overlap > best_overlap:
+                best = item
+                best_overlap = overlap
+        return best or (results[0] if results else None)
+
+    @staticmethod
+    def _extract_title(text: str) -> str:
+        match = re.search(r"Tittel:\s*(.+)", text)
+        return match.group(1).strip() if match else ""
+
+    @staticmethod
+    def _extract_utlaan_status(results: list[dict[str, Any]]) -> str:
+        for item in results:
+            text = str(item.get("text", ""))
+            match = re.search(r"Utl[åa]nsstatus:\s*(.+?)(?:\n|$)", text, flags=re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+            match = re.search(r"UtlÃ¥nsstatus:\s*(.+?)(?:\n|$)", text, flags=re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+
+    @staticmethod
+    def _humanize_source(source: str) -> str:
+        stem = source.rsplit("/", 1)[-1].rsplit("\\", 1)[-1].removesuffix(".txt")
+        return stem.replace("_", " ")
+
+    def _wants_loan(self, query: str) -> bool:
+        normalized = self._normalized_text(query)
+        return any(token in normalized for token in ("lan", "lane", "utlan", "borrow", "loan"))
+
     @staticmethod
     def _terms(text: str) -> set[str]:
         return set(re.findall(r"[a-zA-Z0-9æøåÆØÅ]+", (text or "").lower()))
+
+    @staticmethod
+    def _normalized_text(text: str) -> str:
+        text = (text or "").lower().replace("Ã¥", "å").replace("Ã¸", "ø").replace("Ã¦", "æ")
+        text = (
+            unicodedata.normalize("NFKD", text)
+            .encode("ascii", "ignore")
+            .decode("ascii")
+        )
+        return text

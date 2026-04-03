@@ -1,13 +1,13 @@
-﻿Tittel: Insta360 Link 4K USB-webkamera
+Tittel: Insta360 Link 4K USB-webkamera
 
 Kort beskrivelse:
 AI-styrt webkamera med 3-aksers gimbal og 4K-oppløsning Insta360 Link er et avansert USB-webkamera med AI-sporing, 4K-oppløsning og motorisert gimbal. Kameraet følger brukeren automatisk, tilpasser utsnittet og leverer høy bildekvalitet selv i utfordrende lys. Det er ideelt til undervisning, fjernundervisning, møter, opptak og digitale presentasjoner.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 4K-video ved 30 fps, 1080p og 720p ved opptil 60 fps

@@ -1,13 +1,13 @@
-﻿Tittel: Boss RC-300 Loop Station
+Tittel: Boss RC-300 Loop Station
 
 Kort beskrivelse:
 Boss RC-300 Loop Station er en kraftig og avansert looper for musikkproduksjon og liveopptredener. Den lar deg spille inn, lagre, overdubbe og kontrollere opptil tre separate looper samtidig, med individuelle kontroller og effekter. 3 uavhengige stereospor med egne faderkontroller og start/stopp
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - 3 uavhengige stereospor med egne faderkontroller og start/stopp

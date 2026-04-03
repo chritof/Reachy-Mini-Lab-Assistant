@@ -1,13 +1,13 @@
-﻿Tittel: Apple iPad Pro 11" (3. gen) - 16x kit - 128 GB
+Tittel: Apple iPad Pro 11" (3. gen) - 16x kit - 128 GB
 
 Kort beskrivelse:
 Apple iPad Pro 11" (3. gen) er en kraftig enhet som gir deg en flott brukeropplevelse. Denne enheten kommer med iOS installert fra HVL Læringslab, som er tilpasset for å støtte spesifikke læringsverktøy, apper og funksjoner utviklet for optimal læring og produktivitet. I denne bruksanvisningen får du en oversikt over hvordan du bruker enheten, og hvordan du kan finne spesifikk informasjon ved å bruke OpenAI-boten til å søke gjennom PDF-filer for detaljer om iPad-en og de spesifikke verktøyene som følger med HVL Læringslab.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Lading:iPad Pro 11" bruker USB-C-lading. Koble den medfølgende USB-C-kabelen til en strømadapter og iPad-en. Full lading gir deg lang batterilevetid, perfekt for hele skoledagen eller arbeidsøkter.

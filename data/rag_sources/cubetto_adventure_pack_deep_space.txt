@@ -1,13 +1,13 @@
-﻿Tittel: Cubetto Adventure Pack: Deep Space
+Tittel: Cubetto Adventure Pack: Deep Space
 
 Kort beskrivelse:
 Cubetto Deep Space er en fantasifull utvidelsespakke til Cubetto-programmeringsroboten, der barn programmerer Cubetto på oppdrag i verdensrommet. Dette temakartet stimulerer utforskertrang og logisk tenking, samtidig som det gir mulighet til å jobbe med begreper som retning, rom og sekvenser. Pakken egner seg for barnehage og småskole, og passer perfekt i tverrfaglig undervisning i naturfag, teknologi og matematikk.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Temakart "Deep Space" – et fargerikt tekstilkart med motiver fra romfart, planeter, satellitter, sorte hull og stjerner

@@ -1,13 +1,13 @@
-﻿Tittel: Olympus VN-541PC – Enkel og brukervennlig digital diktafon
+Tittel: Olympus VN-541PC – Enkel og brukervennlig digital diktafon
 
 Kort beskrivelse:
 Olympus VN-541PC er en kompakt og brukervennlig digital diktafon, ideell for studenter og ansatte som ønsker et enkelt verktøy for å ta opp forelesninger, møter, intervjuer eller personlige notater. Den har 4 GB internminne, som gir opptil 1570 timer med opptakstid, og leveres med micro-USB-kabel for enkel filoverføring til datamaskin.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Éntrykksopptak: Start opptak umiddelbart med en dedikert skyveknapp, selv når enheten er avslått.

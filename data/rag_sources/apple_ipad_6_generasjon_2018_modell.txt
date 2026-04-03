@@ -1,13 +1,13 @@
-﻿Tittel: Apple iPad 6. generasjon (2018-modell)
+Tittel: Apple iPad 6. generasjon (2018-modell)
 
 Kort beskrivelse:
 Nettbrett for notater, tegning, video og læringsapper iPad 6th gen er et allsidig nettbrett med touchskjerm, støtte for Apple Pencil (1. gen) og lang batteritid. Den passer utmerket til notatskriving, skisser, PDF-lesing, videomøter, medieproduksjon og pedagogiske apper. Nettbrettet er satt opp med iOS-programvare fra HVL Læringslab, med tilpassede apper og innstillinger.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Skjerm: 9,7" Retina (2048 x 1536)

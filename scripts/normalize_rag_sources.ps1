@@ -36,11 +36,11 @@ function Get-UtlaanStatus {
 
     foreach ($phrase in $loanPhrases) {
         if ($lower.Contains($phrase)) {
-            return "Kan være tilgjengelig for utlån. Se utlaan.txt og spør ansatte om tilgjengelighet og eventuelle krav."
+            return "Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet og eventuelle krav."
         }
     }
 
-    return "Ikke spesifisert i denne filen. Se utlaan.txt og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger."
+    return "Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger."
 }
 
 function Get-UtlaanGuide {

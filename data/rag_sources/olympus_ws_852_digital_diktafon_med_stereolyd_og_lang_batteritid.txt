@@ -1,13 +1,13 @@
-﻿Tittel: Olympus WS-852 – Digital diktafon med stereolyd og lang batteritid
+Tittel: Olympus WS-852 – Digital diktafon med stereolyd og lang batteritid
 
 Kort beskrivelse:
 Olympus WS-852 er en brukervennlig digital diktafon som kombinerer høy lydkvalitet med praktiske funksjoner for både studenter og ansatte. Med to innebygde stereomikrofoner i 90° vinkel, fanger den opp klar og naturlig lyd, ideell for opptak av forelesninger, møter og intervjuer. Den har 4 GB internminne, støtte for microSD-kort, og en integrert USB-plugg for enkel filoverføring til PC eller Mac.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - Stereomikrofoner: To retningsstyrte mikrofoner i 90° vinkel gir autentisk stereolyd.

@@ -13,6 +13,7 @@ def pcm16_to_float32(audio: np.ndarray) -> np.ndarray:
 class ReachyPlayer:
     mini: object
     chunk_size: int = 2048
+    tail_padding_sec: float = 0.25
 
     def play_wav(self, wav_bytes: bytes) -> None:
         with wave.open(io.BytesIO(wav_bytes), "rb") as wf:
@@ -38,4 +39,6 @@ class ReachyPlayer:
             self.mini.media.push_audio_sample(chunk)
             time.sleep(len(chunk) / sample_rate)
 
+        # Let Reachy's playback buffer drain before stopping and advancing state.
+        time.sleep(self.tail_padding_sec)
         self.mini.media.stop_playing()

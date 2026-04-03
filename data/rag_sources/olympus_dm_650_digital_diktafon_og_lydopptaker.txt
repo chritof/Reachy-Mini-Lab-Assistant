@@ -1,13 +1,13 @@
-﻿Tittel: Olympus DM-650 – Digital diktafon og lydopptaker
+Tittel: Olympus DM-650 – Digital diktafon og lydopptaker
 
 Kort beskrivelse:
 Olympus DM-650 er en avansert digital diktafon som egner seg godt til forelesninger, intervjuer, møter og feltarbeid. Den kombinerer brukervennlighet med høy lydkvalitet, og passer godt for både studenter og ansatte som trenger pålitelig lydopptak. Den støtter både MP3 og ukomprimert WAV (PCM)-opptak, og har innebygde stereomikrofoner for naturlig og klart opptak.
 
-UtlÃ¥nsstatus:
-Ikke spesifisert i denne filen. Se utlaan.txt og spÃ¸r ansatte om tilgjengelighet, opplÃ¦ring og eventuelle begrensninger.
+Utlånsstatus:
+Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
 
-UtlÃ¥nsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlÃ¥n, opplÃ¦ring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Utlånsveiledning:
+Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
 - TRESMIC-system: Tre mikrofoner (to retningsstyrte + én omnidireksjonal) gir balansert og tydelig stereolyd

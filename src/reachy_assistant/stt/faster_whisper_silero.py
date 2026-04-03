@@ -50,14 +50,26 @@ class FasterWhisperSileroSTT:
         self.temperature = temperature
 
         # cache models (don’t reload per call)
+        print("[local-pipeline][stt] Loading Faster Whisper...")
         self._whisper = WhisperModel(whisper_model, device=device, compute_type=compute_type)
-        self._vad_model, self._vad_utils = torch.hub.load(
-            repo_or_dir="snakers4/silero-vad",
-            model="silero_vad",
-            force_reload=False,
-            trust_repo=True,
-        )
-        (self._get_speech_timestamps, _, _, _, _) = self._vad_utils
+        print("[local-pipeline][stt] Loading Silero VAD...")
+        self._vad_model = None
+        self._vad_utils = None
+        self._get_speech_timestamps = None
+        try:
+            self._vad_model, self._vad_utils = torch.hub.load(
+                repo_or_dir="snakers4/silero-vad",
+                model="silero_vad",
+                force_reload=False,
+                trust_repo=True,
+            )
+            (self._get_speech_timestamps, _, _, _, _) = self._vad_utils
+            print("[local-pipeline][stt] Silero VAD ready.")
+        except Exception as exc:
+            print(
+                "[local-pipeline][stt] Silero VAD unavailable, "
+                f"falling back to full-audio transcription: {exc}"
+            )
 
     def load_wav_float32_mono(self, wav_path: Path) -> tuple[int, np.ndarray]:
         sr, audio = wav_read(str(wav_path))
@@ -88,6 +100,11 @@ class FasterWhisperSileroSTT:
         return audio
 
     def vad_segments(self, audio_16k: np.ndarray) -> list[Segment]:
+        if self._get_speech_timestamps is None or self._vad_model is None:
+            if audio_16k.size == 0:
+                return []
+            return [Segment(0, len(audio_16k))]
+
         wav = torch.from_numpy(audio_16k)
         ts = self._get_speech_timestamps(
             wav,
