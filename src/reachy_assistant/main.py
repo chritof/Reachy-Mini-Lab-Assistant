@@ -1,4 +1,4 @@
-from reachy_assistant.realtime.main import main
+from reachy_assistant.realtime.reachy_main import main
 
 
 if __name__ == "__main__":

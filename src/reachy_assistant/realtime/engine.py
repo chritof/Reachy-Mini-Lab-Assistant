@@ -2,8 +2,11 @@ from __future__ import annotations
 
 import asyncio
 import json
+import time
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING
+
+from websockets.exceptions import ConnectionClosedError
 
 from reachy_assistant.realtime.audio import REALTIME_SAMPLE_RATE, from_base64_pcm16, to_base64_pcm16
 from reachy_assistant.realtime.config import RealtimeConfig
@@ -32,6 +35,8 @@ class RealtimeConversationEngine:
     _interrupting_response_id: str | None = field(init=False, default=None)
     _response_create_pending: bool = field(init=False, default=False)
     _tool_calls: dict[str, str] = field(init=False, default_factory=dict)
+    _suppress_input_until: float = field(init=False, default=0.0)
+    reconnect_delay_sec: float = 2.0
 
     def __post_init__(self) -> None:
         if self.client is None:
@@ -48,51 +53,20 @@ class RealtimeConversationEngine:
         self._motion_call("idle")
 
         try:
-            print("[realtime] Connecting to OpenAI Realtime API...")
-            async with self.client.connect() as connection:
-                await connection.session.update(
-                    session={
-                        "modalities": ["text", "audio"],
-                        "instructions": self.config.instructions,
-                        "voice": self.config.voice,
-                        "input_audio_format": "pcm16",
-                        "output_audio_format": "pcm16",
-                        "input_audio_transcription": {
-                            "model": self.config.transcription_model,
-                            "language": self.config.language,
-                        },
-                        "turn_detection": {
-                            "type": "server_vad",
-                            "threshold": self.config.vad_threshold,
-                            "silence_duration_ms": self.config.vad_silence_ms,
-                            "prefix_padding_ms": self.config.vad_prefix_padding_ms,
-                            "create_response": (
-                                self.config.vad_create_response
-                                if self.config.allow_interruptions
-                                else False
-                            ),
-                            "interrupt_response": self.config.allow_interruptions,
-                        },
-                        "temperature": self.config.temperature,
-                        "max_response_output_tokens": self.config.max_output_tokens,
-                        "tools": self._tool_definitions(),
-                        "tool_choice": "auto",
-                    }
-                )
-                print("[realtime] Session ready. Speak into the microphone. Press Ctrl+C to stop.")
-
-                send_task = asyncio.create_task(self._send_audio(connection))
-                receive_task = asyncio.create_task(self._receive_events(connection))
-
-                done, pending = await asyncio.wait(
-                    {send_task, receive_task},
-                    return_when=asyncio.FIRST_EXCEPTION,
-                )
-
-                for task in pending:
-                    task.cancel()
-                for task in done:
-                    task.result()
+            while not self._stop_event.is_set():
+                try:
+                    await self._run_session()
+                    break
+                except (ConnectionClosedError, TimeoutError) as exc:
+                    if self._stop_event.is_set():
+                        break
+                    print(
+                        "[realtime] Connection lost. "
+                        f"Retrying in {self.reconnect_delay_sec:.1f}s: {exc}"
+                    )
+                    self._clear_active_response()
+                    self._motion_call("idle")
+                    await asyncio.sleep(self.reconnect_delay_sec)
         finally:
             self._stop_event.set()
             await self.source.close()
@@ -105,8 +79,57 @@ class RealtimeConversationEngine:
         async for chunk in self.source.chunks():
             if self._stop_event.is_set():
                 break
+            if self._should_suppress_input():
+                continue
             payload = to_base64_pcm16(chunk, self.source.sample_rate, REALTIME_SAMPLE_RATE)
             await connection.input_audio_buffer.append(audio=payload)
+
+    async def _run_session(self) -> None:
+        print("[realtime] Connecting to OpenAI Realtime API...")
+        async with self.client.connect() as connection:
+            await connection.session.update(
+                session={
+                    "modalities": ["text", "audio"],
+                    "instructions": self.config.instructions,
+                    "voice": self.config.voice,
+                    "input_audio_format": "pcm16",
+                    "output_audio_format": "pcm16",
+                    "input_audio_transcription": {
+                        "model": self.config.transcription_model,
+                        "language": self.config.language,
+                    },
+                    "turn_detection": {
+                        "type": "server_vad",
+                        "threshold": self.config.vad_threshold,
+                        "silence_duration_ms": self.config.vad_silence_ms,
+                        "prefix_padding_ms": self.config.vad_prefix_padding_ms,
+                        "create_response": (
+                            self.config.vad_create_response
+                            if self.config.allow_interruptions
+                            else False
+                        ),
+                        "interrupt_response": self.config.allow_interruptions,
+                    },
+                    "temperature": self.config.temperature,
+                    "max_response_output_tokens": self.config.max_output_tokens,
+                    "tools": self._tool_definitions(),
+                    "tool_choice": "auto",
+                }
+            )
+            print("[realtime] Session ready. Speak into the microphone. Press Ctrl+C to stop.")
+
+            send_task = asyncio.create_task(self._send_audio(connection))
+            receive_task = asyncio.create_task(self._receive_events(connection))
+
+            done, pending = await asyncio.wait(
+                {send_task, receive_task},
+                return_when=asyncio.FIRST_EXCEPTION,
+            )
+
+            for task in pending:
+                task.cancel()
+            for task in done:
+                task.result()
 
     async def _receive_events(self, connection) -> None:
         async for event in connection:
@@ -114,6 +137,7 @@ class RealtimeConversationEngine:
 
             if event_type == "response.audio.delta":
                 self._motion_call("speaking")
+                self._push_input_suppression()
                 self._active_response_id = getattr(event, "response_id", None)
                 self._active_item_id = getattr(event, "item_id", None)
                 self._active_content_index = getattr(event, "content_index", None)
@@ -122,6 +146,7 @@ class RealtimeConversationEngine:
                 self._active_audio_end_ms += int(round(len(audio) * 1000 / sample_rate))
 
             elif event_type == "response.audio.done":
+                self._push_input_suppression()
                 self._clear_active_response()
 
             elif event_type == "response.created":
@@ -145,6 +170,7 @@ class RealtimeConversationEngine:
                 if transcript:
                     self.last_assistant_transcript = transcript
                     print(f"Assistant: {transcript}")
+                self._push_input_suppression()
                 self._motion_call("idle")
 
             elif event_type == "conversation.item.input_audio_transcription.completed":
@@ -167,6 +193,7 @@ class RealtimeConversationEngine:
                 self._motion_call("thinking")
 
             elif event_type == "response.done":
+                self._push_input_suppression()
                 self._clear_active_response()
                 self._motion_call("idle")
 
@@ -227,6 +254,20 @@ class RealtimeConversationEngine:
         self._active_audio_end_ms = 0
         self._interrupting_response_id = None
         self._response_create_pending = False
+
+    def _should_suppress_input(self) -> bool:
+        if not self.config.suppress_input_while_speaking:
+            return False
+        return time.monotonic() < self._suppress_input_until
+
+    def _push_input_suppression(self) -> None:
+        if not self.config.suppress_input_while_speaking:
+            return
+        delay_sec = max(0.0, self.config.input_resume_delay_ms / 1000.0)
+        self._suppress_input_until = max(
+            self._suppress_input_until,
+            time.monotonic() + delay_sec,
+        )
 
     async def _request_response_if_idle(self, connection) -> None:
         if self._active_response_id is not None or self._response_create_pending:

@@ -12,7 +12,9 @@ class RealtimeConfig:
     voice: str = "ballad"
     instructions: str = (
         "Du er Reachy, en norsk labassistent på Læringslabben ved HVL. "
-        "Du hjelper brukere av labben med utstyr og spørsmål knyttet til læringslabben. "
+        "Svar kort, tydelig og hjelpsomt, vanligvis i 1-3 setninger. "
+        "Du kan bruke litt lett robot-humor av og til, men hold den diskre og ikke i hvert svar. "
+        "Svar på norsk som standard, men hvis brukeren tydelig snakker et annet språk, skal du svare på det språket. "
         "For spørsmål om utlån, regler, rom, utstyr, tilgjengelighet eller hvordan noe brukes, "
         "skal du bruke dokumentasjonstoolen når den er tilgjengelig og basere svaret på den. "
         "I denne modusen har du bare tilgang til tale, ikke kamera eller bilder. "
@@ -30,6 +32,8 @@ class RealtimeConfig:
     vad_prefix_padding_ms: int = 300
     vad_create_response: bool = True
     allow_interruptions: bool = True
+    suppress_input_while_speaking: bool = False
+    input_resume_delay_ms: int = 0
     temperature: float = 0.8
     max_output_tokens: str | int = "inf"
 
@@ -56,6 +60,9 @@ class RealtimeConfig:
             instructions=os.getenv(
                 "OPENAI_REALTIME_INSTRUCTIONS",
                 "You are Reachy, a concise Norwegian-speaking lab assistant for the Learning Lab. "
+                "Keep answers short, clear, and helpful, usually 1-3 sentences. "
+                "You may use a small touch of robot humor occasionally, but keep it subtle. "
+                "Reply in Norwegian by default, but if the user is clearly speaking another language, reply in that language instead. "
                 "Use the documentation search tool for factual questions about equipment, loan rules, rooms, "
                 "availability, and how to use lab resources whenever it is available. "
                 "In this mode you only have audio, not camera or image input. "
@@ -77,6 +84,12 @@ class RealtimeConfig:
             in {"1", "true", "yes", "on"},
             allow_interruptions=os.getenv("OPENAI_REALTIME_ALLOW_INTERRUPTIONS", "true").lower()
             in {"1", "true", "yes", "on"},
+            suppress_input_while_speaking=os.getenv(
+                "OPENAI_REALTIME_SUPPRESS_INPUT_WHILE_SPEAKING",
+                "false",
+            ).lower()
+            in {"1", "true", "yes", "on"},
+            input_resume_delay_ms=int(os.getenv("OPENAI_REALTIME_INPUT_RESUME_DELAY_MS", "0")),
             temperature=float(os.getenv("OPENAI_REALTIME_TEMPERATURE", "0.8")),
             max_output_tokens=max_output_tokens,
         )

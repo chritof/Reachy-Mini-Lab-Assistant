@@ -19,7 +19,6 @@ def build_parser() -> argparse.ArgumentParser:
         default="auto",
     )
     parser.add_argument("--reachy-use-sim", action="store_true")
-    parser.add_argument("--allow-interruptions", action="store_true")
     return parser
 
 
@@ -27,7 +26,9 @@ def main() -> None:
     args = build_parser().parse_args()
     try:
         config = RealtimeConfig.from_env()
-        config.allow_interruptions = args.allow_interruptions
+        config.allow_interruptions = False
+        config.suppress_input_while_speaking = True
+        config.input_resume_delay_ms = 900
         print(
             f"[realtime] Starting Reachy assistant with model={config.model} "
             f"at {args.reachy_host}:{args.reachy_port} "

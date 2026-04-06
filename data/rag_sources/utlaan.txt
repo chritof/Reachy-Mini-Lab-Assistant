@@ -1,36 +1,49 @@
-Tittel: Utlån i Læringslaben
+Tittel: Utstyr og utlån i Læringslab
 
 Kort beskrivelse:
-Retningslinjer for lån av utstyr i Læringslaben ved HVL.
+Studentar og tilsette ved HVL kan låne rom og utstyr i Læringslab. Cheqroom blir brukt for å handtere utlån og gi oversikt over utstyret.
 
 Utlånsstatus:
-Generelle utlånsregler for utstyr i Læringslaben.
+Generelle utlånsregler for rom og utstyr i Læringslab ved HVL.
 
 Utlånsveiledning:
-Bruk denne filen sammen med utstyrsfilene når noen spør om hvem som kan låne, krav til opplæring, reservasjon eller tilbakelevering.
+Bruk denne fila saman med utstyrsfilene når nokon spør om kven som kan låne, korleis ein reserverer i Cheqroom, kor lenge ein kan låne, eller kva ein må gjere for å hente og levere tilbake utstyr.
 
 Nøkkelpunkter:
-- Utstyr kan lånes av studenter og ansatte
-- Noe utstyr krever opplæring før utlån
-- Enkelte avanserte systemer lånes kun etter avtale
-- Alt utstyr skal leveres tilbake i samme stand
+- studentar og tilsette ved HVL kan låne rom og utstyr i Læringslab
+- Cheqroom blir brukt til reservasjon og oversikt over utlån
+- brukarane kan velje campus, frå-dato og til-dato i reservasjonen
+- vanleg maksimal reservasjon i sjølvbetening er 3 arbeidsdagar
+- lengre lån kan vere mogleg etter avtale med Læringslab
+- det er lurt å reservere i god tid
 
-Hvordan låne utstyr:
-1. Finn utstyr i Læringslaben eller spør en ansatt
-2. Avklar om utstyret er tilgjengelig
-3. Få eventuell opplæring dersom nødvendig
-4. Registrer utlån dersom det kreves
-5. Ta med alt tilhørende utstyr (kabler, tilbehør)
+Slik reserverer du:
+1. Logg inn i Cheqroom med Feide eller bruk Cheqroom-appen.
+2. Vel "Log in with SSO".
+3. Bruk student- eller tilsett-e-post og stadfest med verifiseringskode.
+4. Vel "Læringslab HVL".
+5. Fullfør innlogging med Windows Authenticator dersom du blir beden om det.
+6. Opprett "New reservation" eller bruk reservasjonsskjemaet.
+7. Vel campus under location.
+8. Vel frå- og til-dato.
+9. Legg til ledig utstyr eller kits med "Add item or kits".
 
-Ved levering:
-- Lever tilbake til avtalt tid
-- Sørg for at alt utstyr er med
-- Gi beskjed hvis noe er skadet eller mangler
+Ved behov for lengre utlån:
+- lag først ei reservasjon på inntil 3 arbeidsdagar
+- ta deretter kontakt med Læringslab for å undersøkje om utstyret kan lånast lenger
+- Læringslab vurderer dette ut frå om andre allereie har reservert utstyret
 
-Viktig:
-- Noe utstyr (f.eks. avanserte kameraer eller VR-oppsett) krever opplæring
-- Misbruk eller skade kan føre til begrenset tilgang til utlån
-- Spør Læringslaben hvis du er usikker
+Praktisk:
+- fast inventar i rom kan brukast der det står
+- det er også mogleg å bruke eige utstyr
+- bruk filter i Cheqroom for å sjå utstyr som er tilgjengeleg på din campus
+
+Cheqroom:
+- innlogging og reservasjon: https://app.cheqroom.com
+- utstyrsoversikt: https://equipment.cheqroom.com
+
+Kilde:
+https://www.hvl.no/alu/medielab/laringslab/utstyr-og-utlan/
 
 Søkbare nøkkelord:
-utlån, regler, læringslab, utstyr, booking, hvl
+utlån, utstyr, cheqroom, reservasjon, lån, læringslab, campus, feide, sso, tilgjengelighet, rom, klassesett

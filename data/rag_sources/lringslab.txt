@@ -1,18 +1,44 @@
-Tittel: Læringslab:
+Tittel: Læringslab ved HVL
 
 Kort beskrivelse:
-Læringslab ved Høgskulen på Vestlandet er ein stad for å utforske, samhandle og skape, med fokus på teknologi. Vi har i dag læringslabar på alle campus, og Medielab er driftsansvarleg eining. Læringslab er Medielabs førstelinjeteneste for hjelp til sjølvhjelp innanfor ny teknologi.
+Læringslab ved Høgskulen på Vestlandet er ein stad for å utforske, samhandle og skape med fokus på teknologi. Medielab er driftsansvarleg, og læringslabane fungerer som førstelinjeteneste for hjelp til sjølvhjelp innan ny teknologi.
 
 Utlånsstatus:
-Kan normalt lånes av studenter og ansatte hvis ikke annet er oppgitt. Se utlaan.txt for generelle regler og spør ansatte om tilgjengelighet, opplæring og eventuelle begrensninger.
+Kan normalt brukast av studentar og tilsette ved HVL. Utlån av utstyr og klassesett er mogleg etter gjeldande reglar. Sjå utlaan.txt for praktiske reglar om reservasjon, opplæring og tilbakelevering.
 
 Utlånsveiledning:
-Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
+Denne fila beskriv kva Læringslab er, kven som kan bruke labane og kva tenester som finst. For konkrete spørsmål om lån, reservasjon i Cheqroom eller utlånslengde, kombiner informasjonen her med utlaan.txt.
 
 Nøkkelpunkter:
-- Aktuelle tenester vi tilbyr:
-- Kjerneoppgaver:De ansatte i Læringslab er en faggruppe som er tett tilknyttet Medielab. Ikke alle kan like mye om alt, og alle har sine områder de har spisskompetanse på. Medielab gir støtte og bidrar ved behov. Samarbeid i faggruppen er nødvendig for å drifte læringslabbene på en måte som gir brukerne gode brukeropplevelser og relevante tjenester innenfor tjenesteområdet. Det betyr at en som besøkende noen ganger må forholde seg til verter ved andre campuser over nett. Uansett vil besøkende få tilbud om den hjelpen de trenger, eller bli vist til steder der hjelp er tilgjengelig. Under er en liste over kjerneoppgavene til en samlet Læringslab:
-- Reservasjon i Læringslab:
+- Læringslab finst på alle campus ved HVL
+- Medielab er driftsansvarleg eining
+- Læringslabane kan brukast av enkeltpersonar og grupper
+- Labane støttar læring, utvikling av undervisning, utprøving av digitale arbeidsmåtar og forsking
+- Aktuelle område inkluderer 3D-printing, koding og programmering, VR/360, videoproduksjon, podkast, streaming og droneflyging
+
+Tenester:
+- kurs og opplæring
+- pedagogisk og teknologisk rådgiving
+- støtte og tilrettelegging for brukarane sine eigne aktivitetar
+- utlån av produksjonsutstyr og klassesett til bruk i undervisning
+
+Målgrupper:
+- alle tilsette ved HVL
+- alle studentar ved HVL
+- eksterne partar etter avtale
+
+Kontakt:
+- felles e-post: laeringslab@hvl.no
+
+Aapningstider og plassering:
+- Bergen: første etasje i nybygget K2 på Kronstad, inngang via rom M-164. Opningstid måndag-torsdag 09:00-17:00, fredag 09:00-15:00.
+- Haugesund: rett ved hovudinngangen, til høgre når du kjem inn. Opningstid måndag-torsdag 09:00-17:00, fredag 09:00-15:00.
+- Sogndal: ved sida av Gamingsenteret i Stadionbygget, over resepsjonen på Idrettssenteret. Opningstid måndag, onsdag og torsdag 09:00-17:00, tirsdag 15:00-17:00, fredag 09:00-15:00.
+- Førde: ved inngangen ved servicetorget, rett fram når du kjem inn. Opningstid måndag, onsdag og torsdag 09:00-17:00, tirsdag 15:00-17:00, fredag 09:00-15:00.
+- Stord: rett ved biblioteket. Opningstid mandag-onsdag 09:00-15:00, torsdag 09:00-15:00, fredag 09:00-12:00.
+
+Kilde:
+https://www.hvl.no/alu/medielab/laringslab/om/
 
 Søkbare nøkkelord:
-læringslab, høgskulen, vestlandet, ein, stad, utforske, samhandle, skape, fokus, teknologi, dag, læringslabar
+læringslab, hvl, medielab, aapningstider, opningstider, om oss, campus, rådgiving, kurs, opplæring, undervisning, teknologi, utstyr, klassesett
