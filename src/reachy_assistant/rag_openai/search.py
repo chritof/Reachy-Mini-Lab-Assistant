@@ -95,7 +95,9 @@ class OpenAIRagSearch:
                 continue
             selected.append(item)
             seen_sources.add(source)
-            saw_equipment = saw_equipment or ("utlaan" not in source and len(self._terms(source) & query_terms) > 0)
+            saw_equipment = saw_equipment or (
+                "utlaan" not in source and len(self._terms(source) & query_terms) > 0
+            )
             saw_utlaan = saw_utlaan or ("utlaan" in source)
             if len(selected) >= limit:
                 break
@@ -139,9 +141,9 @@ class OpenAIRagSearch:
 
         return (
             f"{title} kan normalt lånes i Læringslaben hvis ikke annet er oppgitt. "
-            "De generelle reglene sier at utstyr kan lånes av studenter og ansatte, "
-            "at noe utstyr kan kreve opplæring, og at alt skal leveres tilbake i samme stand. "
-            "Spør ansatte om tilgjengelighet og eventuelle krav før utlån."
+            "Reservasjon skjer normalt i Cheqroom, der studenter og ansatte kan se tilgjengelig utstyr og velge datoer. "
+            "Noe utstyr kan kreve opplæring, og alt skal leveres tilbake i samme stand. "
+            "Kontakt Læringslab dersom du trenger lengre utlån eller dersom noe er uklart i reservasjonen."
         )
 
     def _primary_equipment_result(self, query: str, results: list[dict[str, Any]]) -> dict[str, Any] | None:
@@ -170,7 +172,7 @@ class OpenAIRagSearch:
             match = re.search(r"Utl[åa]nsstatus:\s*(.+?)(?:\n|$)", text, flags=re.IGNORECASE)
             if match:
                 return match.group(1).strip()
-            match = re.search(r"UtlÃ¥nsstatus:\s*(.+?)(?:\n|$)", text, flags=re.IGNORECASE)
+            match = re.search(r"UtlÃƒÂ¥nsstatus:\s*(.+?)(?:\n|$)", text, flags=re.IGNORECASE)
             if match:
                 return match.group(1).strip()
         return ""
@@ -190,7 +192,7 @@ class OpenAIRagSearch:
 
     @staticmethod
     def _normalized_text(text: str) -> str:
-        text = (text or "").lower().replace("Ã¥", "å").replace("Ã¸", "ø").replace("Ã¦", "æ")
+        text = (text or "").lower().replace("ÃƒÂ¥", "å").replace("ÃƒÂ¸", "ø").replace("ÃƒÂ¦", "æ")
         text = (
             unicodedata.normalize("NFKD", text)
             .encode("ascii", "ignore")

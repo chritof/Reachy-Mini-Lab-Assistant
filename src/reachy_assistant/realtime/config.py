@@ -1,3 +1,7 @@
+"""
+Felles konfigurasjon for OpenAI Realtime-sesjonen og assistentprofilen.
+"""
+
 from __future__ import annotations
 
 import os
@@ -34,6 +38,22 @@ class RealtimeConfig:
     allow_interruptions: bool = True
     suppress_input_while_speaking: bool = False
     input_resume_delay_ms: int = 0
+    wake_phrase_enabled: bool = False
+    wake_phrases: tuple[str, ...] = (
+        "hei",
+        "hey",
+        "hallo",
+        "hello",
+        "hei reachy",
+        "hey reachy",
+        "hei richie",
+        "hey richie",
+        "hei ritchie",
+        "hey ritchie",
+        "hei reachie",
+        "hey reachie",
+    )
+    wake_phrase_timeout_sec: float = 20.0
     temperature: float = 0.8
     max_output_tokens: str | int = "inf"
 
@@ -90,6 +110,19 @@ class RealtimeConfig:
             ).lower()
             in {"1", "true", "yes", "on"},
             input_resume_delay_ms=int(os.getenv("OPENAI_REALTIME_INPUT_RESUME_DELAY_MS", "0")),
+            wake_phrase_enabled=os.getenv("OPENAI_REALTIME_WAKE_PHRASE_ENABLED", "false").lower()
+            in {"1", "true", "yes", "on"},
+            wake_phrases=tuple(
+                part.strip().lower()
+                for part in os.getenv(
+                    "OPENAI_REALTIME_WAKE_PHRASES",
+                    "hei,hey,hallo,hello,hei reachy,hey reachy,hei richie,hey richie,hei ritchie,hey ritchie,hei reachie,hey reachie",
+                ).split(",")
+                if part.strip()
+            ),
+            wake_phrase_timeout_sec=float(
+                os.getenv("OPENAI_REALTIME_WAKE_PHRASE_TIMEOUT_SEC", "20.0")
+            ),
             temperature=float(os.getenv("OPENAI_REALTIME_TEMPERATURE", "0.8")),
             max_output_tokens=max_output_tokens,
         )

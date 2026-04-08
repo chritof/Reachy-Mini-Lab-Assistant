@@ -1,3 +1,7 @@
+"""
+Tynn wrapper rundt OpenAI sin realtime-klient for å opprette sesjoner.
+"""
+
 from __future__ import annotations
 
 from openai import AsyncOpenAI

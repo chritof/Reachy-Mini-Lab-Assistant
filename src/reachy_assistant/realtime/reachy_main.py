@@ -1,7 +1,12 @@
+"""
+CLI-entrypoint for realtime-assistenten på Reachy Mini, inkludert wakeword-oppsett.
+"""
+
 from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from reachy_mini import ReachyMini
 
@@ -19,7 +24,17 @@ def build_parser() -> argparse.ArgumentParser:
         default="auto",
     )
     parser.add_argument("--reachy-use-sim", action="store_true")
+    parser.add_argument("--wakeword-model", default="")
+    parser.add_argument("--wakeword-timeout-sec", type=float, default=20.0)
     return parser
+
+
+def _find_default_wakeword_model() -> str | None:
+    models_dir = Path(__file__).resolve().parents[3] / "models"
+    matches = sorted(models_dir.glob("hei_reachee*.onnx"))
+    if not matches:
+        return None
+    return str(matches[-1])
 
 
 def main() -> None:
@@ -29,6 +44,14 @@ def main() -> None:
         config.allow_interruptions = False
         config.suppress_input_while_speaking = True
         config.input_resume_delay_ms = 900
+        config.wake_phrase_enabled = False
+        config.wake_phrase_timeout_sec = args.wakeword_timeout_sec
+        wakeword_model = args.wakeword_model.strip() or _find_default_wakeword_model()
+        if not wakeword_model:
+            raise FileNotFoundError(
+                "No openWakeWord model found. Put a model like 'hei_reachee*.onnx' in the project's models/ folder "
+                "or pass --wakeword-model <path>."
+            )
         print(
             f"[realtime] Starting Reachy assistant with model={config.model} "
             f"at {args.reachy_host}:{args.reachy_port} "
@@ -41,7 +64,11 @@ def main() -> None:
             connection_mode=args.reachy_connection_mode,
             use_sim=args.reachy_use_sim,
         )
-        pipeline = ReachyRealtimePipeline(mini=mini, config=config).build()
+        pipeline = ReachyRealtimePipeline(
+            mini=mini,
+            config=config,
+            wakeword_model_path=wakeword_model,
+        ).build()
         pipeline.run()
     except Exception as exc:
         print(f"[realtime] Fatal error: {exc}", file=sys.stderr)

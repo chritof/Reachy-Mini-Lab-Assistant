@@ -17,6 +17,14 @@ def neutral(mini: ReachyMini) -> None:
     mini.goto_target(head=_head_pose(yaw=0.0, pitch=0.0), antennas=[0.0, 0.0], duration=0.4)
 
 
+def sleeping(mini: ReachyMini) -> None:
+    mini.goto_sleep()
+
+
+def waking(mini: ReachyMini) -> None:
+    mini.wake_up()
+
+
 def listening(mini: ReachyMini) -> None:
     mini.goto_target(
         head=_head_pose(yaw=0.0, pitch=-0.08),

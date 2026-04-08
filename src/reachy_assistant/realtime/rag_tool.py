@@ -1,3 +1,7 @@
+"""
+Realtime-tool som kobler modellen til lokal RAG-søk i Læringslab-dokumentasjonen.
+"""
+
 from __future__ import annotations
 
 import json

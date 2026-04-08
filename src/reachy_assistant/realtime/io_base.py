@@ -5,6 +5,10 @@ from typing import AsyncIterator, Protocol
 import numpy as np
 
 
+class RealtimeSessionRestart(Exception):
+    """Signaliserer at den aktive realtime-sessionen skal startes på nytt."""
+
+
 class RealtimeAudioSource(Protocol):
     sample_rate: int
 

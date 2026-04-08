@@ -1,3 +1,7 @@
+"""
+Enkel tilstandskontroll for Reachy-bevegelser brukt av samtalepipelinen.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -9,6 +13,15 @@ from reachy_assistant.robot.motion import gestures
 class ReachyMotionController:
     mini: object
     current_state: str = field(init=False, default="")
+
+    def sleeping(self) -> None:
+        if self.current_state != "sleeping":
+            gestures.sleeping(self.mini)
+            self.current_state = "sleeping"
+
+    def waking(self) -> None:
+        gestures.waking(self.mini)
+        self.current_state = "idle"
 
     def idle(self) -> None:
         if self.current_state != "idle":

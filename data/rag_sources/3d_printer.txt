@@ -1,0 +1,24 @@
+Tittel: 3D-printer
+
+Kort beskrivelse:
+Læringslab kan bruke 3D-printer i relevante prosjekt og læringsaktivitetar. Denne fila er meint som ei enkel oversiktsfil for spørsmål om 3D-printing i Læringslab.
+
+Utlånsstatus:
+Ikkje oppgitt som vanleg utlån i denne fila. Bruk i Læringslab er sannsynleg, men detaljar om tilgang, reservasjon og eventuell utlån må avklarast med ansatte.
+
+Utlånsveiledning:
+For generelle reglar om reservasjon og utlån, sjå utlaan.txt. For spesifikk informasjon om 3D-printer, tilgang, opplæring og praktisk bruk må ein spørje ansatte i Læringslab.
+
+Nøkkelpunkter:
+- 3D-printer kan vere aktuell for prosjekt og læringsaktivitetar i Læringslab.
+- Fila gir berre generell informasjon, ikkje detaljert teknisk dokumentasjon.
+- Tilgang, bruk og eventuelle avgrensingar må avklarast med ansatte.
+- Dersom ein treng hjelp til oppsett, materiale eller utskriftsprosess, bør ein spørje ansatte i Læringslab.
+
+Bruk:
+1. Spør ansatte i Læringslab om 3D-printer er tilgjengeleg for det du skal gjere.
+2. Avklar om du treng opplæring eller hjelp før bruk.
+3. Få informasjon om materiale, oppsett og praktisk gjennomføring frå ansatte.
+
+Søkbare nøkkelord:
+3d-printer, 3d printing, printer, printing, modellering, prototyping, læringslab
