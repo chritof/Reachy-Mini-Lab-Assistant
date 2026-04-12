@@ -1,0 +1,19 @@
+Tittel: Åpningstider i Læringslab ved HVL
+
+Kort beskrivelse:
+Denne fila gir ei samla og kort oversikt over opningstider i Læringslab på dei ulike campusane.
+
+Åpningstider per campus:
+- Bergen: mandag-torsdag 09:00-17:00, fredag 09:00-15:00
+- Haugesund: mandag-torsdag 09:00-17:00, fredag 09:00-15:00
+- Sogndal: mandag 09:00-17:00, tirsdag 15:00-17:00, onsdag 09:00-17:00, torsdag 09:00-17:00, fredag 09:00-15:00
+- Førde: mandag 09:00-17:00, tirsdag 15:00-17:00, onsdag 09:00-17:00, torsdag 09:00-17:00, fredag 09:00-15:00
+- Stord: mandag-onsdag 09:00-15:00, torsdag 09:00-15:00, fredag 09:00-12:00
+
+Viktig:
+- Denne fila oppgir berre dei registrerte opningstidene i dokumentasjonen.
+- Dersom ein spør om ein bestemt campus, bør svaret avgrensast til den campusen.
+- Dersom nokon spør generelt om opningstider, kan svaret først be om campus eller oppsummere dei viktigaste.
+
+Søkbare nøkkelord:
+åpningstider, aapningstider, opningstider, åpningstid, opningstid, bergen, haugesund, sogndal, førde, forde, stord, når er læringslab åpen, opening hours

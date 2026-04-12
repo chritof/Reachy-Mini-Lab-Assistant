@@ -8,30 +8,35 @@ import time
 from collections import deque
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable
+from typing import TYPE_CHECKING, Callable
 
 import numpy as np
-from openwakeword.model import Model
 
 from reachy_assistant.realtime.audio import ensure_mono, float32_to_pcm16_bytes, resample_audio
 from reachy_assistant.realtime.io_base import RealtimeAudioSource, RealtimeSessionRestart
+
+if TYPE_CHECKING:
+    from openwakeword.model import Model
 
 
 @dataclass
 class OpenWakewordAudioSource(RealtimeAudioSource):
     base_source: RealtimeAudioSource
     model_path: str
+    sleep_model_path: str | None = None
     threshold: float = 0.5
+    sleep_threshold: float | None = None
     debounce_time: float = 0.8
     preroll_ms: int = 1200
-    inactivity_timeout_sec: float = 20.0
+    inactivity_timeout_sec: float = 4.0
     activity_level_threshold: float = 0.015
     on_wake: Callable[[], None] | None = None
     on_sleep: Callable[[], None] | None = None
     sample_rate: int = field(init=False)
     starts_asleep: bool = field(init=False, default=True)
-    _model: Model | None = field(init=False, default=None)
-    _model_name: str = field(init=False)
+    _model: "Model | None" = field(init=False, default=None)
+    _wake_model_name: str = field(init=False)
+    _sleep_model_name: str | None = field(init=False, default=None)
     _active: bool = field(init=False, default=False)
     _last_activity_at: float = field(init=False, default=0.0)
     _preroll_chunks: deque[np.ndarray] = field(init=False)
@@ -40,7 +45,8 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
 
     def __post_init__(self) -> None:
         self.sample_rate = int(self.base_source.sample_rate)
-        self._model_name = Path(self.model_path).stem
+        self._wake_model_name = Path(self.model_path).stem
+        self._sleep_model_name = Path(self.sleep_model_path).stem if self.sleep_model_path else None
         self._preroll_chunks = deque()
         self._max_preroll_samples = max(
             int(self.sample_rate * max(self.preroll_ms, 0) / 1000),
@@ -48,16 +54,30 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
         )
 
     async def open(self) -> None:
+        from openwakeword.model import Model
+
         await self.base_source.open()
+        wakeword_models = [self.model_path]
+        if self.sleep_model_path:
+            wakeword_models.append(self.sleep_model_path)
         self._model = Model(
-            wakeword_models=[self.model_path],
+            wakeword_models=wakeword_models,
             inference_framework="onnx",
         )
         self.reset_session_state()
-        print(f"[wakeword] openWakeWord loaded: {self._model_name}")
+        print(f"[wakeword] openWakeWord loaded: {self._wake_model_name}")
+        if self._sleep_model_name:
+            print(f"[wakeword] Sleep word loaded: {self._sleep_model_name}")
 
     async def close(self) -> None:
         await self.base_source.close()
+
+    def is_awake(self) -> bool:
+        return self._active
+
+    def touch_activity(self) -> None:
+        if self._active:
+            self._last_activity_at = time.monotonic()
 
     async def chunks(self):
         async for chunk in self.base_source.chunks():
@@ -69,16 +89,23 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
                 self._store_preroll(mono)
 
             if not self._active:
-                if self._detect_wakeword(mono):
+                if self._detect_model(mono, self._wake_model_name, self.threshold):
                     self._active = True
                     self._last_activity_at = time.monotonic()
-                    print(f"[wakeword] Detected {self._model_name}.")
-                    if self.on_wake is not None:
-                        self.on_wake()
-                    wake_audio = self._consume_preroll()
-                    if wake_audio.size:
-                        yield wake_audio
+                    print(f"[wakeword] Detected {self._wake_model_name}.")
+                    self._run_callback(self.on_wake, "wake")
+                    self._consume_preroll()
                 continue
+
+            if self._sleep_model_name and self._detect_model(
+                mono,
+                self._sleep_model_name,
+                self.sleep_threshold if self.sleep_threshold is not None else self.threshold,
+            ):
+                print(f"[wakeword] Detected {self._sleep_model_name}. Returning to sleep mode.")
+                self.reset_session_state()
+                self._run_callback(self.on_sleep, "sleep")
+                raise RealtimeSessionRestart("Sleep word detected; starting a fresh wakeword session.")
 
             now = time.monotonic()
             level = float(np.sqrt(np.mean(np.square(mono)))) if mono.size else 0.0
@@ -87,8 +114,7 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
             elif now - self._last_activity_at > self.inactivity_timeout_sec:
                 self.reset_session_state()
                 print("[wakeword] Inactivity timeout reached. Returning to sleep mode.")
-                if self.on_sleep is not None:
-                    self.on_sleep()
+                self._run_callback(self.on_sleep, "sleep")
                 raise RealtimeSessionRestart("Wakeword session expired; starting a fresh session.")
 
             yield mono
@@ -119,8 +145,18 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
         if self._model is not None:
             self._model.reset()
 
-    def _detect_wakeword(self, chunk: np.ndarray) -> bool:
+    def _run_callback(self, callback: Callable[[], None] | None, label: str) -> None:
+        if callback is None:
+            return
+        try:
+            callback()
+        except Exception as exc:
+            print(f"[wakeword] {label} callback failed: {exc}")
+
+    def _detect_model(self, chunk: np.ndarray, model_name: str | None, threshold: float) -> bool:
         if self._model is None:
+            return False
+        if not model_name:
             return False
 
         pcm16 = np.frombuffer(
@@ -132,8 +168,8 @@ class OpenWakewordAudioSource(RealtimeAudioSource):
 
         scores = self._model.predict(
             pcm16,
-            threshold={self._model_name: self.threshold},
+            threshold={model_name: threshold},
             debounce_time=self.debounce_time,
         )
-        score = float(scores.get(self._model_name, 0.0))
-        return score >= self.threshold
+        score = float(scores.get(model_name, 0.0))
+        return score >= threshold

@@ -49,7 +49,7 @@ class OpenAIRagRealtimeTool:
             "type": "function",
             "name": "openai_rag_search",
             "description": (
-                "Search the local Learning Lab documentation for grounded answers about equipment, "
+                "Search the local Læringslab documentation for grounded answers about equipment, "
                 "rules, procedures, rooms, and project resources. "
                 "Use this for factual questions about what exists in the lab, what can be borrowed, "
                 "how something is used, and local lab policies."

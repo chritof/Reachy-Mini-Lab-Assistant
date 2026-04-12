@@ -22,7 +22,11 @@ def sleeping(mini: ReachyMini) -> None:
 
 
 def waking(mini: ReachyMini) -> None:
-    mini.wake_up()
+    # Avoid the library wake-up helper: on some Reachy Mini setups its
+    # built-in short return motion is rejected by the daemon.
+    mini.goto_target(head=_head_pose(yaw=0.0, pitch=0.0), antennas=[0.0, 0.0], duration=1.0)
+    mini.goto_target(head=_head_pose(yaw=0.0, pitch=0.12), antennas=[0.1, -0.1], duration=0.6)
+    mini.goto_target(head=_head_pose(yaw=0.0, pitch=0.0), antennas=[0.0, 0.0], duration=0.6)
 
 
 def listening(mini: ReachyMini) -> None:

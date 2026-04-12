@@ -48,6 +48,8 @@ class RealtimeConversationEngine:
     _suppress_input_until: float = field(init=False, default=0.0)
     _wake_active_until: float = field(init=False, default=0.0)
     _wake_waiting_logged: bool = field(init=False, default=False)
+    _sleep_after_response: bool = field(init=False, default=False)
+    _skip_next_response_create: bool = field(init=False, default=False)
     reconnect_delay_sec: float = 2.0
 
     def __post_init__(self) -> None:
@@ -117,7 +119,10 @@ class RealtimeConversationEngine:
             await connection.session.update(
                 session={
                     "modalities": ["text", "audio"],
-                    "instructions": self.config.instructions,
+                    "instructions": (
+                        f"{self.config.instructions} "
+                        "When the conversation is clearly over, finish briefly and call the go_to_sleep tool."
+                    ),
                     "voice": self.config.voice,
                     "input_audio_format": "pcm16",
                     "output_audio_format": "pcm16",
@@ -164,6 +169,9 @@ class RealtimeConversationEngine:
             event_type = getattr(event, "type", "")
 
             if event_type == "response.audio.delta":
+                if not self._wake_is_active():
+                    await self._interrupt_assistant_response(connection)
+                    continue
                 self._motion_call("speaking")
                 self._push_input_suppression()
                 self._active_response_id = getattr(event, "response_id", None)
@@ -181,6 +189,9 @@ class RealtimeConversationEngine:
                 response = getattr(event, "response", None)
                 self._active_response_id = getattr(response, "id", None)
                 self._response_create_pending = False
+                if not self._wake_is_active():
+                    await self._interrupt_assistant_response(connection)
+                    continue
 
             elif event_type == "response.output_item.added":
                 item = getattr(event, "item", None)
@@ -199,7 +210,8 @@ class RealtimeConversationEngine:
                     self.last_assistant_transcript = transcript
                     print(f"Assistant: {transcript}")
                 self._push_input_suppression()
-                self._motion_call("idle")
+                if not self._should_hold_sleep_pose():
+                    self._motion_call("idle")
 
             elif event_type == "conversation.item.input_audio_transcription.completed":
                 transcript = getattr(event, "transcript", "").strip()
@@ -210,6 +222,10 @@ class RealtimeConversationEngine:
                     if wake_matched:
                         self._motion_call("acknowledge")
                         await self._request_response_if_idle(connection)
+                    elif self._wake_is_active() and self._is_sleep_phrase(transcript):
+                        print("[wakeword] Sleep phrase detected from transcript. Returning to sleep mode.")
+                        self._skip_next_response_create = True
+                        await self._enter_sleep_mode(connection)
                     elif self._wake_is_active():
                         self._extend_wake_window()
                         self._motion_call("acknowledge")
@@ -226,18 +242,25 @@ class RealtimeConversationEngine:
 
             elif event_type == "input_audio_buffer.speech_stopped":
                 print("[realtime] Processing speech...")
-                if not self.config.allow_interruptions and self._wake_is_active():
+                skip_response = self._skip_next_response_create
+                if skip_response:
+                    self._skip_next_response_create = False
+                elif not self.config.allow_interruptions and self._wake_is_active():
                     await self._request_response_if_idle(connection)
                 elif not self._wake_is_active() and not self._wake_waiting_logged:
                     print("[realtime] Waiting for wake phrase.")
                     self._wake_waiting_logged = True
-                if self._wake_is_active():
+                if self._wake_is_active() and not skip_response:
                     self._motion_call("thinking")
 
             elif event_type == "response.done":
                 self._push_input_suppression()
                 self._clear_active_response()
-                self._motion_call("idle")
+                if self._sleep_after_response:
+                    self._sleep_after_response = False
+                    await self._enter_sleep_mode(connection)
+                elif not self._should_hold_sleep_pose():
+                    self._motion_call("idle")
 
             elif event_type == "response.function_call_arguments.done":
                 await self._handle_function_call(connection, event)
@@ -302,6 +325,8 @@ class RealtimeConversationEngine:
         self.last_assistant_transcript = ""
         self._tool_calls.clear()
         self._wake_waiting_logged = False
+        self._sleep_after_response = False
+        self._skip_next_response_create = False
         self._clear_active_response()
 
     def _reset_source_state(self) -> None:
@@ -324,10 +349,14 @@ class RealtimeConversationEngine:
 
     async def _monitor_wake_timeout(self) -> None:
         while not self._stop_event.is_set():
+            self._keep_source_awake_if_busy()
             self._wake_is_active()
             await asyncio.sleep(0.25)
 
     def _wake_is_active(self) -> bool:
+        if bool(getattr(self.source, "starts_asleep", False)) and hasattr(self.source, "is_awake"):
+            return bool(self.source.is_awake())
+
         if not self.config.wake_phrase_enabled:
             return True
 
@@ -403,6 +432,20 @@ class RealtimeConversationEngine:
 
         return None, text
 
+    def _is_sleep_phrase(self, transcript: str) -> bool:
+        normalized = re.sub(r"[^\w\s]", " ", transcript.lower())
+        normalized = re.sub(r"\s+", " ", normalized).strip()
+        if not normalized:
+            return False
+
+        if normalized in self.config.sleep_phrases:
+            return True
+
+        return any(
+            phrase and phrase in normalized
+            for phrase in self.config.sleep_phrases
+        )
+
     async def _request_response_if_idle(self, connection) -> None:
         if self._active_response_id is not None or self._response_create_pending:
             return
@@ -410,9 +453,33 @@ class RealtimeConversationEngine:
         await connection.response.create()
 
     def _tool_definitions(self) -> list[dict[str, object]]:
-        if self.rag_tool is None:
-            return []
-        return [self.rag_tool.definition()]
+        tools: list[dict[str, object]] = [self._sleep_tool_definition()]
+        if self.rag_tool is not None:
+            tools.append(self.rag_tool.definition())
+        return tools
+
+    @staticmethod
+    def _sleep_tool_definition() -> dict[str, object]:
+        return {
+            "type": "function",
+            "name": "go_to_sleep",
+            "description": (
+                "Use this when the conversation is clearly over and Reachy should go back to sleep "
+                "after a short closing reply, for example after goodbye, good night, or when the "
+                "user says they do not need more help."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "reason": {
+                        "type": "string",
+                        "description": "Short reason for ending the conversation.",
+                    }
+                },
+                "required": [],
+                "additionalProperties": False,
+            },
+        }
 
     async def _handle_function_call(self, connection, event) -> None:
         call_id = getattr(event, "call_id", None)
@@ -425,7 +492,13 @@ class RealtimeConversationEngine:
 
         self._clear_active_response()
 
-        if name != "openai_rag_search" or self.rag_tool is None:
+        if name == "go_to_sleep":
+            self._sleep_after_response = True
+            output = json.dumps(
+                {"status": "ok", "message": "Reachy will go to sleep after this reply."},
+                ensure_ascii=False,
+            )
+        elif name != "openai_rag_search" or self.rag_tool is None:
             output = json.dumps({"error": f"Unknown tool: {name}"}, ensure_ascii=False)
         else:
             print("[realtime] Running tool: openai_rag_search")
@@ -454,3 +527,34 @@ class RealtimeConversationEngine:
             }
         )
         await self._request_response_if_idle(connection)
+
+    async def _enter_sleep_mode(self, connection=None) -> None:
+        self._sleep_after_response = False
+        if connection is not None and self._active_response_id is not None:
+            await self._interrupt_assistant_response(connection)
+        elif hasattr(self.sink, "clear"):
+            await self.sink.clear()
+
+        self._clear_active_response()
+        self._reset_source_state()
+        self._motion_call("sleeping")
+        if bool(getattr(self.source, "starts_asleep", False)):
+            raise RealtimeSessionRestart("Sleep requested; starting a fresh wakeword session.")
+
+    def _keep_source_awake_if_busy(self) -> None:
+        if not hasattr(self.source, "touch_activity"):
+            return
+        if not bool(getattr(self.source, "starts_asleep", False)):
+            return
+        if (
+            self._response_create_pending
+            or self._active_response_id is not None
+        ):
+            self.source.touch_activity()
+
+    def _should_hold_sleep_pose(self) -> bool:
+        if self._sleep_after_response:
+            return True
+        if bool(getattr(self.source, "starts_asleep", False)) and hasattr(self.source, "is_awake"):
+            return not bool(self.source.is_awake())
+        return False

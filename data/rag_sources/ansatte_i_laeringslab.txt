@@ -1,0 +1,32 @@
+Tittel: Ansatte og verter i Læringslab
+
+Kort beskrivelse:
+Denne fila gir en oversikt over hvem man kan møte i Læringslab ved HVL. Den skiller mellom læringslab-assistenter og faste verter.
+
+Kontakt og roller:
+- Læringslab-assistenter er studenter som jobber i Læringslab ved siden av studiene.
+- De har ikke samme faglige bakgrunn som fast ansatte, men kan hjelpe med generell veiledning og mye praktisk i laben.
+
+Vanlige spørsmål denne fila skal svare på:
+- Hvem jobber i Læringslab?
+- Hvem jobber der?
+- Hvem er verter i Læringslab?
+- Hvem kan jeg møte i Bergen?
+- Hvem er på Stord?
+
+Faste verter per campus:
+- Bergen: Xavier, Robin og Kaspar
+- Stord: Robin
+- Haugesund: Thomas
+- Sogndal: Torkjell
+- Førde: Martine
+
+Viktig avgrensning:
+- Denne fila oppgir navn og campus, men ikke detaljerte kompetansefelt for hver enkelt person.
+- Dersom noen spør hvem som kan hjelpe med et bestemt fagområde, bør svaret være at dette ikke er spesifisert her, og at man kan kontakte Læringslab eller spørre de som er på vakt.
+
+Kontakt:
+- Felles e-post: laeringslab@hvl.no
+
+Søkbare nøkkelord:
+ansatte, tilsette, verter, ansatte i læringslab, læringslab-assistenter, hvem jobber der, hvem jobber i læringslab, hvem er verter, campus, bergen, stord, haugesund, sogndal, førde, xavier, robin, kaspar, thomas, torkjell, martine

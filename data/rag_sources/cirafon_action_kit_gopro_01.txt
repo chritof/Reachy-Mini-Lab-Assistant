@@ -10,4 +10,4 @@ Utlånsveiledning:
 Denne filen beskriver utstyret eller ressursen. For generelle regler om utlån, opplæring, ansvar og tilbakelevering, kombiner informasjonen her med utlaan.txt.
 
 Søkbare nøkkelord:
-cirafon, action, kit, gopro, tilbehørsett, andre, actionkameraer, laget, deg, fleksible, monteringsmuligheter, ulike
+cirafon, action, kit, gopro, tilbehørsett, andre, actionkameraer, laget, deg, fleksible, monteringsmuligheter, ulike, actionkamera.

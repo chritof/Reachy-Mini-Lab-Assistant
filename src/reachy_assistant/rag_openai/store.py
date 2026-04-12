@@ -48,6 +48,10 @@ class QdrantVectorStore:
         if points:
             self._client.upsert(collection_name=COLLECTION_NAME, points=points)
 
+    def reset(self) -> None:
+        self._client.delete_collection(collection_name=COLLECTION_NAME)
+        self._ensure_collection()
+
     def delete_by_file(self, file_path: str) -> None:
         from qdrant_client.models import FieldCondition, Filter, MatchValue
 

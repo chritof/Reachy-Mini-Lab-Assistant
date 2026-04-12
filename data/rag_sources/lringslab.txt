@@ -30,15 +30,22 @@ Målgrupper:
 Kontakt:
 - felles e-post: laeringslab@hvl.no
 
+Aapningstider:
+- Bergen: Mandag-torsdag 9-17, fredag 9-15.
+
 Aapningstider og plassering:
-- Bergen: første etasje i nybygget K2 på Kronstad, inngang via rom M-164. Opningstid måndag-torsdag 09:00-17:00, fredag 09:00-15:00.
-- Haugesund: rett ved hovudinngangen, til høgre når du kjem inn. Opningstid måndag-torsdag 09:00-17:00, fredag 09:00-15:00.
-- Sogndal: ved sida av Gamingsenteret i Stadionbygget, over resepsjonen på Idrettssenteret. Opningstid måndag, onsdag og torsdag 09:00-17:00, tirsdag 15:00-17:00, fredag 09:00-15:00.
-- Førde: ved inngangen ved servicetorget, rett fram når du kjem inn. Opningstid måndag, onsdag og torsdag 09:00-17:00, tirsdag 15:00-17:00, fredag 09:00-15:00.
-- Stord: rett ved biblioteket. Opningstid mandag-onsdag 09:00-15:00, torsdag 09:00-15:00, fredag 09:00-12:00.
+- Bergen: første etasje i nybygget K2 på Kronstad, inngang via rom M-164. Opningstid måndag-torsdag klokken 9-17, fredag 9-15.
+- Haugesund: rett ved hovudinngangen, til høgre når du kjem inn. Opningstid måndag-torsdag 9-17, fredag 9-15.
+- Sogndal: ved sida av Gamingsenteret i Stadionbygget, over resepsjonen på Idrettssenteret. Opningstid måndag, onsdag og torsdag 9-17, tirsdag 15-17, fredag 9-15.
+- Førde: ved inngangen ved servicetorget, rett fram når du kjem inn. Opningstid måndag, onsdag og torsdag 9-17, tirsdag 15-17, fredag 9-15.
+- Stord: rett ved biblioteket. Opningstid mandag-onsdag 9-15, torsdag 9-15, fredag 9-12.
 
-Kilde:
-https://www.hvl.no/alu/medielab/laringslab/om/
 
+Reservasjon i Læringslab:
+
+I Læringslab kan du reservere tid for ansattfoto, skjermførelesningar,
+rådgjeving og mye mer.
+
+Reserver tid i Læringslaben i Bergen i TimeEdit.
 Søkbare nøkkelord:
 læringslab, hvl, medielab, aapningstider, opningstider, om oss, campus, rådgiving, kurs, opplæring, undervisning, teknologi, utstyr, klassesett

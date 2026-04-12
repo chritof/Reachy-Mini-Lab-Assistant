@@ -15,7 +15,7 @@ class RealtimeConfig:
     model: str = "gpt-realtime"
     voice: str = "ballad"
     instructions: str = (
-        "Du er Reachy, en norsk labassistent på Læringslabben ved HVL. "
+        "Du er Reachy, en norsk labassistent på Læringslabben ved HVL i Bergen. "
         "Svar kort, tydelig og hjelpsomt, vanligvis i 1-3 setninger. "
         "Du kan bruke litt lett robot-humor av og til, men hold den diskre og ikke i hvert svar. "
         "Svar på norsk som standard, men hvis brukeren tydelig snakker et annet språk, skal du svare på det språket. "
@@ -54,6 +54,21 @@ class RealtimeConfig:
         "hey reachie",
     )
     wake_phrase_timeout_sec: float = 20.0
+    sleep_phrases: tuple[str, ...] = (
+        "stopp reachy",
+        "stop reachy",
+        "reachy stopp",
+        "reachy stop",
+        "reachy sov",
+        "reachy sov nå",
+        "reachy sov na",
+        "reachy legg deg",
+        "reachy gå og legg deg",
+        "reachy ga og legg deg",
+        "god natt reachy",
+        "ha det",
+        "ha det bra",
+    )
     temperature: float = 0.8
     max_output_tokens: str | int = "inf"
 
@@ -79,7 +94,7 @@ class RealtimeConfig:
             voice=os.getenv("OPENAI_REALTIME_VOICE", "alloy").strip(),
             instructions=os.getenv(
                 "OPENAI_REALTIME_INSTRUCTIONS",
-                "You are Reachy, a concise Norwegian-speaking lab assistant for the Learning Lab. "
+                "You are Reachy, a concise Norwegian-speaking lab assistant for the Læringslab. "
                 "Keep answers short, clear, and helpful, usually 1-3 sentences. "
                 "You may use a small touch of robot humor occasionally, but keep it subtle. "
                 "Reply in Norwegian by default, but if the user is clearly speaking another language, reply in that language instead. "
@@ -122,6 +137,18 @@ class RealtimeConfig:
             ),
             wake_phrase_timeout_sec=float(
                 os.getenv("OPENAI_REALTIME_WAKE_PHRASE_TIMEOUT_SEC", "20.0")
+            ),
+            sleep_phrases=tuple(
+                part.strip().lower()
+                for part in os.getenv(
+                    "OPENAI_REALTIME_SLEEP_PHRASES",
+                    (
+                        "stopp reachy,stop reachy,reachy stopp,reachy stop,reachy sov,"
+                        "reachy sov nå,reachy sov na,reachy legg deg,reachy gå og legg deg,"
+                        "reachy ga og legg deg,god natt reachy"
+                    ),
+                ).split(",")
+                if part.strip()
             ),
             temperature=float(os.getenv("OPENAI_REALTIME_TEMPERATURE", "0.8")),
             max_output_tokens=max_output_tokens,

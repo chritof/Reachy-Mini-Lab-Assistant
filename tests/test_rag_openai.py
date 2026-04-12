@@ -63,3 +63,103 @@ def test_openai_rag_search_returns_context() -> None:
 
     assert "results" in result
     assert "[equipment/ipad.txt]" in result["context"]
+
+
+def test_opening_hours_query_boosts_opening_hours_source() -> None:
+    search = OpenAIRagSearch(vector_store=FakeVectorStore(), embeddings=FakeEmbeddings())
+
+    results = search._rerank_results(
+        "Hva er åpningstidene i Bergen?",
+        [
+            {
+                "source": "general/lringslab.txt",
+                "text": "Bergen campus overview without structured hours first.",
+                "score": 0.95,
+            },
+            {
+                "source": "general/aapningstider_laeringslab.txt",
+                "text": "Bergen: mandag-torsdag 09:00-17:00, fredag 09:00-15:00",
+                "score": 0.7,
+            },
+        ],
+        limit=1,
+        wants_opening_hours=True,
+    )
+
+    assert results[0]["source"] == "general/aapningstider_laeringslab.txt"
+
+
+def test_staff_query_boosts_staff_source() -> None:
+    search = OpenAIRagSearch(vector_store=FakeVectorStore(), embeddings=FakeEmbeddings())
+
+    results = search._rerank_results(
+        "Hvem jobber i Laeringslab i Bergen?",
+        [
+            {
+                "source": "general/lringslab.txt",
+                "text": "Generell informasjon om Laeringslab og campus.",
+                "score": 0.95,
+            },
+            {
+                "source": "general/ansatte_i_laeringslab.txt",
+                "text": "Faste verter per campus: Bergen: Xavier, Robin og Kaspar.",
+                "score": 0.7,
+            },
+        ],
+        limit=1,
+        wants_staff=True,
+    )
+
+    assert results[0]["source"] == "general/ansatte_i_laeringslab.txt"
+
+
+def test_staff_answer_lists_known_staff() -> None:
+    search = OpenAIRagSearch(vector_store=FakeVectorStore(), embeddings=FakeEmbeddings())
+
+    answer = search._build_answer(
+        query="Hvem jobber i Læringslab?",
+        results=[
+            {
+                "source": "general/ansatte_i_laeringslab.txt",
+                "text": (
+                    "Tittel: Ansatte og verter i Læringslab\n"
+                    "Faste verter per campus:\n"
+                    "- Bergen: Xavier, Robin og Kaspar\n"
+                    "- Stord: Robin\n"
+                    "- Haugesund: Thomas\n"
+                ),
+                "score": 0.9,
+            }
+        ],
+        wants_loan=False,
+        wants_staff=True,
+        fallback="fallback",
+    )
+
+    assert "Xavier, Robin og Kaspar" in answer
+    assert "Stord: Robin" in answer
+
+
+def test_loan_answer_leads_with_cheqroom() -> None:
+    search = OpenAIRagSearch(vector_store=FakeVectorStore(), embeddings=FakeEmbeddings())
+
+    answer = search._build_answer(
+        query="Hva kan jeg låne?",
+        results=[
+            {
+                "source": "equipment/ipad.txt",
+                "text": "Tittel: iPad\nUtlånsstatus: Kan normalt lånes.",
+                "score": 0.9,
+            },
+            {
+                "source": "general/utlaan.txt",
+                "text": "Cheqroom brukes for utlån og reservasjon.",
+                "score": 0.8,
+            },
+        ],
+        wants_loan=True,
+        wants_staff=False,
+        fallback="fallback",
+    )
+
+    assert answer.startswith("For utlån og reservasjon bruker Læringslab normalt Cheqroom.")

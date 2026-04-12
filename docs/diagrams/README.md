@@ -1,1 +1,0 @@
-Denne mappen inneholder endelige diagrammer for systems arkitektur og flyt.

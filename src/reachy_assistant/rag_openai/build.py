@@ -37,6 +37,7 @@ def build_index(
     embeddings = OpenAIEmbeddings(api_key=api_key)
     vectors = embeddings.embed([record.text for record in records])
     store = QdrantVectorStore(path=str(store_dir))
+    store.reset()
 
     from qdrant_client.models import PointStruct
 

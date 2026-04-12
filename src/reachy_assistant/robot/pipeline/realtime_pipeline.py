@@ -20,6 +20,7 @@ class ReachyRealtimePipeline:
     mini: object
     config: RealtimeConfig
     wakeword_model_path: str | None = None
+    sleepword_model_path: str | None = None
 
     def build(self) -> RealtimeConversationPipeline:
         motion = ReachyMotionController(mini=self.mini)
@@ -28,6 +29,9 @@ class ReachyRealtimePipeline:
             source = OpenWakewordAudioSource(
                 base_source=source,
                 model_path=str(Path(self.wakeword_model_path)),
+                sleep_model_path=(
+                    str(Path(self.sleepword_model_path)) if self.sleepword_model_path else None
+                ),
                 inactivity_timeout_sec=self.config.wake_phrase_timeout_sec,
                 on_wake=motion.waking,
                 on_sleep=motion.sleeping,
