@@ -30,9 +30,6 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Local model artifacts
-models/*
-!models/.gitkeep
 
 # Generated retrieval indexes / vector stores
 data/rag_index/
