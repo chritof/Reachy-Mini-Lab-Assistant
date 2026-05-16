@@ -1,4 +1,4 @@
-﻿# Minimal runtime dependencies for the current Reachy realtime path
+# Runtime dependencies for the final realtime-based solution
 openai
 websockets
 numpy
@@ -10,5 +10,5 @@ reachy_mini_rust_kinematics
 openwakeword
 sounddevice
 
-# Test dependency kept here because the repo currently uses pytest directly during verification
+# Dev / verification
 pytest

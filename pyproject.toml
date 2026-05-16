@@ -5,15 +5,25 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "reachy-assistant"
 version = "0.1.0"
-description = "Reachy Mini lab assistant pipeline"
+description = "Reachy Mini lab assistant built around the OpenAI Realtime API"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Bachelor group 16" }]
 dependencies = [
-  # put runtime deps here, examples:
-  # "requests>=2.31",
-  # "pydantic>=2.0",
+  "numpy",
+  "openai",
+  "openwakeword",
+  "qdrant-client",
+  "reachy_mini",
+  "reachy_mini_motor_controller",
+  "reachy_mini_rust_kinematics",
+  "scipy",
+  "sounddevice",
+  "websockets",
 ]
+
+[project.scripts]
+reachy-assistant = "reachy_assistant.main:main"
 
 [project.optional-dependencies]
 dev = [

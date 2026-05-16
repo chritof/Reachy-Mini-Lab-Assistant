@@ -40,3 +40,10 @@ data/audio/input.wav
 data/audio/recordings/
 data/audio/tts/
 
+# Local model artifacts
+models/no_NO-talesyntese-medium.onnx
+models/no_NO-talesyntese-medium.onnx.json
+
+# One-off smoke test outputs
+reachy_record.wav
+
