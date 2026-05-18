@@ -15,4 +15,4 @@ class OpenAIRealtimeClient:
         self._client = AsyncOpenAI(api_key=config.api_key)
 
     def connect(self):
-        return self._client.beta.realtime.connect(model=self.config.model)
+        return self._client.realtime.connect(model=self.config.model)

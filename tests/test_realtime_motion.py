@@ -3,6 +3,7 @@ import asyncio
 import numpy as np
 
 from reachy_assistant.realtime.config import RealtimeConfig
+from reachy_assistant.realtime.client import OpenAIRealtimeClient
 from reachy_assistant.realtime.engine import RealtimeConversationEngine
 from reachy_assistant.realtime.io_base import RealtimeSessionRestart
 from reachy_assistant.realtime.openwakeword_source import OpenWakewordAudioSource
@@ -218,6 +219,35 @@ def test_tool_definitions_include_sleep_tool() -> None:
     names = [tool["name"] for tool in engine._tool_definitions()]
 
     assert "go_to_sleep" in names
+
+
+def test_realtime_client_uses_ga_realtime_resource() -> None:
+    client = OpenAIRealtimeClient(RealtimeConfig(api_key="test"))
+
+    assert client.connect().__class__.__module__.startswith("openai.resources.realtime")
+
+
+def test_session_config_uses_current_realtime_shape() -> None:
+    engine = RealtimeConversationEngine(
+        config=RealtimeConfig(api_key="test"),
+        source=DummySource(),
+        sink=DummySink(),
+        client=object(),
+        motion=DummyMotion(),
+        rag_tool=None,
+    )
+
+    session = engine._session_config()
+
+    assert session["type"] == "realtime"
+    assert session["output_modalities"] == ["audio"]
+    assert "modalities" not in session
+    assert "input_audio_format" not in session
+    assert "temperature" not in session
+    assert session["max_output_tokens"] == "inf"
+    assert session["audio"]["input"]["format"] == {"type": "audio/pcm", "rate": 24000}
+    assert session["audio"]["output"]["format"] == {"type": "audio/pcm", "rate": 24000}
+    assert session["audio"]["input"]["turn_detection"]["type"] == "server_vad"
 
 
 def test_enter_sleep_mode_resets_source_and_motion() -> None:

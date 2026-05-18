@@ -116,38 +116,7 @@ class RealtimeConversationEngine:
     async def _run_session(self) -> None:
         print("[realtime] Connecting to OpenAI Realtime API...")
         async with self.client.connect() as connection:
-            await connection.session.update(
-                session={
-                    "modalities": ["text", "audio"],
-                    "instructions": (
-                        f"{self.config.instructions} "
-                        "When the conversation is clearly over, finish briefly and call the go_to_sleep tool."
-                    ),
-                    "voice": self.config.voice,
-                    "input_audio_format": "pcm16",
-                    "output_audio_format": "pcm16",
-                    "input_audio_transcription": {
-                        "model": self.config.transcription_model,
-                        "language": self.config.language,
-                    },
-                    "turn_detection": {
-                        "type": "server_vad",
-                        "threshold": self.config.vad_threshold,
-                        "silence_duration_ms": self.config.vad_silence_ms,
-                        "prefix_padding_ms": self.config.vad_prefix_padding_ms,
-                        "create_response": (
-                            self.config.vad_create_response
-                            if self.config.allow_interruptions
-                            else False
-                        ),
-                        "interrupt_response": self.config.allow_interruptions,
-                    },
-                    "temperature": self.config.temperature,
-                    "max_response_output_tokens": self.config.max_output_tokens,
-                    "tools": self._tool_definitions(),
-                    "tool_choice": "auto",
-                }
-            )
+            await connection.session.update(session=self._session_config())
             print("[realtime] Session ready. Speak into the microphone. Press Ctrl+C to stop.")
 
             send_task = asyncio.create_task(self._send_audio(connection))
@@ -168,7 +137,7 @@ class RealtimeConversationEngine:
         async for event in connection:
             event_type = getattr(event, "type", "")
 
-            if event_type == "response.audio.delta":
+            if event_type in {"response.output_audio.delta", "response.audio.delta"}:
                 if not self._wake_is_active():
                     await self._interrupt_assistant_response(connection)
                     continue
@@ -181,7 +150,7 @@ class RealtimeConversationEngine:
                 await self.sink.write(audio, sample_rate)
                 self._active_audio_end_ms += int(round(len(audio) * 1000 / sample_rate))
 
-            elif event_type == "response.audio.done":
+            elif event_type in {"response.output_audio.done", "response.audio.done"}:
                 self._push_input_suppression()
                 self._clear_active_response()
 
@@ -201,10 +170,16 @@ class RealtimeConversationEngine:
                     if call_id and name:
                         self._tool_calls[call_id] = name
 
-            elif event_type == "response.audio_transcript.delta":
+            elif event_type in {
+                "response.output_audio_transcript.delta",
+                "response.audio_transcript.delta",
+            }:
                 self.last_assistant_transcript += event.delta
 
-            elif event_type == "response.audio_transcript.done":
+            elif event_type in {
+                "response.output_audio_transcript.done",
+                "response.audio_transcript.done",
+            }:
                 transcript = getattr(event, "transcript", "").strip()
                 if transcript:
                     self.last_assistant_transcript = transcript
@@ -457,6 +432,44 @@ class RealtimeConversationEngine:
         if self.rag_tool is not None:
             tools.append(self.rag_tool.definition())
         return tools
+
+    def _session_config(self) -> dict[str, object]:
+        return {
+            "type": "realtime",
+            "instructions": (
+                f"{self.config.instructions} "
+                "When the conversation is clearly over, finish briefly and call the go_to_sleep tool."
+            ),
+            "output_modalities": ["audio"],
+            "audio": {
+                "input": {
+                    "format": {"type": "audio/pcm", "rate": REALTIME_SAMPLE_RATE},
+                    "transcription": {
+                        "model": self.config.transcription_model,
+                        "language": self.config.language,
+                    },
+                    "turn_detection": {
+                        "type": "server_vad",
+                        "threshold": self.config.vad_threshold,
+                        "silence_duration_ms": self.config.vad_silence_ms,
+                        "prefix_padding_ms": self.config.vad_prefix_padding_ms,
+                        "create_response": (
+                            self.config.vad_create_response
+                            if self.config.allow_interruptions
+                            else False
+                        ),
+                        "interrupt_response": self.config.allow_interruptions,
+                    },
+                },
+                "output": {
+                    "format": {"type": "audio/pcm", "rate": REALTIME_SAMPLE_RATE},
+                    "voice": self.config.voice,
+                },
+            },
+            "max_output_tokens": self.config.max_output_tokens,
+            "tools": self._tool_definitions(),
+            "tool_choice": "auto",
+        }
 
     @staticmethod
     def _sleep_tool_definition() -> dict[str, object]:
